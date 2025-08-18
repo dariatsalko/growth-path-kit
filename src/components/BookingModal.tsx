@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
@@ -32,6 +32,12 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
       whatsapp: false
     }
   });
+
+  useEffect(() => {
+    if (selectedPsychologist) {
+      setFormData((prev) => ({ ...prev, psychologist: selectedPsychologist }));
+    }
+  }, [selectedPsychologist]);
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
@@ -85,7 +91,7 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
   ];
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
+    <Dialog open={isOpen} onOpenChange={(open) => { if (!open) onClose(); }}>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">

@@ -3,11 +3,8 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { User, Users, Heart, Brain, Clock, Smartphone } from "lucide-react";
 
 const ServicesSection = () => {
-  const scrollToBooking = () => {
-    const bookingForm = document.getElementById('booking-form');
-    if (bookingForm) {
-      bookingForm.scrollIntoView({ behavior: 'smooth' });
-    }
+  const openBooking = () => {
+    window.dispatchEvent(new CustomEvent('openBookingModal'));
   };
   const services = [
     {
@@ -102,7 +99,7 @@ const ServicesSection = () => {
                   <Button 
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-medium"
                     size="sm"
-                    onClick={scrollToBooking}
+                    onClick={openBooking}
                   >
                     Записаться
                   </Button>

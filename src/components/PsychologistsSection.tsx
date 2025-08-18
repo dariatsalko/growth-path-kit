@@ -18,20 +18,20 @@ const PsychologistsSection = ({ onSelectPsychologist }: PsychologistsSectionProp
   } = useToast();
   const [selectedPsychologist, setSelectedPsychologist] = useState<any>(null);
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
-  const scrollToBooking = () => {
-    const bookingForm = document.getElementById('booking-form');
-    if (bookingForm) {
-      bookingForm.scrollIntoView({
-        behavior: 'smooth'
-      });
+  const openBooking = (psychologistName?: string) => {
+    if (psychologistName) {
+      window.dispatchEvent(new CustomEvent('openBookingWithPsychologist', { detail: { name: psychologistName } }));
+    } else {
+      window.dispatchEvent(new CustomEvent('openBookingModal'));
     }
   };
   const handleSelectPsychologist = (psychologist: any) => {
+    onSelectPsychologist?.(psychologist.name);
+    openBooking(psychologist.name);
     toast({
       title: "Психолог выбран!",
-      description: `Вы выбрали ${psychologist.name}. Заполните форму записи ниже.`
+      description: `Вы выбрали ${psychologist.name}. Заполните форму записи.`
     });
-    scrollToBooking();
   };
   const handleViewDetails = (psychologist: any) => {
     setSelectedPsychologist(psychologist);
@@ -93,7 +93,7 @@ const PsychologistsSection = ({ onSelectPsychologist }: PsychologistsSectionProp
           <p className="text-muted-foreground mb-4">
             Не знаете, какого специалиста выбрать?
           </p>
-          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8" onClick={scrollToBooking}>
+          <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8" onClick={() => openBooking()}>
             Подобрать психолога автоматически
           </Button>
         </div>

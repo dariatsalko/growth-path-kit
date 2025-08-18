@@ -3,11 +3,8 @@ import { Shield, Heart, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const HeroSection = () => {
-  const scrollToBooking = () => {
-    const bookingForm = document.getElementById('booking-form');
-    if (bookingForm) {
-      bookingForm.scrollIntoView({ behavior: 'smooth' });
-    }
+  const openBooking = () => {
+    window.dispatchEvent(new CustomEvent('openBookingModal'));
   };
 
   const scrollToServices = () => {
@@ -57,7 +54,7 @@ const HeroSection = () => {
             <Button 
               size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
-              onClick={scrollToBooking}
+              onClick={openBooking}
             >
               Записаться на консультацию
             </Button>

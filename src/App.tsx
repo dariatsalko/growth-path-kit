@@ -8,6 +8,7 @@ import School from "./pages/School";
 import Mindfulness from "./pages/Mindfulness";
 import Contacts from "./pages/Contacts";
 import NotFound from "./pages/NotFound";
+import GlobalBookingModal from "@/components/GlobalBookingModal";
 
 const queryClient = new QueryClient();
 
@@ -26,6 +27,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <GlobalBookingModal />
     </TooltipProvider>
   </QueryClientProvider>
 );
