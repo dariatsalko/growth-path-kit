@@ -76,10 +76,7 @@ const PsychologistsSection = () => {
           {/* Filter Tags */}
           
           
-          <Button variant="outline" className="mb-8">
-            <Filter className="w-4 h-4 mr-2" />
-            Расширенный фильтр
-          </Button>
+          
         </div>
 
         {/* Psychologists Grid */}
