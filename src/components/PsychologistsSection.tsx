@@ -8,7 +8,11 @@ import { useToast } from "@/hooks/use-toast";
 import psychologist1 from "@/assets/psychologist-1.jpg";
 import psychologist2 from "@/assets/psychologist-2.jpg";
 import psychologist3 from "@/assets/psychologist-3.jpg";
-const PsychologistsSection = () => {
+interface PsychologistsSectionProps {
+  onSelectPsychologist?: (psychologist: string) => void;
+}
+
+const PsychologistsSection = ({ onSelectPsychologist }: PsychologistsSectionProps) => {
   const {
     toast
   } = useToast();

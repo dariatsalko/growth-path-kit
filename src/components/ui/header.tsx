@@ -13,11 +13,9 @@ const Header = () => {
     { label: "Контакты", href: "/contacts" },
   ];
 
-  const scrollToBooking = () => {
-    const bookingForm = document.getElementById('booking-form');
-    if (bookingForm) {
-      bookingForm.scrollIntoView({ behavior: 'smooth' });
-    }
+  const openBookingModal = () => {
+    // Dispatch custom event to open booking modal
+    window.dispatchEvent(new CustomEvent('openBookingModal'));
   };
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -51,7 +49,7 @@ const Header = () => {
           <Button 
             variant="default" 
             className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium"
-            onClick={scrollToBooking}
+            onClick={openBookingModal}
           >
             Записаться
           </Button>
@@ -88,7 +86,7 @@ const Header = () => {
               className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-medium"
               onClick={() => {
                 setIsMenuOpen(false);
-                scrollToBooking();
+                openBookingModal();
               }}
             >
               Записаться
