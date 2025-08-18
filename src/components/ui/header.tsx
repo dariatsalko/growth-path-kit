@@ -8,7 +8,7 @@ const Header = () => {
 
   const navItems = [
     { label: "Консультации", href: "/" },
-    { label: "Школа ЭИ", href: "/school" },
+    { label: "Школа эмоционального интеллекта", href: "/school" },
     { label: "Осознанность", href: "/mindfulness" },
     { label: "Контакты", href: "/contacts" },
   ];
