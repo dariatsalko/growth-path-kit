@@ -8,50 +8,62 @@ All colors MUST be HSL.
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Центр "Точка роста" дизайн-система */
+    --background: 77 8% 96%; /* #F6F7F5 светло-бежевый */
+    --foreground: 0 0% 17%; /* #2B2B2B основной текст */
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 0 0% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 0 0% 17%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Основной зелёный цвет гармонии */
+    --primary: 157 23% 39%; /* #4E7D6A */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Нейтральный фон для второстепенных элементов */
+    --secondary: 150 13% 91%; /* #E8F0ED */
+    --secondary-foreground: 157 23% 39%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 200 8% 84%; /* #CFCFCF */
+    --muted-foreground: 200 8% 43%; /* #5C6B73 */
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Кораллово-персиковый акцент для CTA */
+    --accent: 7 100% 69%; /* #FF6F61 */
+    --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive: 0 65% 51%; /* #D32F2F */
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    /* Успех/позитив */
+    --success: 122 39% 49%; /* #2E7D32 */
+    --success-foreground: 0 0% 100%;
+
+    --border: 200 8% 84%;
+    --input: 200 8% 84%;
+    --ring: 157 23% 39%;
 
     --radius: 0.5rem;
 
+    /* Градиенты для hero секций */
+    --gradient-hero: linear-gradient(135deg, hsl(157 23% 39%) 0%, hsl(157 15% 45%) 100%);
+    --gradient-accent: linear-gradient(135deg, hsl(7 100% 69%) 0%, hsl(7 85% 63%) 100%);
+    
+    /* Тени */
+    --shadow-card: 0 4px 12px rgba(0, 0, 0, 0.08);
+    --shadow-hero: 0 8px 32px rgba(78, 125, 106, 0.15);
+
+    /* Анимации */
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
