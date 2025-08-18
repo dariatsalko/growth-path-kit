@@ -4,34 +4,27 @@ import { Badge } from "@/components/ui/badge";
 import Header from "@/components/ui/header";
 import Footer from "@/components/Footer";
 import { Play, Download, Clock, Brain, Leaf, Shield } from "lucide-react";
-
 const Mindfulness = () => {
-  const practices = [
-    {
-      title: "Дыхание 4-7-8",
-      duration: "5 минут",
-      description: "Техника для быстрого расслабления и снижения тревожности",
-      audioUrl: "#",
-      icon: <Leaf className="w-6 h-6" />
-    },
-    {
-      title: "Сканирование тела",
-      duration: "10 минут",
-      description: "Постепенное расслабление всех частей тела",
-      audioUrl: "#",
-      icon: <Brain className="w-6 h-6" />
-    },
-    {
-      title: "Наблюдение за мыслями",
-      duration: "8 минут",
-      description: "Практика осознанного наблюдения без оценки",
-      audioUrl: "#",
-      icon: <Clock className="w-6 h-6" />
-    }
-  ];
-
-  return (
-    <div className="min-h-screen bg-background">
+  const practices = [{
+    title: "Дыхание 4-7-8",
+    duration: "5 минут",
+    description: "Техника для быстрого расслабления и снижения тревожности",
+    audioUrl: "#",
+    icon: <Leaf className="w-6 h-6" />
+  }, {
+    title: "Сканирование тела",
+    duration: "10 минут",
+    description: "Постепенное расслабление всех частей тела",
+    audioUrl: "#",
+    icon: <Brain className="w-6 h-6" />
+  }, {
+    title: "Наблюдение за мыслями",
+    duration: "8 минут",
+    description: "Практика осознанного наблюдения без оценки",
+    audioUrl: "#",
+    icon: <Clock className="w-6 h-6" />
+  }];
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -48,13 +41,8 @@ const Mindfulness = () => {
               Изучайте техники майндфулнесс и медитации для снижения стресса, улучшения концентрации и эмоционального благополучия
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
-                <Play className="w-5 h-5 mr-2" />
-                Начать практику
-              </Button>
-              <Button size="lg" variant="outline">
-                Скачать гайды
-              </Button>
+              
+              
             </div>
           </div>
         </div>
@@ -126,8 +114,7 @@ const Mindfulness = () => {
           </div>
 
           <div className="grid md:grid-cols-3 gap-6">
-            {practices.map((practice, index) => (
-              <Card key={index} className="group hover:shadow-lg transition-shadow">
+            {practices.map((practice, index) => <Card key={index} className="group hover:shadow-lg transition-shadow">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
                     <div className="p-3 bg-primary/10 rounded-lg text-primary">
@@ -149,8 +136,7 @@ const Mindfulness = () => {
                     </Button>
                   </div>
                 </CardContent>
-              </Card>
-            ))}
+              </Card>)}
           </div>
         </div>
       </section>
@@ -296,8 +282,6 @@ const Mindfulness = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Mindfulness;
