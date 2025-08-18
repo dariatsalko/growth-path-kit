@@ -13,6 +13,7 @@ import Consent from "./pages/Consent";
 import Cancellation from "./pages/Cancellation";
 import NotFound from "./pages/NotFound";
 import GlobalBookingModal from "@/components/GlobalBookingModal";
+import GlobalSchoolBookingModal from "@/components/GlobalSchoolBookingModal";
 
 const queryClient = new QueryClient();
 
@@ -36,6 +37,7 @@ const App = () => (
         </Routes>
       </BrowserRouter>
       <GlobalBookingModal />
+      <GlobalSchoolBookingModal />
     </TooltipProvider>
   </QueryClientProvider>
 );

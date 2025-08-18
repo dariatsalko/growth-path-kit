@@ -25,7 +25,7 @@ const School = () => {
               <Button 
                 size="lg" 
                 className="bg-accent hover:bg-accent/90 text-accent-foreground"
-                onClick={() => window.dispatchEvent(new CustomEvent("openBookingModal"))}
+                onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}
               >
                 <Calendar className="w-5 h-5 mr-2" />
                 Записать ребёнка
@@ -116,7 +116,7 @@ const School = () => {
                 </div>
                 <Button 
                   className="w-full"
-                  onClick={() => window.dispatchEvent(new CustomEvent("openBookingModal"))}
+                  onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}
                 >
                   Записаться
                 </Button>
@@ -141,7 +141,7 @@ const School = () => {
                 </div>
                 <Button 
                   className="w-full"
-                  onClick={() => window.dispatchEvent(new CustomEvent("openBookingModal"))}
+                  onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}
                 >
                   Записаться
                 </Button>
@@ -166,7 +166,7 @@ const School = () => {
                 </div>
                 <Button 
                   className="w-full"
-                  onClick={() => window.dispatchEvent(new CustomEvent("openBookingModal"))}
+                  onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}
                 >
                   Записаться
                 </Button>
