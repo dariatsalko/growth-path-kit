@@ -4,10 +4,8 @@ import { Badge } from "@/components/ui/badge";
 import Header from "@/components/ui/header";
 import Footer from "@/components/Footer";
 import { Brain, Users, Calendar, Star, BookOpen, Heart } from "lucide-react";
-
 const School = () => {
-  return (
-    <div className="min-h-screen bg-background">
+  return <div className="min-h-screen bg-background">
       <Header />
       
       {/* Hero Section */}
@@ -28,9 +26,7 @@ const School = () => {
                 <Calendar className="w-5 h-5 mr-2" />
                 Записать ребёнка
               </Button>
-              <Button size="lg" variant="outline">
-                Пробное занятие
-              </Button>
+              
             </div>
           </div>
         </div>
@@ -230,9 +226,7 @@ const School = () => {
             <Card>
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">
                   "После занятий дочь стала лучше понимать свои эмоции и говорить о них. Истерики почти прекратились."
@@ -244,9 +238,7 @@ const School = () => {
             <Card>
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">
                   "Сын-подросток научился управлять гневом. В школе конфликтов стало меньше, оценки улучшились."
@@ -258,9 +250,7 @@ const School = () => {
             <Card>
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => (
-                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
-                  ))}
+                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">
                   "Замечательная программа! Ребёнок стал более уверенным в себе и открытым к общению."
@@ -273,8 +263,6 @@ const School = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default School;
