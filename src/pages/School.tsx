@@ -22,7 +22,11 @@ const School = () => {
               Помогаем детям понимать эмоции, развивать эмпатию и строить здоровые отношения через игровые практики и научно обоснованные методики
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button 
+                size="lg" 
+                className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                onClick={() => window.dispatchEvent(new CustomEvent("openBookingModal"))}
+              >
                 <Calendar className="w-5 h-5 mr-2" />
                 Записать ребёнка
               </Button>
@@ -110,7 +114,12 @@ const School = () => {
                   <p className="text-sm text-muted-foreground mb-2">8 занятий по 45 минут</p>
                   <p className="font-semibold">От 6 000 ₽/занятие</p>
                 </div>
-                <Button className="w-full">Записаться</Button>
+                <Button 
+                  className="w-full"
+                  onClick={() => window.dispatchEvent(new CustomEvent("openBookingModal"))}
+                >
+                  Записаться
+                </Button>
               </CardContent>
             </Card>
 
@@ -130,7 +139,12 @@ const School = () => {
                   <p className="text-sm text-muted-foreground mb-2">10 занятий по 60 минут</p>
                   <p className="font-semibold">От 7 000 ₽/занятие</p>
                 </div>
-                <Button className="w-full">Записаться</Button>
+                <Button 
+                  className="w-full"
+                  onClick={() => window.dispatchEvent(new CustomEvent("openBookingModal"))}
+                >
+                  Записаться
+                </Button>
               </CardContent>
             </Card>
 
@@ -150,7 +164,12 @@ const School = () => {
                   <p className="text-sm text-muted-foreground mb-2">12 занятий по 75 минут</p>
                   <p className="font-semibold">От 8 000 ₽/занятие</p>
                 </div>
-                <Button className="w-full">Записаться</Button>
+                <Button 
+                  className="w-full"
+                  onClick={() => window.dispatchEvent(new CustomEvent("openBookingModal"))}
+                >
+                  Записаться
+                </Button>
               </CardContent>
             </Card>
           </div>
