@@ -3,6 +3,19 @@ import { Shield, Heart, Clock } from "lucide-react";
 import heroImage from "@/assets/hero-image.jpg";
 
 const HeroSection = () => {
+  const scrollToBooking = () => {
+    const bookingForm = document.getElementById('booking-form');
+    if (bookingForm) {
+      bookingForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const scrollToServices = () => {
+    const servicesSection = document.querySelector('#services');
+    if (servicesSection) {
+      servicesSection.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
   return (
     <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/20">
       <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent z-10"></div>
@@ -44,6 +57,7 @@ const HeroSection = () => {
             <Button 
               size="lg"
               className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
+              onClick={scrollToBooking}
             >
               Записаться на консультацию
             </Button>
@@ -51,6 +65,7 @@ const HeroSection = () => {
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg rounded-lg transition-all"
+              onClick={scrollToServices}
             >
               Узнать больше
             </Button>

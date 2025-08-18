@@ -8,8 +8,10 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Calendar, Clock, MessageSquare, CreditCard } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 
 const BookingForm = () => {
+  const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",
     phone: "",
@@ -27,8 +29,34 @@ const BookingForm = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
+    
+    // Проверяем заполнение обязательных полей
+    if (!formData.name || !formData.phone || !formData.format) {
+      toast({
+        title: "Ошибка",
+        description: "Пожалуйста, заполните все обязательные поля",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    // Проверяем согласия
+    if (!formData.agreements.privacy || !formData.agreements.terms) {
+      toast({
+        title: "Ошибка", 
+        description: "Необходимо согласие с политикой конфиденциальности и офертой",
+        variant: "destructive"
+      });
+      return;
+    }
+
+    toast({
+      title: "Заявка отправлена!",
+      description: "Мы свяжемся с вами в течение 2 часов для подтверждения записи",
+    });
+
     // Здесь будет логика отправки формы и перехода к оплате
+    console.log("Form submitted:", formData);
   };
 
   const timeSlots = [

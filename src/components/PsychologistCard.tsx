@@ -12,6 +12,8 @@ interface PsychologistCardProps {
   price: string;
   available: boolean;
   description: string;
+  onSelect: () => void;
+  onViewDetails: () => void;
 }
 
 const PsychologistCard: React.FC<PsychologistCardProps> = ({
@@ -22,7 +24,9 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
   experience,
   price,
   available,
-  description
+  description,
+  onSelect,
+  onViewDetails
 }) => {
   return (
     <Card className="border-border hover:shadow-card transition-all duration-300 group">
@@ -81,13 +85,16 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
           <Button 
             className="flex-1 bg-accent hover:bg-accent/90 text-accent-foreground font-medium"
             size="sm"
+            onClick={onSelect}
+            disabled={!available}
           >
-            Выбрать специалиста
+            {available ? 'Выбрать специалиста' : 'Нет свободных слотов'}
           </Button>
           <Button 
             variant="outline" 
             size="sm"
             className="border-primary text-primary hover:bg-primary hover:text-primary-foreground"
+            onClick={onViewDetails}
           >
             Подробнее
           </Button>

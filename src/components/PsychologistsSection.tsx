@@ -1,12 +1,38 @@
+import { useState } from "react";
 import PsychologistCard from "@/components/PsychologistCard";
+import PsychologistDetailsModal from "@/components/PsychologistDetailsModal";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Filter } from "lucide-react";
+import { useToast } from "@/hooks/use-toast";
 import psychologist1 from "@/assets/psychologist-1.jpg";
 import psychologist2 from "@/assets/psychologist-2.jpg";
 import psychologist3 from "@/assets/psychologist-3.jpg";
 
 const PsychologistsSection = () => {
+  const { toast } = useToast();
+  const [selectedPsychologist, setSelectedPsychologist] = useState<any>(null);
+  const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
+  
+  const scrollToBooking = () => {
+    const bookingForm = document.getElementById('booking-form');
+    if (bookingForm) {
+      bookingForm.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
+
+  const handleSelectPsychologist = (psychologist: any) => {
+    toast({
+      title: "Психолог выбран!",
+      description: `Вы выбрали ${psychologist.name}. Заполните форму записи ниже.`,
+    });
+    scrollToBooking();
+  };
+
+  const handleViewDetails = (psychologist: any) => {
+    setSelectedPsychologist(psychologist);
+    setIsDetailsModalOpen(true);
+  };
   const psychologists = [
     {
       name: "Елена Михайловна",
@@ -91,6 +117,8 @@ const PsychologistsSection = () => {
             <PsychologistCard
               key={index}
               {...psychologist}
+              onSelect={() => handleSelectPsychologist(psychologist)}
+              onViewDetails={() => handleViewDetails(psychologist)}
             />
           ))}
         </div>
@@ -103,10 +131,18 @@ const PsychologistsSection = () => {
           <Button 
             size="lg"
             className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8"
+            onClick={scrollToBooking}
           >
             Подобрать психолога автоматически
           </Button>
         </div>
+
+        {/* Details Modal */}
+        <PsychologistDetailsModal
+          isOpen={isDetailsModalOpen}
+          onClose={() => setIsDetailsModalOpen(false)}
+          psychologist={selectedPsychologist}
+        />
       </div>
     </section>
   );
