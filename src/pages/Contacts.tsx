@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
@@ -68,6 +69,13 @@ const Contacts = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Контакты и запись на прием | Центр ИНТЕНЦИЯ в Минске</title>
+        <meta name="description" content="Контакты центра психологии ИНТЕНЦИЯ в Минске. Телефон +375 29 123-45-67, email info@intention.by. Онлайн запись и оплата услуг." />
+        <meta property="og:title" content="Контакты центра психологии ИНТЕНЦИЯ" />
+        <meta property="og:description" content="Свяжитесь с нами для записи на консультацию. Работаем онлайн и очно в Минске." />
+        <meta property="og:url" content="https://intention.by/contacts" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}
@@ -94,7 +102,7 @@ const Contacts = () => {
                 <CardTitle>Телефон</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg font-medium mb-2">+7 (999) 123-45-67</p>
+                <p className="text-lg font-medium mb-2">+375 (29) 123-45-67</p>
                 <p className="text-sm text-muted-foreground">Ежедневно с 9:00 до 21:00</p>
               </CardContent>
             </Card>
@@ -105,7 +113,7 @@ const Contacts = () => {
                 <CardTitle>Email</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg font-medium mb-2">hello@tochkarosta.ru</p>
+                <p className="text-lg font-medium mb-2">info@intention.by</p>
                 <p className="text-sm text-muted-foreground">Ответим в течение 24 часов</p>
               </CardContent>
             </Card>
@@ -118,7 +126,7 @@ const Contacts = () => {
               <CardContent>
                 <div className="space-y-2">
                   <p className="text-lg font-medium">WhatsApp / Telegram</p>
-                  <p className="text-sm text-muted-foreground">+7 (999) 123-45-67</p>
+                  <p className="text-sm text-muted-foreground">+375 (29) 123-45-67</p>
                 </div>
               </CardContent>
             </Card>
@@ -134,9 +142,9 @@ const Contacts = () => {
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-lg">г. Москва, ул. Примерная, д. 123, офис 456</p>
+                <p className="text-lg">г. Минск, пр. Независимости, 125, офис 305</p>
                 <p className="text-muted-foreground">
-                  Метро "Примерная" (красная ветка), выход №2, 5 минут пешком
+                  Станция метро "Площадь Победы", 3 минуты пешком
                 </p>
                 <div className="bg-secondary/30 rounded-lg h-48 flex items-center justify-center">
                   <p className="text-muted-foreground">Здесь будет карта</p>
@@ -168,7 +176,7 @@ const Contacts = () => {
                 </div>
                 <div className="pt-4 border-t">
                   <p className="text-sm text-muted-foreground">
-                    Онлайн-консультации доступны в любое время по предварительной записи
+                    Онлайн-консультации доступны в любое время по предварительной записи. Работаем с клиентами по всей Беларуси.
                   </p>
                 </div>
               </CardContent>
@@ -329,7 +337,7 @@ const Contacts = () => {
                   <div className="flex justify-between items-center">
                     <span className="font-medium">К оплате:</span>
                     <span className="text-2xl font-bold text-primary">
-                      {paymentData.service && paymentData.package ? "5 000 ₽" : "— ₽"}
+                      {paymentData.service && paymentData.package ? "150 BYN" : "— BYN"}
                     </span>
                   </div>
                 </div>
@@ -345,7 +353,7 @@ const Contacts = () => {
 
                 <div className="text-center space-y-2">
                   <p className="text-sm text-muted-foreground">
-                    Принимаем карты Visa, Mastercard, МИР, СБП
+                    Принимаем карты Visa, Mastercard, Белкарт, Интернет-банкинг
                   </p>
                   <p className="text-xs text-muted-foreground">
                     Безопасная оплата через защищённое соединение

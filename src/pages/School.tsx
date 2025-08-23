@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
@@ -6,6 +7,13 @@ import Footer from "@/components/Footer";
 import { Brain, Users, Calendar, Star, BookOpen, Heart } from "lucide-react";
 const School = () => {
   return <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Школа эмоционального интеллекта для детей | Центр ИНТЕНЦИЯ</title>
+        <meta name="description" content="Развитие эмоционального интеллекта у детей 6-17 лет в Минске. Научно обоснованные методики, игровая терапия, групповые и индивидуальные занятия." />
+        <meta property="og:title" content="Школа эмоционального интеллекта для детей | ИНТЕНЦИЯ" />
+        <meta property="og:description" content="Помогаем детям понимать эмоции, развивать эмпатию и строить здоровые отношения через игровые практики." />
+        <meta property="og:url" content="https://intention.by/school" />
+      </Helmet>
       <Header />
       
       {/* Hero Section */}
@@ -112,7 +120,7 @@ const School = () => {
                 </ul>
                 <div className="pt-4">
                   <p className="text-sm text-muted-foreground mb-2">8 занятий по 45 минут</p>
-                  <p className="font-semibold">От 6 000 ₽/занятие</p>
+                  <p className="font-semibold">От 80 BYN/занятие</p>
                 </div>
                 <Button 
                   className="w-full"
@@ -137,7 +145,7 @@ const School = () => {
                 </ul>
                 <div className="pt-4">
                   <p className="text-sm text-muted-foreground mb-2">10 занятий по 60 минут</p>
-                  <p className="font-semibold">От 7 000 ₽/занятие</p>
+                  <p className="font-semibold">От 90 BYN/занятие</p>
                 </div>
                 <Button 
                   className="w-full"
@@ -162,7 +170,7 @@ const School = () => {
                 </ul>
                 <div className="pt-4">
                   <p className="text-sm text-muted-foreground mb-2">12 занятий по 75 минут</p>
-                  <p className="font-semibold">От 8 000 ₽/занятие</p>
+                  <p className="font-semibold">От 100 BYN/занятие</p>
                 </div>
                 <Button 
                   className="w-full"
