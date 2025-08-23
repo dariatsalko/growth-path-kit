@@ -28,7 +28,7 @@ const Header = () => {
           <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary">
             <div className="h-4 w-4 rounded-full bg-accent"></div>
           </div>
-          <span className="text-lg font-semibold text-foreground">Точка роста</span>
+          <span className="text-lg font-semibold text-foreground">ИНТЕНЦИЯ</span>
         </div>
 
         {/* Desktop Navigation */}

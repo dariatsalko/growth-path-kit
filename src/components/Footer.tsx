@@ -11,7 +11,7 @@ const Footer = () => {
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent">
                 <div className="h-4 w-4 rounded-full bg-primary"></div>
               </div>
-              <span className="text-lg font-semibold">Точка роста</span>
+              <span className="text-lg font-semibold">ИНТЕНЦИЯ</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4">
               Центр консультативной психологии. Помогаем найти баланс и двигаться вперёд
@@ -73,13 +73,13 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-primary-foreground/80">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href="mailto:hello@tochkarosta-psy.ru" className="hover:text-primary-foreground transition-colors">
-                  hello@tochkarosta-psy.ru
+                <a href="mailto:info@intention.by" className="hover:text-primary-foreground transition-colors">
+                  info@intention.by
                 </a>
               </div>
               <div className="flex items-start gap-3 text-primary-foreground/80">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>г. Москва, ул. Примерная, д. 123</span>
+                <span>г. Минск, Беларусь</span>
               </div>
               <div className="text-primary-foreground/60 text-xs mt-2">
                 Пн-Пт: 9:00-21:00<br />
@@ -120,7 +120,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
             <div>
-              © 2024 Центр «Точка роста». Все права защищены.
+              © 2024 Центр «ИНТЕНЦИЯ». Все права защищены.
             </div>
             <div className="flex items-center gap-4">
               <span>ИП Иванова А.С.</span>
