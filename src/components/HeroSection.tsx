@@ -7,10 +7,10 @@ const HeroSection = () => {
     window.dispatchEvent(new CustomEvent('openBookingModal'));
   };
 
-  const scrollToServices = () => {
-    const servicesSection = document.querySelector('#services');
-    if (servicesSection) {
-      servicesSection.scrollIntoView({ behavior: 'smooth' });
+  const scrollToApproach = () => {
+    const approachSection = document.querySelector('#approach');
+    if (approachSection) {
+      approachSection.scrollIntoView({ behavior: 'smooth' });
     }
   };
   return (
@@ -23,14 +23,12 @@ const HeroSection = () => {
       
       <div className="relative z-20 container px-4 py-16 lg:py-24">
         <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-foreground mb-6">
-            Психологическая поддержка, которая помогает 
-            <span className="text-primary"> двигаться вперёд</span>
+          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold tracking-tight text-foreground mb-6">
+            Добро пожаловать в <span className="text-primary">«Интенцию»</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">
-            Индивидуальные и семейные консультации. Онлайн и очно. 
-            Бережно, конфиденциально, научно обоснованно.
+            Мы создаём пространство, где можно говорить откровенно, понимать себя и находить опору для перемен.
           </p>
 
           {/* Trust Indicators */}
@@ -62,9 +60,9 @@ const HeroSection = () => {
               size="lg"
               variant="outline"
               className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg rounded-lg transition-all"
-              onClick={scrollToServices}
+              onClick={scrollToApproach}
             >
-              Узнать больше
+              Узнать о подходе
             </Button>
           </div>
         </div>

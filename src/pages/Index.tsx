@@ -1,12 +1,12 @@
 import { Helmet } from "react-helmet-async";
 import Header from "@/components/ui/header";
 import HeroSection from "@/components/HeroSection";
-import ServicesSection from "@/components/ServicesSection";
+import AboutSection from "@/components/AboutSection";
 import HowItWorksSection from "@/components/HowItWorksSection";
+import ServicesSection from "@/components/ServicesSection";
 import PsychologistsSection from "@/components/PsychologistsSection";
-import TestimonialsSection from "@/components/TestimonialsSection";
-
-
+import MessageSection from "@/components/MessageSection";
+import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -43,12 +43,14 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <ServicesSection />
+        <AboutSection />
         <HowItWorksSection />
+        <ServicesSection />
         <PsychologistsSection onSelectPsychologist={(psychologist) => {
           window.dispatchEvent(new CustomEvent('openBookingWithPsychologist', { detail: { name: psychologist } }));
         }} />
-        <TestimonialsSection />
+        <MessageSection />
+        <CtaSection />
       </main>
       <Footer />
     </div>

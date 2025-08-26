@@ -9,35 +9,35 @@ const ServicesSection = () => {
   const services = [
     {
       icon: User,
-      title: "Индивидуальная терапия",
-      description: "Работа с тревогой, депрессией, травмой, кризисными состояниями",
-      price: "от 4 000 ₽",
+      title: "Работа с тревожностью и стрессом",
+      description: "Помощь в управлении сложными эмоциями и стрессовыми состояниями",
+      price: "от 120 BYN",
       duration: "50-60 мин",
       features: ["Онлайн и очно", "Научно обоснованные методы", "Конфиденциальность"]
     },
     {
       icon: Users,
-      title: "Семейная терапия",
-      description: "Работа с парами и семьями, детско-родительские отношения",
-      price: "от 5 000 ₽",
-      duration: "60-80 мин",
-      features: ["Системный подход", "Работа с конфликтами", "Улучшение коммуникации"]
+      title: "Поддержка в кризисах и переменах",
+      description: "Сопровождение в сложных жизненных ситуациях и периодах изменений",
+      price: "от 120 BYN",
+      duration: "50-60 мин",
+      features: ["Кризисная терапия", "Адаптационная поддержка", "Быстрая помощь"]
     },
     {
       icon: Heart,
-      title: "Подростковая психология",
-      description: "Поддержка подростков в период взросления и адаптации",
-      price: "от 3 500 ₽",
-      duration: "45-50 мин",
-      features: ["Возраст 12-18 лет", "Работа с самооценкой", "Поддержка родителей"]
+      title: "Помощь в улучшении отношений",
+      description: "Работа с парами, семьями и детско-родительскими отношениями",
+      price: "от 150 BYN",
+      duration: "60-80 мин",
+      features: ["Семейная терапия", "Работа с конфликтами", "Улучшение коммуникации"]
     },
     {
       icon: Brain,
-      title: "Разовая консультация",
-      description: "Получите поддержку и рекомендации по конкретному вопросу",
-      price: "от 3 000 ₽",
+      title: "Развитие психологической устойчивости",
+      description: "Укрепление внутренних ресурсов и развитие эмоционального интеллекта",
+      price: "от 120 BYN",
       duration: "50 мин",
-      features: ["Без обязательств", "Быстрая запись", "Четкие рекомендации"]
+      features: ["Личностный рост", "Навыки саморегуляции", "Повышение стрессоустойчивости"]
     }
   ];
 
@@ -58,8 +58,8 @@ const ServicesSection = () => {
     <section className="py-16 lg:py-24 bg-background" id="services">
       <div className="container px-4">
         <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-            Услуги и форматы
+          <h2 className="text-3xl md:text-4xl font-playfair font-bold text-foreground mb-4">
+            С чем приходят к нам клиенты
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
             Подберем подходящий формат работы под ваши потребности и возможности
@@ -96,13 +96,13 @@ const ServicesSection = () => {
                       </li>
                     ))}
                   </ul>
-                  <Button 
-                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-medium"
-                    size="sm"
-                    onClick={openBooking}
-                  >
-                    Записаться
-                  </Button>
+                   <Button 
+                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-medium"
+                     size="sm"
+                     onClick={openBooking}
+                   >
+                     Хочу обсудить свой запрос
+                   </Button>
                 </CardContent>
               </Card>
             );

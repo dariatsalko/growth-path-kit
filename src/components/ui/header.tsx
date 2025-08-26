@@ -24,11 +24,14 @@ const Header = () => {
     <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b border-border">
       <div className="container flex h-16 items-center justify-between px-4">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
-          <div className="flex h-8 w-8 items-center justify-center rounded-full bg-primary">
-            <div className="h-4 w-4 rounded-full bg-accent"></div>
+        <div className="flex items-center space-x-3">
+          <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
+            <div className="h-5 w-5 rounded-full bg-accent transform rotate-45"></div>
           </div>
-          <span className="text-lg font-semibold text-foreground">ИНТЕНЦИЯ</span>
+          <div className="flex flex-col">
+            <span className="text-lg font-bold text-foreground">ИНТЕНЦИЯ</span>
+            <span className="text-xs text-muted-foreground hidden lg:block">Безопасное пространство для понимания себя</span>
+          </div>
         </div>
 
         {/* Desktop Navigation */}
