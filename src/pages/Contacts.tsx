@@ -388,30 +388,36 @@ const Contacts = () => {
               </h2>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
-              <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer">
-                <CardContent className="pt-6">
-                  <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-medium mb-2">Договор оферты</h3>
-                  <p className="text-sm text-muted-foreground">Условия оказания услуг</p>
-                </CardContent>
-              </Card>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
+              <a href="/terms" className="block w-full max-w-xs">
+                <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer h-full">
+                  <CardContent className="pt-6">
+                    <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
+                    <h3 className="font-medium mb-2">Договор оферты</h3>
+                    <p className="text-sm text-muted-foreground">Условия оказания услуг</p>
+                  </CardContent>
+                </Card>
+              </a>
 
-              <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer">
-                <CardContent className="pt-6">
-                  <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-medium mb-2">Политика конфиденциальности</h3>
-                  <p className="text-sm text-muted-foreground">Обработка персональных данных</p>
-                </CardContent>
-              </Card>
+              <a href="/privacy" className="block w-full max-w-xs">
+                <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer h-full">
+                  <CardContent className="pt-6">
+                    <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
+                    <h3 className="font-medium mb-2">Политика конфиденциальности</h3>
+                    <p className="text-sm text-muted-foreground">Обработка персональных данных</p>
+                  </CardContent>
+                </Card>
+              </a>
 
-              <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer">
-                <CardContent className="pt-6">
-                  <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-medium mb-2">Правила отмены</h3>
-                  <p className="text-sm text-muted-foreground">Условия переноса и возврата</p>
-                </CardContent>
-              </Card>
+              <a href="/consent" className="block w-full max-w-xs">
+                <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer h-full">
+                  <CardContent className="pt-6">
+                    <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
+                    <h3 className="font-medium mb-2">Согласие на обработку данных</h3>
+                    <p className="text-sm text-muted-foreground">Обработка персональных данных</p>
+                  </CardContent>
+                </Card>
+              </a>
 
             </div>
           </div>
