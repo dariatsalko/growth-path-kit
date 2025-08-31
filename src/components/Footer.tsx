@@ -11,10 +11,10 @@ const Footer = () => {
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent">
                 <div className="h-4 w-4 rounded-full bg-primary"></div>
               </div>
-              <span className="text-lg font-semibold">ИНТЕНЦИЯ</span>
+              <span className="text-lg font-bold text-foreground">Точка роста</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4">
-              Центр консультативной психологии. Помогаем найти баланс и двигаться вперёд
+              Центр консультативной психологии «Точка роста». Помогаем найти баланс и двигаться вперёд
             </p>
             <div className="flex space-x-3">
               <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
@@ -67,8 +67,8 @@ const Footer = () => {
             <div className="space-y-3 text-sm">
               <div className="flex items-center gap-3 text-primary-foreground/80">
                 <Phone className="w-4 h-4 flex-shrink-0" />
-                <a href="tel:+7999123456789" className="hover:text-primary-foreground transition-colors">
-                  +7 (999) 123-45-67
+                <a href="tel:+375292375730" className="hover:text-primary-foreground transition-colors">
+                  +375 (29) 237-57-30
                 </a>
               </div>
               <div className="flex items-center gap-3 text-primary-foreground/80">
@@ -79,7 +79,10 @@ const Footer = () => {
               </div>
               <div className="flex items-start gap-3 text-primary-foreground/80">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
-                <span>г. Минск, Беларусь</span>
+                <div>
+                  <div>г. Минск, пр-т Дзержинского 11-843-3</div>
+                  <div className="text-xs text-primary-foreground/60">ЧП «ЭЛЬМОТО», УНП: 193334920</div>
+                </div>
               </div>
               <div className="text-primary-foreground/60 text-xs mt-2">
                 Пн-Пт: 9:00-21:00<br />
@@ -120,11 +123,11 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
             <div>
-              © 2024 Центр «ИНТЕНЦИЯ». Все права защищены.
+              © 2025 Центр консультативной психологии «Точка роста». Все права защищены.
             </div>
             <div className="flex items-center gap-4">
-              <span>ИП Иванова А.С.</span>
-              <span>ИНН: 123456789012</span>
+              <span>ЧП «ЭЛЬМОТО»</span>
+              <span>УНП: 193334920</span>
             </div>
           </div>
         </div>

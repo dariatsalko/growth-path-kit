@@ -15,28 +15,34 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Центр консультативной психологии «ИНТЕНЦИЯ» - Профессиональная помощь в Беларуси</title>
-        <meta name="description" content="Индивидуальная, семейная и подростковая психотерапия в Минске. Онлайн и очно. Школа эмоционального интеллекта для детей. Лицензированные специалисты." />
-        <meta property="og:title" content="Центр «ИНТЕНЦИЯ» - Психологическая поддержка в Беларуси" />
+        <title>Центр консультативной психологии «Точка роста» - Профессиональная помощь в Беларуси</title>
+        <meta name="description" content="Центр консультативной психологии «Точка роста» в Минске. Индивидуальная, семейная и подростковая психотерапия. Онлайн и очно. Школа эмоционального интеллекта для детей. Лицензированные специалисты." />
+        <meta property="og:title" content="Центр «Точка роста» - Психологическая поддержка в Беларуси" />
         <meta property="og:description" content="Профессиональная психологическая помощь для взрослых, семей и подростков. Запишитесь на консультацию онлайн или очно." />
         <meta property="og:url" content="https://intention.by/" />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
             "@type": "LocalBusiness",
-            "name": "Центр консультативной психологии ИНТЕНЦИЯ",
+            "name": "Центр консультативной психологии «Точка роста»",
             "description": "Профессиональная психологическая помощь в Минске",
             "url": "https://intention.by",
-            "telephone": "+375291234567",
+            "telephone": "+375292375730",
             "email": "info@intention.by",
             "address": {
               "@type": "PostalAddress",
-              "streetAddress": "пр. Независимости, 125, офис 305",
+              "streetAddress": "пр-т Дзержинского 11-843-3",
               "addressLocality": "Минск",
+              "postalCode": "220069",
               "addressCountry": "BY"
             },
             "openingHours": "Mo-Fr 09:00-21:00, Sa 10:00-18:00, Su 10:00-16:00",
-            "priceRange": "80-150 BYN"
+            "priceRange": "80-150 BYN",
+            "founder": {
+              "@type": "Organization",
+              "name": "частное предприятие «ЭЛЬМОТО»",
+              "taxID": "193334920"
+            }
           }`}
         </script>
       </Helmet>

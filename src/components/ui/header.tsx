@@ -29,7 +29,7 @@ const Header = () => {
             <div className="h-5 w-5 rounded-full bg-accent transform rotate-45"></div>
           </div>
           <div className="flex flex-col">
-            <span className="text-lg font-bold text-foreground">ИНТЕНЦИЯ</span>
+            <span className="text-lg font-bold text-foreground">Точка роста</span>
             <span className="text-xs text-muted-foreground hidden lg:block">Безопасное пространство для понимания себя</span>
           </div>
         </div>

@@ -70,9 +70,9 @@ const Contacts = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Контакты и запись на прием | Центр ИНТЕНЦИЯ в Минске</title>
-        <meta name="description" content="Контакты центра психологии ИНТЕНЦИЯ в Минске. Телефон +375 29 123-45-67, email info@intention.by. Онлайн запись и оплата услуг." />
-        <meta property="og:title" content="Контакты центра психологии ИНТЕНЦИЯ" />
+        <title>Контакты и запись на прием | Центр консультативной психологии «Точка роста»</title>
+        <meta name="description" content="Контакты центра психологии «Точка роста» в Минске. Телефон +375 29 237-57-30, email info@intention.by. Онлайн запись и оплата услуг." />
+        <meta property="og:title" content="Контакты центра психологии «Точка роста»" />
         <meta property="og:description" content="Свяжитесь с нами для записи на консультацию. Работаем онлайн и очно в Минске." />
         <meta property="og:url" content="https://intention.by/contacts" />
       </Helmet>
@@ -102,7 +102,7 @@ const Contacts = () => {
                 <CardTitle>Телефон</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg font-medium mb-2">+375 (29) 123-45-67</p>
+                <p className="text-lg font-medium mb-2">+375 (29) 237-57-30</p>
                 <p className="text-sm text-muted-foreground">Ежедневно с 9:00 до 21:00</p>
               </CardContent>
             </Card>
@@ -125,8 +125,8 @@ const Contacts = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  <p className="text-lg font-medium">WhatsApp / Telegram</p>
-                  <p className="text-sm text-muted-foreground">+375 (29) 123-45-67</p>
+                  <p className="text-lg font-medium">Telegram / Instagram / Viber / VK</p>
+                  <p className="text-sm text-muted-foreground">+375 (29) 237-57-30</p>
                 </div>
               </CardContent>
             </Card>
@@ -142,11 +142,19 @@ const Contacts = () => {
                 </div>
               </CardHeader>
               <CardContent className="space-y-4">
-                <p className="text-lg">г. Минск, пр. Независимости, 125, офис 305</p>
-                <p className="text-muted-foreground">
-                  Станция метро "Площадь Победы", 3 минуты пешком
-                </p>
-                <div className="bg-secondary/30 rounded-lg h-48 flex items-center justify-center">
+                <div className="space-y-2">
+                  <p className="text-lg font-semibold">Юридический адрес:</p>
+                  <p>220069, г. Минск, пр-т Дзержинского 11-843-3</p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-lg font-semibold">Почтовый адрес:</p>
+                  <p>220117, г. Минск, ул. Рафиева, д. 54, кв. 4</p>
+                </div>
+                <div className="space-y-2">
+                  <p className="text-sm text-muted-foreground">Учредитель: частное предприятие «ЭЛЬМОТО»</p>
+                  <p className="text-sm text-muted-foreground">УНП: 193334920</p>
+                </div>
+                <div className="bg-secondary/30 rounded-lg h-32 flex items-center justify-center">
                   <p className="text-muted-foreground">Здесь будет карта</p>
                 </div>
               </CardContent>
@@ -178,6 +186,11 @@ const Contacts = () => {
                   <p className="text-sm text-muted-foreground">
                     Онлайн-консультации доступны в любое время по предварительной записи. Работаем с клиентами по всей Беларуси.
                   </p>
+                  <div className="mt-4 space-y-2">
+                    <p className="text-sm font-medium">Банковские реквизиты:</p>
+                    <p className="text-xs text-muted-foreground">BY03ALFA30122559870010270000</p>
+                    <p className="text-xs text-muted-foreground">БИК: ALFABY2X</p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
