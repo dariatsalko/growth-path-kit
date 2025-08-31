@@ -110,11 +110,6 @@ const Footer = () => {
                   Согласие на обработку ПД
                 </a>
               </li>
-              <li>
-                <a href="/cancellation" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Правила отмены
-                </a>
-              </li>
             </ul>
           </div>
         </div>
