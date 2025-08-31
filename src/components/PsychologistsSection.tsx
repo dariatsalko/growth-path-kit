@@ -9,6 +9,7 @@ import psychologist1 from "@/assets/psychologist-1.jpg";
 import psychologist2 from "@/assets/psychologist-2.jpg";
 import psychologist3 from "@/assets/psychologist-3.jpg";
 import artemPhoto from "@/assets/Artem.jpg";
+import dariaPhoto from "@/assets/Daria.jpeg";
 interface PsychologistsSectionProps {
   onSelectPsychologist?: (psychologist: string) => void;
 }
@@ -40,7 +41,7 @@ const PsychologistsSection = ({ onSelectPsychologist }: PsychologistsSectionProp
   };
   const psychologists = [{
     name: "Дарья Цалко",
-    photo: psychologist1,
+    photo: dariaPhoto,
     specialization: "Практикующий психолог КПТ",
     approach: ["КПТ", "Тревога", "Навязчивые мысли", "Отношения"],
     experience: "Магистратура по психологии, обучение КПТ",
