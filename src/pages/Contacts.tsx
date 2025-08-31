@@ -413,13 +413,6 @@ const Contacts = () => {
                 </CardContent>
               </Card>
 
-              <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer">
-                <CardContent className="pt-6">
-                  <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
-                  <h3 className="font-medium mb-2">Реквизиты</h3>
-                  <p className="text-sm text-muted-foreground">ИП Иванова А.А.</p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         </div>
