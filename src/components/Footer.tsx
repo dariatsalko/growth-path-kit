@@ -1,8 +1,6 @@
 import { Phone, Mail, MapPin, MessageCircle, Instagram, Facebook } from "lucide-react";
-
 const Footer = () => {
-  return (
-    <footer className="bg-primary text-primary-foreground">
+  return <footer className="bg-primary text-primary-foreground">
       <div className="container px-4 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
@@ -106,8 +104,13 @@ const Footer = () => {
                 </a>
               </li>
               <li>
-                <a href="/consent" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Согласие на обработку ПД
+                <a href="/consent" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">Согласие на обработку персональных данных
+
+              </a>
+              </li>
+              <li>
+                <a href="/cancellation" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
+                  Правила отмены
                 </a>
               </li>
             </ul>
@@ -127,8 +130,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
