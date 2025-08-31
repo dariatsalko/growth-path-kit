@@ -22,19 +22,21 @@ const PsychologistDetailsModal: React.FC<PsychologistDetailsModalProps> = ({
   onClose,
   psychologist
 }) => {
+  console.log('Modal state:', { isOpen, psychologist: psychologist?.name });
+  
   if (!psychologist) return null;
 
   return (
-    <Dialog open={isOpen} onOpenChange={onClose}>
-      <DialogContent className="max-w-2xl">
+    <Dialog open={isOpen} onOpenChange={(open) => !open && onClose()}>
+      <DialogContent className="max-w-2xl max-h-[80vh] overflow-y-auto">
         <DialogHeader>
           <div className="flex items-start gap-4 mb-4">
             <img 
               src={psychologist.photo} 
               alt={`Психолог ${psychologist.name}`}
-              className="w-20 h-20 rounded-full object-cover"
+              className="w-20 h-20 rounded-full object-cover flex-shrink-0"
             />
-            <div>
+            <div className="flex-1">
               <DialogTitle className="text-xl mb-2">{psychologist.name}</DialogTitle>
               <DialogDescription className="text-muted-foreground mb-2">
                 {psychologist.specialization}
