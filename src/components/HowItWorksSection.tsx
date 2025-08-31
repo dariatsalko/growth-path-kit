@@ -55,22 +55,22 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Process visualization */}
-        <div className="bg-secondary/30 rounded-xl p-6 lg:p-8">
+        <div className="bg-secondary/30 rounded-xl p-6 lg:p-8 flex flex-col items-center">
           <h3 className="text-xl font-semibold text-foreground mb-8 text-center">
             Путь клиента
           </h3>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8">
+          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 w-full max-w-4xl">
             {processSteps.map((step, index) => (
-              <div key={index} className="flex flex-col md:flex-row items-center gap-4">
-                <div className="text-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-2">
+              <div key={index} className="flex flex-col md:flex-row items-center gap-4 flex-1">
+                <div className="text-center flex flex-col items-center">
+                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-3">
                     <span className="text-lg font-bold text-primary">{index + 1}</span>
                   </div>
-                  <h4 className="font-semibold text-foreground">{step.title}</h4>
-                  <p className="text-xs text-muted-foreground">{step.description}</p>
+                  <h4 className="font-semibold text-foreground mb-1">{step.title}</h4>
+                  <p className="text-xs text-muted-foreground text-center">{step.description}</p>
                 </div>
                 {index < processSteps.length - 1 && (
-                  <ArrowRight className="h-5 w-5 text-primary hidden md:block" />
+                  <ArrowRight className="h-5 w-5 text-primary hidden md:block flex-shrink-0" />
                 )}
               </div>
             ))}
