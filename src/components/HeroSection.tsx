@@ -39,7 +39,7 @@ const HeroSection = () => {
             </div>
             <div className="flex items-center gap-2 bg-secondary/50 rounded-full px-3 py-2">
               <Heart className="h-4 w-4 text-primary" />
-              <span className="text-sm font-medium text-foreground">Более 8 лет опыта</span>
+              <span className="text-sm font-medium text-foreground">Более 5 лет опыта</span>
             </div>
             <div className="flex items-center gap-2 bg-secondary/50 rounded-full px-3 py-2">
               <Clock className="h-4 w-4 text-primary" />
