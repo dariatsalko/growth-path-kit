@@ -13,6 +13,7 @@ interface PsychologistDetailsModalProps {
     experience: string;
     price: string;
     description: string;
+    detailedDescription?: string;
   } | null;
 }
 
@@ -65,7 +66,7 @@ const PsychologistDetailsModal: React.FC<PsychologistDetailsModalProps> = ({
           
           <div>
             <h4 className="font-semibold mb-2">О специалисте:</h4>
-            <p className="text-muted-foreground leading-relaxed">{psychologist.description}</p>
+            <div className="text-muted-foreground leading-relaxed whitespace-pre-line">{psychologist.detailedDescription || psychologist.description}</div>
           </div>
         </div>
       </DialogContent>
