@@ -252,7 +252,7 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
                 required
               />
               <Label htmlFor="privacy" className="text-sm leading-relaxed cursor-pointer">
-                Согласен с обработкой персональных данных и <a href="/privacy" className="text-primary underline">политикой конфиденциальности</a> *
+                Согласен с обработкой персональных данных и <a href="/privacy" target="_blank" rel="noopener noreferrer" className="text-primary underline">политикой конфиденциальности</a> *
               </Label>
             </div>
             
@@ -269,7 +269,7 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
                 required
               />
               <Label htmlFor="terms" className="text-sm leading-relaxed cursor-pointer">
-                Принимаю условия <a href="/terms" className="text-primary underline">договора оферты</a> *
+                Принимаю условия <a href="/terms" target="_blank" rel="noopener noreferrer" className="text-primary underline">договора оферты</a> *
               </Label>
             </div>
             
