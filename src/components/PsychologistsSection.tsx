@@ -22,7 +22,7 @@ const PsychologistsSection = ({ onSelectPsychologist }: PsychologistsSectionProp
     if (psychologistName) {
       window.dispatchEvent(new CustomEvent('openBookingWithPsychologist', { detail: { name: psychologistName } }));
     } else {
-      window.dispatchEvent(new CustomEvent('openBookingModal'));
+      window.dispatchEvent(new CustomEvent('openBookingWithPsychologist', { detail: { name: 'auto' } }));
     }
   };
   const handleSelectPsychologist = (psychologist: any) => {

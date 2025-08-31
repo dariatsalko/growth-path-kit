@@ -39,6 +39,21 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
     }
   }, [selectedPsychologist]);
 
+  useEffect(() => {
+    const handleBookingWithPsychologist = (event: CustomEvent) => {
+      const psychologistName = event.detail?.name;
+      if (psychologistName) {
+        setFormData(prev => ({ ...prev, psychologist: psychologistName }));
+      }
+    };
+
+    window.addEventListener('openBookingWithPsychologist', handleBookingWithPsychologist as EventListener);
+    
+    return () => {
+      window.removeEventListener('openBookingWithPsychologist', handleBookingWithPsychologist as EventListener);
+    };
+  }, []);
+
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     
