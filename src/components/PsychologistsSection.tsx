@@ -34,7 +34,6 @@ const PsychologistsSection = ({ onSelectPsychologist }: PsychologistsSectionProp
     });
   };
   const handleViewDetails = (psychologist: any) => {
-    console.log('Opening details for:', psychologist.name);
     setSelectedPsychologist(psychologist);
     setIsDetailsModalOpen(true);
   };

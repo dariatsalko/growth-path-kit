@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { Button } from "@/components/ui/button";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { useToast } from "@/hooks/use-toast";
 
 interface PsychologistDetailsModalProps {
   isOpen: boolean;
@@ -22,8 +21,6 @@ const PsychologistDetailsModal: React.FC<PsychologistDetailsModalProps> = ({
   onClose,
   psychologist
 }) => {
-  console.log('Modal state:', { isOpen, psychologist: psychologist?.name });
-  
   if (!psychologist) return null;
 
   return (
@@ -69,6 +66,20 @@ const PsychologistDetailsModal: React.FC<PsychologistDetailsModalProps> = ({
           <div>
             <h4 className="font-semibold mb-2">О специалисте:</h4>
             <div className="text-muted-foreground leading-relaxed whitespace-pre-line">{psychologist.detailedDescription || psychologist.description}</div>
+          </div>
+          
+          <div className="pt-4 border-t">
+            <Button 
+              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold"
+              onClick={() => {
+                onClose();
+                window.dispatchEvent(new CustomEvent('openBookingWithPsychologist', { 
+                  detail: { name: psychologist.name } 
+                }));
+              }}
+            >
+              Выбрать специалиста
+            </Button>
           </div>
         </div>
       </DialogContent>

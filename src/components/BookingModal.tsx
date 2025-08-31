@@ -175,9 +175,9 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="auto">Подобрать автоматически</SelectItem>
-                <SelectItem value="elena">Елена Михайловна</SelectItem>
-                <SelectItem value="dmitry">Дмитрий Александрович</SelectItem>
-                <SelectItem value="anna">Анна Сергеевна</SelectItem>
+                <SelectItem value="Дарья Цалко">Дарья Цалко</SelectItem>
+                <SelectItem value="Артём Иванов">Артём Иванов</SelectItem>
+                <SelectItem value="Екатерина Иванова">Екатерина Иванова</SelectItem>
               </SelectContent>
             </Select>
           </div>
