@@ -45,7 +45,7 @@ const Footer = () => {
               </li>
               <li>
                 <a href="/school" className="text-primary-foreground/80 hover:text-primary-foreground transition-colors">
-                  Школа ЭИ для детей
+                  Школа эмоционального интеллекта
                 </a>
               </li>
               <li>
