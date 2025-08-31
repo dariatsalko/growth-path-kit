@@ -11,10 +11,10 @@ const Footer = () => {
               <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent">
                 <div className="h-4 w-4 rounded-full bg-primary"></div>
               </div>
-              <span className="text-lg font-bold text-foreground">Точка роста</span>
+              <span className="text-lg font-semibold">ИНТЕНЦИЯ</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4">
-              Центр консультативной психологии «Точка роста». Помогаем найти баланс и двигаться вперёд
+              Центр консультативной психологии ИНТЕНЦИЯ. Помогаем найти баланс и двигаться вперёд
             </p>
             <div className="flex space-x-3">
               <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
@@ -123,7 +123,7 @@ const Footer = () => {
         <div className="border-t border-primary-foreground/20 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-primary-foreground/60">
             <div>
-              © 2025 Центр консультативной психологии «Точка роста». Все права защищены.
+              © 2025 Центр консультативной психологии ИНТЕНЦИЯ. Все права защищены.
             </div>
             <div className="flex items-center gap-4">
               <span>ЧП «ЭЛЬМОТО»</span>

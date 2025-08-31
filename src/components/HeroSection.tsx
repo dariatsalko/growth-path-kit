@@ -24,7 +24,7 @@ const HeroSection = () => {
       <div className="relative z-20 container px-4 py-16 lg:py-24">
         <div className="max-w-2xl">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold tracking-tight text-foreground mb-6">
-            Добро пожаловать в Центр консультативной психологии <span className="text-primary">«Точка роста»</span>
+            Добро пожаловать в Центр консультативной психологии <span className="text-primary">ИНТЕНЦИЯ</span>
           </h1>
           
           <p className="text-lg md:text-xl text-muted-foreground mb-8 leading-relaxed">

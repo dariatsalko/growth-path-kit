@@ -70,9 +70,9 @@ const Contacts = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Контакты и запись на прием | Центр консультативной психологии «Точка роста»</title>
-        <meta name="description" content="Контакты центра психологии «Точка роста» в Минске. Телефон +375 29 237-57-30, email info@intention.by. Онлайн запись и оплата услуг." />
-        <meta property="og:title" content="Контакты центра психологии «Точка роста»" />
+        <title>Контакты и запись на прием | Центр консультативной психологии ИНТЕНЦИЯ</title>
+        <meta name="description" content="Контакты центра психологии ИНТЕНЦИЯ в Минске. Телефон +375 29 237-57-30, email info@intention.by. Онлайн запись и оплата услуг." />
+        <meta property="og:title" content="Контакты центра психологии ИНТЕНЦИЯ" />
         <meta property="og:description" content="Свяжитесь с нами для записи на консультацию. Работаем онлайн и очно в Минске." />
         <meta property="og:url" content="https://intention.by/contacts" />
       </Helmet>
