@@ -10,7 +10,7 @@ const Header = () => {
     { label: "Консультации", href: "/" },
     { label: "Школа эмоционального интеллекта", href: "/school" },
     { label: "Осознанность", href: "/mindfulness" },
-    { label: "Контакты", href: "/contacts" },
+    { label: "Контакты и оплата", href: "/contacts" },
   ];
 
   const openBookingModal = () => {
