@@ -7,7 +7,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Checkbox } from "@/components/ui/checkbox";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle } from "@/components/ui/dialog";
-import { Calendar, CreditCard } from "lucide-react";
+import { Calendar, Send } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 interface BookingModalProps {
@@ -282,11 +282,11 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
               className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-6 text-lg"
               size="lg"
             >
-              <CreditCard className="w-5 h-5 mr-2" />
-              Подтвердить и перейти к оплате
+              <Send className="w-5 h-5 mr-2" />
+              Оставить заявку на консультацию
             </Button>
             <p className="text-center text-sm text-muted-foreground mt-3">
-              После оплаты вы получите подтверждение и календарь-приглашение
+              Мы свяжемся с вами в течение 2 часов для согласования времени и деталей
             </p>
           </div>
         </form>
