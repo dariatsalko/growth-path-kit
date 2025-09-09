@@ -24,7 +24,7 @@ const HowItWorksSection = () => {
   const processSteps = [
     { title: "Намерение", description: "Определяем цели" },
     { title: "План", description: "Выстраиваем путь" },
-    { title: "Поддержка", description: "Сопровождаем процесс" },
+    { title: "Поддержка", description: "Ведем к цели" },
     { title: "Изменение", description: "Достигаем результата" }
   ];
 
@@ -64,8 +64,8 @@ const HowItWorksSection = () => {
             <div className="grid md:grid-cols-4 gap-6 lg:gap-8">
               {processSteps.map((step, index) => (
                 <div key={index} className="relative">
-                  <Card className="bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-background/90 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-                    <CardContent className="p-6 text-center">
+                   <Card className="h-full bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-background/90 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                     <CardContent className="p-6 text-center h-full flex flex-col justify-between min-h-[160px]">
                       <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary/70 text-primary-foreground font-bold text-lg mx-auto mb-4 shadow-md">
                         {index + 1}
                       </div>
