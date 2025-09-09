@@ -44,9 +44,9 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
               </div>
             )}
           </div>
-          <div className="flex-1 min-w-0">
+          <div className="flex-1 min-w-0 pr-2">
             <CardTitle className="text-lg mb-1">{name}</CardTitle>
-            <CardDescription className="text-base text-muted-foreground mb-2">
+            <CardDescription className="text-sm text-muted-foreground mb-2 max-w-none">
               {specialization}
             </CardDescription>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
