@@ -79,8 +79,7 @@ const PsychologistsSection = ({ onSelectPsychologist }: PsychologistsSectionProp
             Психологи центра
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto mb-8">
-            Каждый специалист имеет высшее психологическое образование, сертификации 
-            и регулярно повышает квалификацию
+            Каждый специалист имеет высшее психологичесĸое образование, регулярно повышает ĸвалифиĸацию и прошел курс личной терапии
           </p>
           
           {/* Filter Tags */}
