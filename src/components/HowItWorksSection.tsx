@@ -55,25 +55,34 @@ const HowItWorksSection = () => {
         </div>
 
         {/* Process visualization */}
-        <div className="bg-secondary/30 rounded-xl p-6 lg:p-8 flex flex-col items-center">
-          <h3 className="text-xl font-semibold text-foreground mb-8 text-center">
-            Путь клиента
-          </h3>
-          <div className="flex flex-col md:flex-row items-center justify-center gap-6 md:gap-8 w-full max-w-4xl">
-            {processSteps.map((step, index) => (
-              <div key={index} className="flex flex-col md:flex-row items-center gap-4 flex-1">
-                <div className="text-center flex flex-col items-center">
-                  <div className="flex h-16 w-16 items-center justify-center rounded-full bg-primary/10 mb-3">
-                    <span className="text-lg font-bold text-primary">{index + 1}</span>
-                  </div>
-                  <h4 className="font-semibold text-foreground mb-1">{step.title}</h4>
-                  <p className="text-xs text-muted-foreground text-center">{step.description}</p>
+        <div className="relative bg-gradient-to-r from-primary/5 via-secondary/20 to-primary/5 rounded-2xl p-8 lg:p-12 overflow-hidden">
+          <div className="absolute inset-0 bg-gradient-to-br from-white/10 to-transparent rounded-2xl"></div>
+          <div className="relative z-10">
+            <h3 className="text-2xl font-playfair font-bold text-foreground mb-12 text-center">
+              Путь клиента
+            </h3>
+            <div className="grid md:grid-cols-4 gap-6 lg:gap-8">
+              {processSteps.map((step, index) => (
+                <div key={index} className="relative">
+                  <Card className="bg-background/80 backdrop-blur-sm border-primary/20 hover:bg-background/90 hover:border-primary/40 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                    <CardContent className="p-6 text-center">
+                      <div className="flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary to-primary/70 text-primary-foreground font-bold text-lg mx-auto mb-4 shadow-md">
+                        {index + 1}
+                      </div>
+                      <h4 className="font-semibold text-foreground mb-2 text-lg">{step.title}</h4>
+                      <p className="text-sm text-muted-foreground leading-relaxed">{step.description}</p>
+                    </CardContent>
+                  </Card>
+                  {index < processSteps.length - 1 && (
+                    <div className="hidden md:flex absolute top-1/2 -right-4 transform -translate-y-1/2 z-20">
+                      <div className="bg-background rounded-full p-2 shadow-md">
+                        <ArrowRight className="h-4 w-4 text-primary" />
+                      </div>
+                    </div>
+                  )}
                 </div>
-                {index < processSteps.length - 1 && (
-                  <ArrowRight className="h-5 w-5 text-primary hidden md:block flex-shrink-0" />
-                )}
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
       </div>
