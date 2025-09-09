@@ -11,42 +11,90 @@ const ServicesSection = () => {
     {
       icon: Brain,
       title: "Тревога и панические атаки",
-      description: "Работа со страхами, навязчивыми мыслями и паническими состояниями"
+      description: "Работа со страхами, навязчивыми мыслями и паническими состояниями",
+      examples: [
+        "У меня постоянное чувство тревоги",
+        "Боюсь выходить из дома",
+        "Навязчивые мысли не дают покоя",
+        "Панические атаки на работе"
+      ]
     },
     {
       icon: Heart,
       title: "Депрессия и апатия",
-      description: "Поддержка при эмоциональном выгорании и потере интереса к жизни"
+      description: "Поддержка при эмоциональном выгорании и потере интереса к жизни",
+      examples: [
+        "Ничего не хочется делать",
+        "Потерял интерес к жизни",
+        "Постоянная усталость",
+        "Чувство безнадежности"
+      ]
     },
     {
       icon: Users,
       title: "Семейные отношения",
-      description: "Улучшение коммуникации в паре, работа с конфликтами и кризисами"
+      description: "Улучшение коммуникации в паре, работа с конфликтами и кризисами",
+      examples: [
+        "Постоянные ссоры с партнером",
+        "Не понимаем друг друга",
+        "Думаем о разводе",
+        "Хотим улучшить отношения"
+      ]
     },
     {
       icon: User,
       title: "Детско-родительские отношения",
-      description: "Помощь в воспитании и понимании потребностей ребенка"
+      description: "Помощь в воспитании и понимании потребностей ребенка",
+      examples: [
+        "Ребенок не слушается",
+        "Проблемы с поведением",
+        "Конфликты с подростком",
+        "Не знаю как реагировать"
+      ]
     },
     {
       icon: Zap,
       title: "Подростковые проблемы",
-      description: "Работа с трудностями переходного возраста и самоопределения"
+      description: "Работа с трудностями переходного возраста и самоопределения",
+      examples: [
+        "Не знаю кем хочу быть",
+        "Конфликты с родителями",
+        "Проблемы в школе",
+        "Чувствую себя одиноко"
+      ]
     },
     {
       icon: Shield,
       title: "Травма и ПТСР",
-      description: "Проработка травматических переживаний и их последствий"
+      description: "Проработка травматических переживаний и их последствий",
+      examples: [
+        "Не могу забыть произошедшее",
+        "Кошмары и флешбэки",
+        "Избегаю определенных мест",
+        "Чувствую себя небезопасно"
+      ]
     },
     {
       icon: Target,
       title: "Профессиональное выгорание",
-      description: "Восстановление ресурсов и поиск баланса между работой и жизнью"
+      description: "Восстановление ресурсов и поиск баланса между работой и жизнью",
+      examples: [
+        "Выгорел на работе",
+        "Нет сил на личную жизнь",
+        "Работа стала в тягость",
+        "Хочу сменить профессию"
+      ]
     },
     {
       icon: Lightbulb,
       title: "Личностный рост",
-      description: "Развитие самопознания, определение целей и ценностей"
+      description: "Развитие самопознания, определение целей и ценностей",
+      examples: [
+        "Хочу лучше понять себя",
+        "Не знаю своих целей",
+        "Хочу быть увереннее",
+        "Ищу свое предназначение"
+      ]
     }
   ];
 
@@ -67,19 +115,38 @@ const ServicesSection = () => {
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <Card key={index} className="border-border hover:shadow-card transition-shadow duration-300 text-center">
-                <CardHeader className="pb-6">
-                  <div className="flex justify-center mb-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
-                      <IconComponent className="h-6 w-6 text-primary" />
-                    </div>
-                  </div>
-                  <CardTitle className="text-lg mb-2">{service.title}</CardTitle>
-                  <CardDescription className="text-sm leading-relaxed">
-                    {service.description}
-                  </CardDescription>
-                </CardHeader>
-              </Card>
+              <div key={index} className="group perspective-1000 h-48">
+                <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
+                  {/* Front Side */}
+                  <Card className="absolute inset-0 border-border hover:shadow-card transition-shadow duration-300 text-center backface-hidden">
+                    <CardHeader className="pb-6 h-full flex flex-col justify-center">
+                      <div className="flex justify-center mb-4">
+                        <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
+                          <IconComponent className="h-6 w-6 text-primary" />
+                        </div>
+                      </div>
+                      <CardTitle className="text-lg mb-2">{service.title}</CardTitle>
+                      <CardDescription className="text-sm leading-relaxed">
+                        {service.description}
+                      </CardDescription>
+                    </CardHeader>
+                  </Card>
+                  
+                  {/* Back Side */}
+                  <Card className="absolute inset-0 border-border bg-accent/5 text-center backface-hidden rotate-y-180">
+                    <CardHeader className="pb-4 h-full flex flex-col justify-center">
+                      <CardTitle className="text-lg mb-4 text-accent">Примеры запросов:</CardTitle>
+                      <div className="space-y-2">
+                        {service.examples.map((example, exampleIndex) => (
+                          <p key={exampleIndex} className="text-xs text-muted-foreground italic leading-relaxed">
+                            "{example}"
+                          </p>
+                        ))}
+                      </div>
+                    </CardHeader>
+                  </Card>
+                </div>
+              </div>
             );
           })}
         </div>
