@@ -89,7 +89,7 @@ const PsychologistsSection = ({ onSelectPsychologist }: PsychologistsSectionProp
         </div>
 
         {/* Psychologists Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mb-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-8 justify-items-center max-w-6xl mx-auto">
           {psychologists.map((psychologist, index) => <PsychologistCard key={index} {...psychologist} onSelect={() => handleSelectPsychologist(psychologist)} onViewDetails={() => handleViewDetails(psychologist)} />)}
         </div>
 
