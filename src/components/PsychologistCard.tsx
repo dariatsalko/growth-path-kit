@@ -50,8 +50,8 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
               {specialization}
             </CardDescription>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <GraduationCap className="w-4 h-4" />
-              <span>{experience}</span>
+              <GraduationCap className="w-4 h-4 flex-shrink-0" />
+              <span className="leading-none">{experience}</span>
             </div>
           </div>
           <div className="text-right">
