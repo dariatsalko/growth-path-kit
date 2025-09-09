@@ -33,9 +33,10 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
       <div className="relative p-4">
         {/* Status badge */}
         {available && (
-          <div className="absolute top-3 right-3 px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium rounded-full flex items-center gap-1">
+          <div className="absolute top-2 right-2 px-2 py-1 bg-emerald-100 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-400 text-xs font-medium rounded-full flex items-center gap-1 z-10">
             <CheckCircle className="w-3 h-3" />
-            Доступен
+            <span className="hidden sm:inline">Доступен</span>
+            <span className="sm:hidden">●</span>
           </div>
         )}
         
