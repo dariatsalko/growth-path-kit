@@ -115,18 +115,18 @@ const ServicesSection = () => {
           {services.map((service, index) => {
             const IconComponent = service.icon;
             return (
-              <div key={index} className="group perspective-1000 h-48">
+              <div key={index} className="group perspective-1000 h-64">
                 <div className="relative w-full h-full transition-transform duration-700 transform-style-preserve-3d group-hover:rotate-y-180">
                   {/* Front Side */}
                   <Card className="absolute inset-0 border-border hover:shadow-card transition-shadow duration-300 text-center backface-hidden">
-                    <CardHeader className="pb-6 h-full flex flex-col justify-center">
+                    <CardHeader className="pb-6 h-full flex flex-col justify-center p-4">
                       <div className="flex justify-center mb-4">
                         <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10">
                           <IconComponent className="h-6 w-6 text-primary" />
                         </div>
                       </div>
-                      <CardTitle className="text-lg mb-2">{service.title}</CardTitle>
-                      <CardDescription className="text-sm leading-relaxed">
+                      <CardTitle className="text-lg mb-2 leading-tight">{service.title}</CardTitle>
+                      <CardDescription className="text-sm leading-relaxed text-center">
                         {service.description}
                       </CardDescription>
                     </CardHeader>
@@ -134,11 +134,11 @@ const ServicesSection = () => {
                   
                   {/* Back Side */}
                   <Card className="absolute inset-0 border-border bg-accent/5 text-center backface-hidden rotate-y-180">
-                    <CardHeader className="pb-4 h-full flex flex-col justify-center">
-                      <CardTitle className="text-lg mb-4 text-accent">Примеры запросов:</CardTitle>
-                      <div className="space-y-2">
+                    <CardHeader className="pb-4 h-full flex flex-col p-4">
+                      <CardTitle className="text-base mb-3 text-accent">Примеры запросов:</CardTitle>
+                      <div className="space-y-1.5 overflow-y-auto flex-1">
                         {service.examples.map((example, exampleIndex) => (
-                          <p key={exampleIndex} className="text-xs text-muted-foreground italic leading-relaxed">
+                          <p key={exampleIndex} className="text-xs text-muted-foreground italic leading-tight px-2">
                             "{example}"
                           </p>
                         ))}
