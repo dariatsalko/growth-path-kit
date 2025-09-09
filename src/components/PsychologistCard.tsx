@@ -44,9 +44,9 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
               </div>
             )}
           </div>
-          <div className="flex-1 min-w-0 pr-2">
+          <div className="flex-1 min-w-0 pr-4">
             <CardTitle className="text-lg mb-1">{name}</CardTitle>
-            <CardDescription className="text-sm text-muted-foreground mb-2 max-w-none">
+            <CardDescription className="text-sm text-muted-foreground mb-2 pr-8">
               {specialization}
             </CardDescription>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
@@ -54,9 +54,9 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
               <span className="leading-none">{experience}</span>
             </div>
           </div>
-          <div className="text-right">
+          <div className="text-right flex-shrink-0 min-w-[80px]">
             <div className="text-lg font-semibold text-accent">{price}</div>
-            <div className="text-sm text-muted-foreground flex items-center gap-1">
+            <div className="text-sm text-muted-foreground flex items-center gap-1 justify-end">
               <Clock className="w-3 h-3" />
               50 мин
             </div>
