@@ -22,7 +22,7 @@ const Header = () => {
 
   return (
     <header className="bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 sticky top-0 z-50 w-full border-b border-border">
-      <div className="container flex h-16 items-center justify-between px-6 mx-auto max-w-6xl">
+      <div className="container flex h-16 items-center px-6 mx-auto max-w-6xl gap-4">
         {/* Logo */}
         <a href="/" className="flex items-center space-x-3 cursor-pointer hover:opacity-80 transition-opacity flex-shrink-0">
           <div className="flex h-10 w-10 items-center justify-center rounded-full bg-primary">
@@ -35,12 +35,12 @@ const Header = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex items-center space-x-8">
+        <nav className="hidden md:flex flex-1 items-center justify-center md:space-x-4 lg:space-x-6 xl:space-x-8 min-w-0">
           {navItems.map((item) => (
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
             >
               {item.label}
             </a>
@@ -48,7 +48,7 @@ const Header = () => {
         </nav>
 
         {/* CTA Button - Desktop */}
-        <div className="hidden md:flex">
+        <div className="hidden md:flex ml-auto">
           <Button 
             variant="default" 
             className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium"
