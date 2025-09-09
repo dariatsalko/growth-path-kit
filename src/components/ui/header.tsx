@@ -35,7 +35,7 @@ const Header = () => {
         </a>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:flex flex-1 items-center justify-center md:space-x-4 lg:space-x-6 xl:space-x-8 min-w-0">
+        <nav className="hidden md:flex flex-1 items-center justify-center space-x-2 lg:space-x-4 xl:space-x-6 min-w-0 mx-4">
           {navItems.map((item) => (
             <a
               key={item.label}
@@ -48,7 +48,7 @@ const Header = () => {
         </nav>
 
         {/* CTA Button - Desktop */}
-        <div className="hidden md:flex ml-auto">
+        <div className="hidden md:flex flex-shrink-0">
           <Button 
             variant="default" 
             className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium"
