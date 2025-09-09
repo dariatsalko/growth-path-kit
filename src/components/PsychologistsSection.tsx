@@ -65,7 +65,7 @@ const PsychologistsSection = ({ onSelectPsychologist }: PsychologistsSectionProp
     photo: katiaPhoto,
     specialization: "Практикующий психолог КПТ",
     approach: ["КПТ", "Тревога", "Депрессия", "Самооценка", "Перфекционизм"],
-    experience: "Факультет психологии, обучение КПТ",
+    experience: "БГПУ им. М. Танка",
     price: "Консультация",
     available: true,
     description: "Моё кредо – не просто поддержать, а дать эффективные инструменты для изменения и самопомощи.",
