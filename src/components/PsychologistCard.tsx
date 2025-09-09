@@ -31,10 +31,10 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
   return (
     <Card className="border-border hover:shadow-card transition-all duration-300 group">
       <CardHeader className="pb-4">
-        <div className="flex items-start gap-6">
-          <div className="relative flex-shrink-0">
-            <img 
-              src={photo} 
+        <div className="grid grid-cols-[auto,1fr,max-content] items-start gap-6">
+          <div className="relative">
+            <img
+              src={photo}
               alt={`Психолог ${name}`}
               className="w-16 h-16 rounded-full object-cover"
             />
@@ -44,17 +44,17 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
               </div>
             )}
           </div>
-          <div className="flex-1 max-w-none">
+          <div className="min-w-0">
             <CardTitle className="text-lg mb-2">{name}</CardTitle>
-            <CardDescription className="text-base text-muted-foreground mb-3 leading-relaxed">
+            <CardDescription className="text-base text-muted-foreground mb-3 leading-normal whitespace-normal">
               {specialization}
             </CardDescription>
             <div className="flex items-start gap-2 text-sm text-muted-foreground">
               <GraduationCap className="w-4 h-4 flex-shrink-0 mt-0.5" />
-              <span className="leading-relaxed">{experience}</span>
+              <span className="leading-normal">{experience}</span>
             </div>
           </div>
-          <div className="text-right flex-shrink-0 ml-4">
+          <div className="text-right justify-self-end self-start ml-2">
             <div className="text-lg font-semibold text-accent whitespace-nowrap">{price}</div>
             <div className="text-sm text-muted-foreground flex items-center gap-1 justify-end">
               <Clock className="w-3 h-3" />
