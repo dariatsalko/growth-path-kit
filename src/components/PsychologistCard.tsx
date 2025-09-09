@@ -31,8 +31,8 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
   return (
     <Card className="border-border hover:shadow-card transition-all duration-300 group">
       <CardHeader className="pb-4">
-        <div className="flex items-start gap-4">
-          <div className="relative">
+        <div className="flex items-start gap-6">
+          <div className="relative flex-shrink-0">
             <img 
               src={photo} 
               alt={`Психолог ${name}`}
@@ -44,19 +44,19 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
               </div>
             )}
           </div>
-          <div className="flex-1 min-w-0">
-            <CardTitle className="text-lg mb-1">{name}</CardTitle>
-            <CardDescription className="text-base text-muted-foreground mb-2">
+          <div className="flex-1 max-w-none">
+            <CardTitle className="text-lg mb-2">{name}</CardTitle>
+            <CardDescription className="text-base text-muted-foreground mb-3 leading-relaxed">
               {specialization}
             </CardDescription>
-            <div className="flex items-center gap-2 text-sm text-muted-foreground">
-              <GraduationCap className="w-4 h-4 flex-shrink-0" />
-              <span className="leading-none">{experience}</span>
+            <div className="flex items-start gap-2 text-sm text-muted-foreground">
+              <GraduationCap className="w-4 h-4 flex-shrink-0 mt-0.5" />
+              <span className="leading-relaxed">{experience}</span>
             </div>
           </div>
-          <div className="text-right">
-            <div className="text-lg font-semibold text-accent">{price}</div>
-            <div className="text-sm text-muted-foreground flex items-center gap-1">
+          <div className="text-right flex-shrink-0 ml-4">
+            <div className="text-lg font-semibold text-accent whitespace-nowrap">{price}</div>
+            <div className="text-sm text-muted-foreground flex items-center gap-1 justify-end">
               <Clock className="w-3 h-3" />
               50 мин
             </div>
