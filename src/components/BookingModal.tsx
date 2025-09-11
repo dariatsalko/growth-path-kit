@@ -85,6 +85,7 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
   };
 
   const timeSlots = [
+    "Любое время",
     "Утром (9:00-12:00)",
     "Днём (12:00-15:00)", 
     "Вечером (15:00-18:00)",
