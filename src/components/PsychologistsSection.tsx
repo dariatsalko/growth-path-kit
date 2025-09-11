@@ -70,7 +70,7 @@ const PsychologistsSection = ({ onSelectPsychologist }: PsychologistsSectionProp
     name: "Екатерина Иванова",
     photo: katiaPhoto,
     specialization: "Практикующий психолог КПТ",
-    approach: ["КПТ", "Тревога", "Депрессия", "Самооценка", "Перфекционизм"],
+    approach: ["Индивидуальное консультирование", "Коучинг"],
     experience: "КПТ+ базовые техники консультирования и коучинга, клинический курс КПТ",
     education: "БГПУ им. М. Танка",
     price: "Консультация",
