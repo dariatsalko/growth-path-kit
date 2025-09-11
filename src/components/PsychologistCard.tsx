@@ -9,7 +9,7 @@ interface PsychologistCardProps {
   specialization: string;
   approach: string[];
   experience: string;
-  price: string;
+  price?: string;
   available: boolean;
   description: string;
   onSelect: () => void;
