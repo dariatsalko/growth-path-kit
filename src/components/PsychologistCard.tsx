@@ -65,8 +65,14 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
           </div>
         </div>
 
+        {/* Consultation info section */}
+        <div className="flex items-center justify-between p-3 bg-accent/5 rounded-lg border border-accent/10 mb-3">
+          <div className="flex items-center gap-2 text-muted-foreground">
+            <Clock className="w-4 h-4" />
+            <span className="text-sm font-medium">Консультация -- 50 минут</span>
+          </div>
+        </div>
         
-        {/* Description */}
         <p className="text-muted-foreground text-sm leading-relaxed mb-3 line-clamp-2">
           {description}
         </p>
