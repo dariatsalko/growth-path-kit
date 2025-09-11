@@ -95,6 +95,7 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
 
   const requestTypes = [
     "Тревога и панические атаки",
+    "Страхи и фобии",
     "Депрессия и апатия",
     "Семейные отношения",
     "Детско-родительские отношения",
