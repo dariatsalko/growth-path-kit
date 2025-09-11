@@ -44,7 +44,7 @@ const PsychologistsSection = ({ onSelectPsychologist }: PsychologistsSectionProp
     name: "Дарья Цалко",
     photo: dariaPhoto,
     specialization: "Практикующий психолог КПТ",
-    approach: ["КПТ", "Тревога", "Навязчивые мысли", "Отношения"],
+    approach: ["КПТ", "профориентация и карьерные консультации", "тренинги общения и решения конфликтов"],
     experience: "Волонтёрский опыт сказкотерапии, обучение на клиническом курсе КПТ",
     education: "Ягеллонский университет в Кракове",
     price: "Консультация",
