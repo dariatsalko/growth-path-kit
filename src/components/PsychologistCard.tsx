@@ -65,16 +65,6 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
           </div>
         </div>
 
-        {/* Price section */}
-        <div className="flex items-center justify-between p-3 bg-accent/5 rounded-lg border border-accent/10 mb-3">
-          <div className="flex items-center gap-2 text-muted-foreground">
-            <Clock className="w-4 h-4" />
-            <span className="text-sm font-medium">50 минут</span>
-          </div>
-          <div className="text-right">
-            <div className="text-lg font-bold text-primary">{price}</div>
-          </div>
-        </div>
         
         {/* Description */}
         <p className="text-muted-foreground text-sm leading-relaxed mb-3 line-clamp-2">
