@@ -9,6 +9,7 @@ interface PsychologistCardProps {
   specialization: string;
   approach: string[];
   experience: string;
+  education: string;
   price?: string;
   available: boolean;
   description: string;
@@ -22,6 +23,7 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
   specialization,
   approach,
   experience,
+  education,
   price,
   available,
   description,
@@ -60,7 +62,7 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
               <div className="p-1 bg-primary/10 rounded">
                 <GraduationCap className="w-3 h-3 text-primary" />
               </div>
-              <span className="font-medium">{experience}</span>
+              <span className="font-medium">{education}</span>
             </div>
           </div>
         </div>
