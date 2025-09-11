@@ -49,13 +49,6 @@ const PsychologistDetailsModal: React.FC<PsychologistDetailsModalProps> = ({
         </DialogHeader>
         
         <div className="space-y-6">
-          <div className="bg-secondary/20 rounded-lg p-4">
-            <h4 className="font-semibold mb-3 text-foreground flex items-center gap-2">
-              <span className="w-2 h-2 bg-accent rounded-full"></span>
-              Опыт работы:
-            </h4>
-            <p className="text-muted-foreground leading-relaxed">{psychologist.experience}</p>
-          </div>
           
           <div className="bg-primary/5 rounded-lg p-4">
             <h4 className="font-semibold mb-3 text-foreground flex items-center gap-2">
