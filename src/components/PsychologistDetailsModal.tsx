@@ -59,7 +59,7 @@ const PsychologistDetailsModal: React.FC<PsychologistDetailsModalProps> = ({
               {psychologist.approach.map((method, index) => (
                 <span 
                   key={index}
-                  className="bg-primary/10 text-primary px-3 py-2 rounded-lg text-sm font-medium border border-primary/20 uppercase"
+                  className="bg-primary/10 text-primary px-3 py-2 rounded-lg text-sm font-medium border border-primary/20 capitalize"
                 >
                   {method}
                 </span>
