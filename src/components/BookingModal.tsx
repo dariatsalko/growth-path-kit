@@ -137,7 +137,7 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
               <Input
                 id="phone"
                 type="tel"
-                placeholder="+375 (29) 237-57-30"
+                placeholder="+375 (29) 123-45-67"
                 value={formData.phone}
                 onChange={(e) => setFormData({...formData, phone: e.target.value})}
                 required
