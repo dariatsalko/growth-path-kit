@@ -175,9 +175,9 @@ const SchoolBookingModal = ({ isOpen, onClose }: SchoolBookingModalProps) => {
               </SelectTrigger>
               <SelectContent>
                 <SelectItem value="auto">Подобрать автоматически</SelectItem>
-                <SelectItem value="elena">Елена Михайловна</SelectItem>
-                <SelectItem value="dmitry">Дмитрий Александрович</SelectItem>
-                <SelectItem value="anna">Анна Сергеевна</SelectItem>
+                <SelectItem value="daria">Дарья Цалко</SelectItem>
+                <SelectItem value="artem">Артём Иванов</SelectItem>
+                <SelectItem value="katia">Екатерина Иванова</SelectItem>
               </SelectContent>
             </Select>
           </div>
