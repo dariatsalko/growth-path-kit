@@ -129,9 +129,9 @@ const Mindfulness = () => {
       
       {/* Hero Section */}
       <section 
-        className="py-16 lg:py-24 bg-gradient-to-br from-primary/5 to-accent/5 bg-cover bg-center bg-no-repeat relative"
+        className="py-16 lg:py-24 bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: `linear-gradient(to bottom right, hsl(var(--primary) / 0.8), hsl(var(--accent) / 0.8)), url(${landingImage})`
+          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/src/assets/Mindfull.jpg')`
         }}
       >
         <div className="container px-4">
