@@ -20,158 +20,69 @@ const TestEIPart2 = () => {
     }
   }, []);
   
-  const questions = [
-    {
-      id: "q6",
-      text: "Как ребёнок ведёт себя в новой компании детей?",
-      options: [
-        { value: "very_shy", label: "Очень застенчиво, прячется" },
-        { value: "observes", label: "Наблюдает издалека" },
-        { value: "needs_encouragement", label: "Нуждается в поддержке" },
-        { value: "joins_gradually", label: "Постепенно присоединяется" },
-        { value: "confident", label: "Уверенно знакомится" }
-      ]
-    },
-    {
-      id: "q7",
-      text: "Как часто ребёнок помогает другим детям?",
-      options: [
-        { value: "never", label: "Никогда" },
-        { value: "when_asked", label: "Только когда просят" },
-        { value: "sometimes", label: "Иногда сам" },
-        { value: "often", label: "Часто предлагает помощь" },
-        { value: "always_helpful", label: "Всегда готов помочь" }
-      ]
-    },
-    {
-      id: "q8",
-      text: "Как ребёнок реагирует на критику или замечания?",
-      options: [
-        { value: "very_defensive", label: "Очень болезненно, защищается" },
-        { value: "upset", label: "Расстраивается, плачет" },
-        { value: "listens_grudgingly", label: "Слушает неохотно" },
-        { value: "accepts", label: "Принимает спокойно" },
-        { value: "learns", label: "Использует для улучшения" }
-      ]
-    },
-    {
-      id: "q9",
-      text: "Умеет ли ребёнок радоваться успехам других?",
-      options: [
-        { value: "jealous", label: "Завидует, расстраивается" },
-        { value: "indifferent", label: "Равнодушен" },
-        { value: "sometimes_happy", label: "Иногда радуется" },
-        { value: "usually_supportive", label: "Обычно поддерживает" },
-        { value: "genuinely_happy", label: "Искренне радуется за других" }
-      ]
-    },
-    {
-      id: "q10",
-      text: "Как ребёнок выражает благодарность?",
-      options: [
-        { value: "rarely", label: "Редко говорит спасибо" },
-        { value: "when_reminded", label: "Когда напоминают" },
-        { value: "sometimes_remembers", label: "Иногда вспоминает сам" },
-        { value: "often_thanks", label: "Часто благодарит" },
-        { value: "very_grateful", label: "Очень благодарный ребёнок" }
-      ]
-    }
+  const emotionalTraits = [
+    "Сверхчувствительность",
+    "Возбуждаемость", 
+    "Капризность",
+    "Боязливость",
+    "Плаксивость",
+    "Злобность",
+    "Веселость",
+    "Завистливость",
+    "Ревность",
+    "Обидчивость",
+    "Упрямство",
+    "Жесткость",
+    "Ласковость",
+    "Сочувствие",
+    "Самомнение",
+    "Агрессивность",
+    "Нетерпеливость"
   ];
 
-  const handleAnswerChange = (questionId: string, value: string) => {
+  const handleAnswerChange = (traitIndex: number, value: string) => {
     setAnswers(prev => ({
       ...prev,
-      [questionId]: value
+      [traitIndex]: value
     }));
   };
 
-  const isComplete = Object.keys(answers).length === questions.length;
-  const progress = 50 + (Object.keys(answers).length / questions.length) * 50; // 50% + part 2 progress
+  const isComplete = Object.keys(answers).length === emotionalTraits.length;
+  const progress = 50 + (Object.keys(answers).length / emotionalTraits.length) * 50; // 50% + part 2 progress
 
   const calculateResults = () => {
     const allAnswers = { ...part1Answers, ...answers };
     
     // Simple scoring system - you can make this more sophisticated
-    const scores = Object.values(allAnswers).map(answer => {
-      switch(answer) {
-        case 'never':
-        case 'no_never':
-        case 'very_poorly':
-        case 'aggressive':
-        case 'no_empathy':
-        case 'very_shy':
-        case 'very_defensive':
-        case 'jealous':
-        case 'rarely':
-          return 1;
-        case 'rarely':
-        case 'with_help':
-        case 'withdraws':
-        case 'minimal':
-        case 'with_difficulty':
-        case 'when_asked':
-        case 'observes':
-        case 'upset':
-        case 'indifferent':
-        case 'when_reminded':
-          return 2;
-        case 'sometimes':
-        case 'sometimes_alone':
-        case 'seeks_help':
-        case 'when_reminded':
-        case 'moderately':
-        case 'needs_encouragement':
-        case 'listens_grudgingly':
-        case 'sometimes_happy':
-        case 'sometimes_remembers':
-          return 3;
-        case 'often':
-        case 'usually_alone':
-        case 'tries_resolve':
-        case 'often_naturally':
-        case 'well':
-        case 'joins_gradually':
-        case 'accepts':
-        case 'usually_supportive':
-        case 'often_thanks':
-          return 4;
-        case 'always':
-        case 'always_quickly':
-        case 'calm_discussion':
-        case 'very_empathetic':
-        case 'excellently':
-        case 'confident':
-        case 'always_helpful':
-        case 'learns':
-        case 'genuinely_happy':
-        case 'very_grateful':
-          return 5;
-        default:
-          return 3;
-      }
-    });
-
-    const totalScore = scores.reduce((sum, score) => sum + score, 0);
-    const maxScore = questions.length * 5 + 5 * 5; // 10 questions total
-    const percentage = (totalScore / maxScore) * 100;
-
-    if (percentage >= 80) {
+    // Calculate part 1 score (да/нет questions)
+    const part1Scores = Object.values(part1Answers).map(answer => answer === 'yes' ? 1 : 0);
+    const part1Total = part1Scores.reduce((sum, score) => sum + score, 0);
+    
+    // Calculate part 2 score (intensity ratings)
+    const part2Scores = Object.values(answers).map(answer => parseInt(answer) || 0);
+    const part2Total = part2Scores.reduce((sum, score) => sum + score, 0);
+    
+    // Total assessment
+    const behavioralScore = (part1Total / 10) * 100; // Percentage of positive behaviors
+    const intensityScore = part2Total; // Sum of all intensity ratings
+    const maxIntensityScore = emotionalTraits.length * 4; // Maximum possible intensity score
+    if (behavioralScore >= 80 && intensityScore <= maxIntensityScore * 0.3) {
       return {
-        level: "Высокий",
-        description: "У вашего ребёнка отлично развит эмоциональный интеллект! Он умеет управлять эмоциями и хорошо понимает других.",
-        recommendations: "Продолжайте поддерживать развитие через чтение книг об эмоциях и обсуждение чувств в семье."
+        level: "Высокий уровень ЭИ",
+        description: "У вашего ребёнка хорошо развиты социальные навыки и эмоциональная регуляция. Большинство поведенческих показателей положительные, а негативные проявления минимальны.",
+        recommendations: "Продолжайте поддерживать развитие через позитивное подкрепление и обсуждение эмоций."
       };
-    } else if (percentage >= 60) {
+    } else if (behavioralScore >= 60 && intensityScore <= maxIntensityScore * 0.5) {
       return {
-        level: "Средний",
-        description: "У ребёнка есть базовые навыки эмоционального интеллекта, но есть области для улучшения.",
-        recommendations: "Рекомендуем занятия в нашей школе ЭИ для развития навыков управления эмоциями и эмпатии."
+        level: "Средний уровень ЭИ",
+        description: "У ребёнка есть базовые навыки, но некоторые эмоциональные проявления требуют внимания.",
+        recommendations: "Рекомендуем занятия по развитию эмоционального интеллекта для укрепления навыков."
       };
     } else {
       return {
-        level: "Требует внимания",
-        description: "Ребёнку нужна поддержка в развитии эмоциональных навыков.",
-        recommendations: "Настоятельно рекомендуем программу развития ЭИ и консультацию с нашим специалистом."
+        level: "Требуется развитие ЭИ",
+        description: "Ребёнок испытывает трудности в эмоциональной регуляции и социальном взаимодействии.",
+        recommendations: "Настоятельно рекомендуем комплексную программу развития ЭИ и консультацию специалиста."
       };
     }
   };
@@ -247,43 +158,63 @@ const TestEIPart2 = () => {
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
             <h1 className="text-3xl font-bold text-foreground mb-4">
-              Диагностика эмоционального интеллекта
+              Оценочная шкала эмоциональных проявлений
             </h1>
             <p className="text-muted-foreground mb-6">
-              Часть 2 из 2: Социальные навыки
+              Часть 2 из 2: Интенсивность эмоциональных проявлений
             </p>
             <Progress value={progress} className="mb-4" />
             <p className="text-sm text-muted-foreground">
-              Прогресс: {5 + Object.keys(answers).length} из 10 вопросов
+              Прогресс: {10 + Object.keys(answers).length} из {10 + emotionalTraits.length} пунктов
+            </p>
+            <p className="text-xs text-muted-foreground mt-2">
+              0 - нет, 1 - немного, 2 - средне, 3 - много, 4 - очень много
             </p>
           </div>
 
-          <div className="space-y-6">
-            {questions.map((question, index) => (
-              <Card key={question.id}>
-                <CardHeader>
-                  <CardTitle className="text-lg">
-                    {index + 6}. {question.text}
-                  </CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <RadioGroup 
-                    value={answers[question.id] || ""} 
-                    onValueChange={(value) => handleAnswerChange(question.id, value)}
-                  >
-                    {question.options.map((option) => (
-                      <div key={option.value} className="flex items-center space-x-2">
-                        <RadioGroupItem value={option.value} id={`${question.id}-${option.value}`} />
-                        <Label htmlFor={`${question.id}-${option.value}`}>
-                          {option.label}
-                        </Label>
-                      </div>
+          <Card>
+            <CardHeader>
+              <CardTitle className="text-xl">Оцените интенсивность проявлений</CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="overflow-x-auto">
+                <table className="w-full border-collapse">
+                  <thead>
+                    <tr className="border-b">
+                      <th className="text-left p-3 font-medium">Чувственное проявление</th>
+                      <th className="text-center p-3 font-medium">Интенсивность (0-4)</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    {emotionalTraits.map((trait, index) => (
+                      <tr key={index} className="border-b">
+                        <td className="p-3 font-medium">{trait}</td>
+                        <td colSpan={5} className="p-3">
+                          <RadioGroup 
+                            value={answers[index] || ""} 
+                            onValueChange={(selectedValue) => handleAnswerChange(index, selectedValue)}
+                            className="flex justify-center gap-6"
+                          >
+                            {[0, 1, 2, 3, 4].map((value) => (
+                              <div key={value} className="flex flex-col items-center space-y-1">
+                                <Label htmlFor={`trait${index}-${value}`} className="text-sm font-medium">
+                                  {value}
+                                </Label>
+                                <RadioGroupItem 
+                                  value={value.toString()} 
+                                  id={`trait${index}-${value}`}
+                                />
+                              </div>
+                            ))}
+                          </RadioGroup>
+                        </td>
+                      </tr>
                     ))}
-                  </RadioGroup>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+                  </tbody>
+                </table>
+              </div>
+            </CardContent>
+          </Card>
 
           <div className="mt-8 text-center">
             <Button 
