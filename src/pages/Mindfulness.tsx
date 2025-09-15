@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import Header from "@/components/ui/header";
 import Footer from "@/components/Footer";
 import { Play, Download, Clock, Brain, Leaf, Shield, AlertTriangle, CheckCircle, Target, Heart, Users, Focus, Zap } from "lucide-react";
+import landingImage from "@/assets/landing.png";
 
 const Mindfulness = () => {
   const openBooking = () => {
@@ -127,7 +128,12 @@ const Mindfulness = () => {
       <Header />
       
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
+      <section 
+        className="py-16 lg:py-24 bg-gradient-to-br from-primary/5 to-accent/5 bg-cover bg-center bg-no-repeat relative"
+        style={{
+          backgroundImage: `linear-gradient(to bottom right, hsl(var(--primary) / 0.8), hsl(var(--accent) / 0.8)), url(${landingImage})`
+        }}
+      >
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-6">
