@@ -12,6 +12,8 @@ import Privacy from "./pages/Privacy";
 import Terms from "./pages/Terms";
 import Consent from "./pages/Consent";
 import Cancellation from "./pages/Cancellation";
+import TestEIPart1 from "./pages/TestEIPart1";
+import TestEIPart2 from "./pages/TestEIPart2";
 import NotFound from "./pages/NotFound";
 import GlobalBookingModal from "@/components/GlobalBookingModal";
 import GlobalSchoolBookingModal from "@/components/GlobalSchoolBookingModal";
@@ -34,6 +36,8 @@ const App = () => (
           <Route path="/terms" element={<Terms />} />
           <Route path="/consent" element={<Consent />} />
           <Route path="/cancellation" element={<Cancellation />} />
+          <Route path="/test-ei-part1" element={<TestEIPart1 />} />
+          <Route path="/test-ei-part2" element={<TestEIPart2 />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
