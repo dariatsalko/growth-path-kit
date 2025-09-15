@@ -17,12 +17,9 @@ const School = () => {
       <Header />
       
       {/* Hero Section */}
-      <section 
-        className="py-16 lg:py-24 relative bg-cover bg-center bg-no-repeat"
-        style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)), url('/src/assets/EI.jpg')`
-        }}
-      >
+      <section className="py-16 lg:py-24 relative bg-cover bg-center bg-no-repeat" style={{
+      backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)), url('/src/assets/EI.jpg')`
+    }}>
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-6">
@@ -35,11 +32,7 @@ const School = () => {
               Помогаем детям понимать эмоции, развивать эмпатию и строить здоровые отношения через игровые практики и научно обоснованные методики
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button 
-                size="lg" 
-                className="bg-accent hover:bg-accent/90 text-accent-foreground"
-                onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}
-              >
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}>
                 <Calendar className="w-5 h-5 mr-2" />
                 Записать ребёнка
               </Button>
@@ -124,13 +117,10 @@ const School = () => {
                   <li>• Простые дыхательные упражнения</li>
                 </ul>
                 <div className="pt-4">
-                  <p className="text-sm text-muted-foreground mb-2">8 занятий по 45 минут</p>
-                  <p className="font-semibold">От 80 BYN/занятие</p>
+                  <p className="text-sm text-muted-foreground mb-2">20 занятий по 40 минут (1-2 раза в неделю)</p>
+                  <p className="font-semibold">От 40 BYN/занятие</p>
                 </div>
-                <Button 
-                  className="w-full"
-                  onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}
-                >
+                <Button className="w-full" onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}>
                   Записаться
                 </Button>
               </CardContent>
@@ -149,13 +139,10 @@ const School = () => {
                   <li>• Решение конфликтов</li>
                 </ul>
                 <div className="pt-4">
-                  <p className="text-sm text-muted-foreground mb-2">10 занятий по 60 минут</p>
-                  <p className="font-semibold">От 90 BYN/занятие</p>
+                  <p className="text-sm text-muted-foreground mb-2">20 занятий по 40 минут (2-3 раза в неделю)</p>
+                  <p className="font-semibold">От 40 BYN/занятие</p>
                 </div>
-                <Button 
-                  className="w-full"
-                  onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}
-                >
+                <Button className="w-full" onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}>
                   Записаться
                 </Button>
               </CardContent>
@@ -163,7 +150,7 @@ const School = () => {
 
             <Card>
               <CardHeader>
-                <CardTitle className="text-center">13-17 лет</CardTitle>
+                <CardTitle className="text-center">13-16 лет</CardTitle>
                 <CardDescription className="text-center">Подростки</CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
@@ -174,13 +161,12 @@ const School = () => {
                   <li>• Цифровая грамотность эмоций</li>
                 </ul>
                 <div className="pt-4">
-                  <p className="text-sm text-muted-foreground mb-2">12 занятий по 75 минут</p>
-                  <p className="font-semibold">От 100 BYN/занятие</p>
+                  <p className="text-sm text-muted-foreground mb-2">10 занятий по 40 минут
+
+                </p>
+                  <p className="font-semibold">От 55 BYN/занятие</p>
                 </div>
-                <Button 
-                  className="w-full"
-                  onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}
-                >
+                <Button className="w-full" onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}>
                   Записаться
                 </Button>
               </CardContent>
