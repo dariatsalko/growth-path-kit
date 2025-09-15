@@ -131,7 +131,7 @@ const Mindfulness = () => {
       <section 
         className="py-16 lg:py-24 bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url('/src/assets/Mindfull.jpg')`
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)), url('/src/assets/Mindfull.jpg')`
         }}
       >
         <div className="container px-4">
