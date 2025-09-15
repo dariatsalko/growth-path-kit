@@ -231,6 +231,96 @@ const School = () => {
         </div>
       </section>
 
+      {/* Help for Parents */}
+      <section className="py-16 lg:py-24">
+        <div className="container px-4">
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              В помощь родителям
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Полезные материалы и советы для развития эмоционального интеллекта вашего ребёнка дома
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <BookOpen className="w-5 h-5 text-primary" />
+                  Статьи и материалы
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-2 text-sm">
+                  <li>• Как говорить с ребёнком об эмоциях</li>
+                  <li>• Игры для развития эмпатии</li>
+                  <li>• Техники успокоения для детей</li>
+                  <li>• Распознавание эмоций в картинках</li>
+                </ul>
+                <Button variant="outline" className="w-full">
+                  Скачать материалы
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Users className="w-5 h-5 text-primary" />
+                  Семейные упражнения
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-2 text-sm">
+                  <li>• Круг эмоций на вечер</li>
+                  <li>• Дневник благодарности</li>
+                  <li>• Ролевые игры с эмоциями</li>
+                  <li>• Медитация для всей семьи</li>
+                </ul>
+                <Button variant="outline" className="w-full">
+                  Получить упражнения
+                </Button>
+              </CardContent>
+            </Card>
+
+            <Card>
+              <CardHeader>
+                <CardTitle className="flex items-center gap-2">
+                  <Calendar className="w-5 h-5 text-primary" />
+                  Консультации
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="space-y-4">
+                <ul className="space-y-2 text-sm">
+                  <li>• Индивидуальная консультация</li>
+                  <li>• Семейная сессия</li>
+                  <li>• Разбор сложных ситуаций</li>
+                  <li>• План развития ЭИ ребёнка</li>
+                </ul>
+                <Button className="w-full" onClick={() => window.dispatchEvent(new CustomEvent("openBookingModal"))}>
+                  Записаться на консультацию
+                </Button>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="mt-12 bg-primary/5 rounded-2xl p-8">
+            <div className="text-center">
+              <h3 className="text-2xl font-bold text-foreground mb-4">
+                Бесплатная диагностика ЭИ ребёнка
+              </h3>
+              <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
+                Пройдите короткий тест и получите персональные рекомендации по развитию эмоционального интеллекта вашего ребёнка
+              </p>
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+                Пройти диагностику
+              </Button>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Testimonials */}
       <section className="py-16 lg:py-24 bg-secondary/30">
         <div className="container px-4">
