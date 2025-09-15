@@ -313,7 +313,7 @@ const School = () => {
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                 Пройдите короткий тест и получите персональные рекомендации по развитию эмоционального интеллекта вашего ребёнка
               </p>
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground">
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}>
                 Пройти диагностику
               </Button>
             </div>
