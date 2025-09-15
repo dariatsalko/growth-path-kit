@@ -244,68 +244,6 @@ const School = () => {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <BookOpen className="w-5 h-5 text-primary" />
-                  Статьи и материалы
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm">
-                  <li>• Как говорить с ребёнком об эмоциях</li>
-                  <li>• Игры для развития эмпатии</li>
-                  <li>• Техники успокоения для детей</li>
-                  <li>• Распознавание эмоций в картинках</li>
-                </ul>
-                <Button variant="outline" className="w-full">
-                  Скачать материалы
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Users className="w-5 h-5 text-primary" />
-                  Семейные упражнения
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm">
-                  <li>• Круг эмоций на вечер</li>
-                  <li>• Дневник благодарности</li>
-                  <li>• Ролевые игры с эмоциями</li>
-                  <li>• Медитация для всей семьи</li>
-                </ul>
-                <Button variant="outline" className="w-full">
-                  Получить упражнения
-                </Button>
-              </CardContent>
-            </Card>
-
-            <Card>
-              <CardHeader>
-                <CardTitle className="flex items-center gap-2">
-                  <Calendar className="w-5 h-5 text-primary" />
-                  Консультации
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <ul className="space-y-2 text-sm">
-                  <li>• Индивидуальная консультация</li>
-                  <li>• Семейная сессия</li>
-                  <li>• Разбор сложных ситуаций</li>
-                  <li>• План развития ЭИ ребёнка</li>
-                </ul>
-                <Button className="w-full" onClick={() => window.dispatchEvent(new CustomEvent("openBookingModal"))}>
-                  Записаться на консультацию
-                </Button>
-              </CardContent>
-            </Card>
-          </div>
-
           {/* FAQ Section */}
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
