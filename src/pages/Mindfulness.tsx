@@ -5,6 +5,7 @@ import Header from "@/components/ui/header";
 import Footer from "@/components/Footer";
 import { Play, Download, Clock, Brain, Leaf, Shield, AlertTriangle, CheckCircle, Target, Heart, Users, Focus, Zap, Calendar } from "lucide-react";
 import landingImage from "@/assets/landing.png";
+import mindfullImage from "@/assets/Mindfull.jpg";
 
 const Mindfulness = () => {
   const openBooking = () => {
@@ -131,7 +132,7 @@ const Mindfulness = () => {
       <section 
         className="py-16 lg:py-24 bg-cover bg-center bg-no-repeat relative"
         style={{
-          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)), url('/src/assets/Mindfull.jpg')`
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)), url(${mindfullImage})`
         }}
       >
         <div className="container px-4">
