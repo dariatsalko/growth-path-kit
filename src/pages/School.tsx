@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import Header from "@/components/ui/header";
 import Footer from "@/components/Footer";
 import { Brain, Users, Calendar, Star, BookOpen, Heart } from "lucide-react";
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 const School = () => {
   return <div className="min-h-screen bg-background">
       <Helmet>
@@ -303,6 +304,53 @@ const School = () => {
                 </Button>
               </CardContent>
             </Card>
+          </div>
+
+          {/* FAQ Section */}
+          <div className="mt-16">
+            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
+              Часто задаваемые вопросы
+            </h3>
+            <div className="max-w-3xl mx-auto">
+              <Accordion type="single" collapsible className="w-full">
+                <AccordionItem value="item-1">
+                  <AccordionTrigger>В каком возрасте лучше начинать развитие эмоционального интеллекта?</AccordionTrigger>
+                  <AccordionContent>
+                    Развитие эмоционального интеллекта можно начинать с самого раннего возраста. Однако наши программы рассчитаны на детей от 6 лет, когда ребёнок уже может осознанно работать с эмоциями и участвовать в групповой работе.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-2">
+                  <AccordionTrigger>Как понять, что ребёнку нужны занятия по развитию ЭИ?</AccordionTrigger>
+                  <AccordionContent>
+                    Обратите внимание на следующие признаки: частые истерики, трудности в общении со сверстниками, неумение выражать свои чувства словами, агрессивное поведение, замкнутость, проблемы с адаптацией в новой среде.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-3">
+                  <AccordionTrigger>Как быстро будут видны результаты?</AccordionTrigger>
+                  <AccordionContent>
+                    Первые изменения родители замечают уже через 4-6 занятий. Ребёнок начинает лучше понимать и называть свои эмоции. Устойчивые навыки формируются через 2-3 месяца регулярных занятий.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-4">
+                  <AccordionTrigger>Можно ли развивать ЭИ ребёнка дома самостоятельно?</AccordionTrigger>
+                  <AccordionContent>
+                    Да, домашняя практика очень важна! Мы предоставляем родителям материалы и упражнения для работы дома. Однако системный подход и работа в группе со специалистом дают более быстрые и устойчивые результаты.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-5">
+                  <AccordionTrigger>Что делать, если ребёнок не хочет идти на занятия?</AccordionTrigger>
+                  <AccordionContent>
+                    Это нормальная реакция. Мы используем игровой подход, поэтому дети обычно быстро втягиваются в процесс. Важно не принуждать, а мотивировать ребёнка. Первое занятие можно провести в присутствии родителя.
+                  </AccordionContent>
+                </AccordionItem>
+                <AccordionItem value="item-6">
+                  <AccordionTrigger>Работаете ли вы с детьми с особенностями развития?</AccordionTrigger>
+                  <AccordionContent>
+                    Да, мы адаптируем программы для детей с СДВГ, аутизмом, задержкой развития. Перед началом занятий проводим индивидуальную консультацию для определения оптимального подхода.
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
           </div>
 
           <div className="mt-12 bg-primary/5 rounded-2xl p-8">
