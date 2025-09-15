@@ -3,7 +3,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Badge } from "@/components/ui/badge";
 import Header from "@/components/ui/header";
 import Footer from "@/components/Footer";
-import { Play, Download, Clock, Brain, Leaf, Shield, AlertTriangle, CheckCircle, Target, Heart, Users, Focus, Zap } from "lucide-react";
+import { Play, Download, Clock, Brain, Leaf, Shield, AlertTriangle, CheckCircle, Target, Heart, Users, Focus, Zap, Calendar } from "lucide-react";
 import landingImage from "@/assets/landing.png";
 
 const Mindfulness = () => {
@@ -258,16 +258,57 @@ const Mindfulness = () => {
                         <CardTitle className="text-xl">{practice.name}</CardTitle>
                       </div>
                     </CardHeader>
-                    <CardContent className="grid md:grid-cols-2 gap-6">
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-2">Как выполнять?</h4>
-                        <p className="text-muted-foreground">{practice.howTo}</p>
-                      </div>
-                      <div>
-                        <h4 className="font-semibold text-foreground mb-2">На что направлена?</h4>
-                        <p className="text-muted-foreground">{practice.purpose}</p>
-                      </div>
-                    </CardContent>
+                     <CardContent className="grid md:grid-cols-2 gap-6">
+                       <div>
+                         <h4 className="font-semibold text-foreground mb-2">Как выполнять?</h4>
+                         <p className="text-muted-foreground">{practice.howTo}</p>
+                       </div>
+                       <div>
+                         <h4 className="font-semibold text-foreground mb-2">На что направлена?</h4>
+                         <p className="text-muted-foreground">{practice.purpose}</p>
+                       </div>
+                       <div className="md:col-span-2 mt-6 pt-6 border-t border-border">
+                         <details className="group">
+                           <summary className="cursor-pointer font-semibold text-primary hover:text-primary/80 flex items-center gap-2 mb-4">
+                             <span>Подробные инструкции</span>
+                             <svg className="w-4 h-4 transition-transform group-open:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                             </svg>
+                           </summary>
+                           <div className="space-y-4">
+                             <div className="p-4 bg-secondary/50 rounded-lg">
+                               <h5 className="font-semibold mb-2">Пошаговая инструкция:</h5>
+                               <ol className="space-y-2 text-sm text-muted-foreground list-decimal list-inside">
+                                 <li>Найдите удобное место, где вас никто не потревожит</li>
+                                 <li>Примите комфортную позу (сидя или лежа)</li>
+                                 <li>Закройте глаза или смотрите в одну точку</li>
+                                 <li>{practice.howTo}</li>
+                                 <li>Начните с 5-10 минут, постепенно увеличивая время</li>
+                                 <li>Завершите практику медленно, открыв глаза</li>
+                               </ol>
+                             </div>
+                             <div className="p-4 bg-accent/10 rounded-lg">
+                               <h5 className="font-semibold mb-2">Рекомендации:</h5>
+                               <ul className="space-y-1 text-sm text-muted-foreground list-disc list-inside">
+                                 <li>Практикуйте в одно и то же время каждый день</li>
+                                 <li>Не судите себя за "блуждающие" мысли - это нормально</li>
+                                 <li>Будьте терпеливы - результаты приходят с постоянством</li>
+                               </ul>
+                             </div>
+                             <div className="flex gap-3 pt-2">
+                               <Button 
+                                 size="sm" 
+                                 onClick={() => window.dispatchEvent(new CustomEvent("openBookingModal"))}
+                                 className="bg-primary hover:bg-primary/90"
+                               >
+                                 <Calendar className="w-4 h-4 mr-2" />
+                                 Записаться на консультацию
+                               </Button>
+                             </div>
+                           </div>
+                         </details>
+                       </div>
+                     </CardContent>
                   </Card>
                 ))}
               </div>
