@@ -1,0 +1,6 @@
+# Redirects for Netlify/Vercel
+# Redirect old URLs to new ones (add your specific redirects here)
+# /old-path /new-path 301
+
+# Handle SPA routing - this should be last
+/* /index.html 200
