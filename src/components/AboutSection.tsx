@@ -34,20 +34,26 @@ const AboutSection = () => {
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6">
           {values.map((value, index) => {
             const IconComponent = value.icon;
             return (
-              <Card key={index} className="border-border bg-background/50 hover:bg-background/80 transition-all duration-300 text-center">
-                <CardHeader className="pb-4">
+              <Card 
+                key={index} 
+                className="border-border bg-background/50 hover:bg-background/80 transition-all duration-300 text-center hover:shadow-lg focus-within:ring-2 focus-within:ring-primary focus-within:ring-offset-2"
+                tabIndex={0}
+                role="article"
+                aria-label={`${value.title}: ${value.description}`}
+              >
+                <CardHeader className="pb-4 px-4 pt-6">
                   <div className="flex justify-center mb-4">
                     <div className="flex h-12 w-12 items-center justify-center rounded-full bg-primary/10">
-                      <IconComponent className="h-6 w-6 text-primary" />
+                      <IconComponent className="h-6 w-6 text-primary" aria-hidden="true" />
                     </div>
                   </div>
                   <CardTitle className="text-lg font-semibold">{value.title}</CardTitle>
                 </CardHeader>
-                <CardContent className="pt-0">
+                <CardContent className="pt-0 px-4 pb-6">
                   <CardDescription className="text-sm text-muted-foreground">
                     {value.description}
                   </CardDescription>

@@ -52,8 +52,9 @@ const Header = () => {
         <div className="hidden md:flex">
           <Button 
             variant="default" 
-            className="bg-accent hover:bg-accent/90 text-accent-foreground font-medium"
+            className="touch-target bg-accent hover:bg-accent/90 text-accent-foreground font-medium focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
             onClick={openBookingModal}
+            aria-label="Записаться на консультацию"
           >
             Записаться
           </Button>
@@ -61,8 +62,10 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:bg-accent/10 hover:text-foreground md:hidden"
+          className="touch-target inline-flex items-center justify-center rounded-md p-2 text-muted-foreground hover:bg-accent/10 hover:text-foreground md:hidden focus:outline-none focus:ring-2 focus:ring-primary focus:ring-offset-2"
           onClick={toggleMenu}
+          aria-label={isMenuOpen ? "Закрыть меню" : "Открыть меню"}
+          aria-expanded={isMenuOpen}
         >
           {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
         </button>
@@ -87,11 +90,12 @@ const Header = () => {
           <div className="pt-2">
             <Button 
               variant="default" 
-              className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-medium"
+              className="touch-target w-full bg-accent hover:bg-accent/90 text-accent-foreground font-medium focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
               onClick={() => {
                 setIsMenuOpen(false);
                 openBookingModal();
               }}
+              aria-label="Записаться на консультацию"
             >
               Записаться
             </Button>

@@ -8,6 +8,8 @@ import PsychologistsSection from "@/components/PsychologistsSection";
 import MessageSection from "@/components/MessageSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
+import ScrollToTop from "@/components/ScrollToTop";
+import AnimatedSection from "@/components/AnimatedSection";
 
 const Index = () => {
 
@@ -49,16 +51,29 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <AboutSection />
-        <HowItWorksSection />
-        <ServicesSection />
-        <PsychologistsSection onSelectPsychologist={(psychologist) => {
-          window.dispatchEvent(new CustomEvent('openBookingWithPsychologist', { detail: { name: psychologist } }));
-        }} />
-        <MessageSection />
-        <CtaSection />
+        <AnimatedSection animation="fade-up" id="about">
+          <AboutSection />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up" delay={200} id="how-it-works">
+          <HowItWorksSection />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up" delay={100} id="services">
+          <ServicesSection />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up" delay={150} id="psychologists">
+          <PsychologistsSection onSelectPsychologist={(psychologist) => {
+            window.dispatchEvent(new CustomEvent('openBookingWithPsychologist', { detail: { name: psychologist } }));
+          }} />
+        </AnimatedSection>
+        <AnimatedSection animation="fade-up" delay={100} id="message">
+          <MessageSection />
+        </AnimatedSection>
+        <AnimatedSection animation="scale-in" delay={200} id="cta">
+          <CtaSection />
+        </AnimatedSection>
       </main>
       <Footer />
+      <ScrollToTop />
     </div>
   );
 };

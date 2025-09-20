@@ -51,16 +51,18 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
+              className="touch-target bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
               onClick={openBooking}
+              aria-label="Записаться на консультацию к психологу"
             >
               Записаться на консультацию
             </Button>
             <Button 
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg rounded-lg transition-all"
+              className="touch-target border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg rounded-lg transition-all"
               onClick={scrollToApproach}
+              aria-label="Узнать больше о нашем подходе к психологии"
             >
               Узнать о подходе
             </Button>
