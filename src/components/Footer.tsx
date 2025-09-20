@@ -7,8 +7,8 @@ const Footer = () => {
           {/* Brand */}
           <div className="lg:col-span-1">
             <div className="flex items-center space-x-2 mb-4">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-amber-100/20 backdrop-blur border border-amber-200/30">
-                <img src={intentionLogo} alt="Интенция" className="h-16 w-16" />
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-amber-100/20 backdrop-blur border border-amber-200/30">
+                <img src={intentionLogo} alt="Интенция" className="h-8 w-8" />
               </div>
               <span className="text-lg font-semibold">ИНТЕНЦИЯ</span>
             </div>
