@@ -1,14 +1,15 @@
 import { Phone, Mail, MapPin, MessageCircle, Instagram, Facebook } from "lucide-react";
+import intentionLogo from "@/assets/intention.svg";
 const Footer = () => {
   return <footer className="bg-primary text-primary-foreground">
       <div className="container px-4 py-12">
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <div className="flex items-center space-x-2 mb-4">
-              <div className="flex h-8 w-8 items-center justify-center rounded-full bg-accent">
-                <div className="h-4 w-4 rounded-full bg-primary"></div>
-              </div>
+             <div className="flex items-center space-x-2 mb-4">
+               <div className="flex h-8 w-8 items-center justify-center rounded-full" style={{backgroundColor: '#F6F7F5'}}>
+                 <img src={intentionLogo} alt="Интенция" className="h-5 w-5" />
+               </div>
               <span className="text-lg font-semibold">ИНТЕНЦИЯ</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed mb-4">
