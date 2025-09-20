@@ -8,7 +8,7 @@ const Footer = () => {
           <div className="lg:col-span-1">
              <div className="flex items-center space-x-2 mb-4">
                <div className="flex h-8 w-8 items-center justify-center rounded-full" style={{backgroundColor: '#F6F7F5'}}>
-                 <img src={intentionLogo} alt="Интенция" className="h-5 w-5" />
+                 <img src={intentionLogo} alt="Интенция" className="h-6 w-7" />
                </div>
               <span className="text-lg font-semibold">ИНТЕНЦИЯ</span>
             </div>
