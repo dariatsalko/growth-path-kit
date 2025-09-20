@@ -8,8 +8,6 @@ import PsychologistsSection from "@/components/PsychologistsSection";
 import MessageSection from "@/components/MessageSection";
 import CtaSection from "@/components/CtaSection";
 import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
-import AnimatedSection from "@/components/AnimatedSection";
 
 const Index = () => {
 
@@ -51,29 +49,16 @@ const Index = () => {
       <Header />
       <main>
         <HeroSection />
-        <AnimatedSection id="about" animation="fade-in-up" delay={100}>
-          <AboutSection />
-        </AnimatedSection>
-        <AnimatedSection id="how-it-works" animation="scale-in" delay={200}>
-          <HowItWorksSection />
-        </AnimatedSection>
-        <AnimatedSection id="services" animation="slide-in-left" delay={100}>
-          <ServicesSection />
-        </AnimatedSection>
-        <AnimatedSection id="psychologists" animation="fade-in-up" delay={150}>
-          <PsychologistsSection onSelectPsychologist={(psychologist) => {
-            window.dispatchEvent(new CustomEvent('openBookingWithPsychologist', { detail: { name: psychologist } }));
-          }} />
-        </AnimatedSection>
-        <AnimatedSection id="message" animation="slide-in-right" delay={100}>
-          <MessageSection />
-        </AnimatedSection>
-        <AnimatedSection animation="scale-in" delay={200}>
-          <CtaSection />
-        </AnimatedSection>
+        <AboutSection />
+        <HowItWorksSection />
+        <ServicesSection />
+        <PsychologistsSection onSelectPsychologist={(psychologist) => {
+          window.dispatchEvent(new CustomEvent('openBookingWithPsychologist', { detail: { name: psychologist } }));
+        }} />
+        <MessageSection />
+        <CtaSection />
       </main>
       <Footer />
-      <ScrollToTop />
     </div>
   );
 };
