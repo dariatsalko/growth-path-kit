@@ -5,6 +5,7 @@ import { Badge } from "@/components/ui/badge";
 import Header from "@/components/ui/header";
 import Footer from "@/components/Footer";
 import { Brain, Users, Calendar, Star, BookOpen, Heart } from "lucide-react";
+import ParentingProblemsSection from "@/components/ParentingProblemsSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 const School = () => {
   return <div className="min-h-screen bg-background">
@@ -232,19 +233,11 @@ const School = () => {
         </div>
       </section>
 
-      {/* Help for Parents */}
+      <ParentingProblemsSection />
+
+      {/* FAQ Section */}
       <section className="py-16 lg:py-24">
         <div className="container px-4">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              В помощь родителям
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Полезные материалы и советы для развития эмоционального интеллекта вашего ребёнка дома
-            </p>
-          </div>
-
-          {/* FAQ Section */}
           <div className="mt-16">
             <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
               Часто задаваемые вопросы
@@ -305,7 +298,7 @@ const School = () => {
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
                 Пройдите короткий тест и получите персональные рекомендации по развитию эмоционального интеллекта вашего ребёнка
               </p>
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => window.open('/test-ei-part1', '_blank')}>
+              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => window.open("/test-ei-part1", "_blank")}>
                 Пройти тест
               </Button>
             </div>
