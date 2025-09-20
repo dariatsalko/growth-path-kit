@@ -89,45 +89,49 @@ const ParentingProblemsSection = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-8 max-w-6xl mx-auto">
-          {problems.map((item, index) => (
-            <Card key={index} className="h-full">
-              <CardHeader>
-                <div className="flex items-center gap-3 mb-3">
-                  {item.icon}
-                  <Badge variant="outline">{item.category}</Badge>
-                </div>
-                <CardTitle className="text-lg leading-tight">
-                  {item.problem}
-                </CardTitle>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
-                    <Lightbulb className="w-4 h-4 text-yellow-500" />
-                    Решение:
-                  </h4>
-                  <p className="text-muted-foreground text-sm leading-relaxed">
-                    {item.solution}
-                  </p>
-                </div>
-                
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">
-                    Практические советы:
-                  </h4>
-                  <ul className="space-y-1">
-                    {item.tips.map((tip, tipIndex) => (
-                      <li key={tipIndex} className="text-sm text-muted-foreground flex items-start gap-2">
-                        <span className="text-primary font-bold">•</span>
-                        <span>{tip}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        <div className="max-w-4xl mx-auto">
+          <Accordion type="single" collapsible className="w-full space-y-4">
+            {problems.map((item, index) => (
+              <AccordionItem key={index} value={`problem-${index}`} className="border rounded-lg">
+                <AccordionTrigger className="px-6 py-4 hover:no-underline">
+                  <div className="flex items-center gap-3 text-left">
+                    {item.icon}
+                    <div>
+                      <Badge variant="outline" className="mb-2">{item.category}</Badge>
+                      <h3 className="font-semibold text-lg leading-tight">
+                        {item.problem}
+                      </h3>
+                    </div>
+                  </div>
+                </AccordionTrigger>
+                <AccordionContent className="px-6 pb-6 space-y-4">
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2 flex items-center gap-2">
+                      <Lightbulb className="w-4 h-4 text-yellow-500" />
+                      Решение:
+                    </h4>
+                    <p className="text-muted-foreground text-sm leading-relaxed">
+                      {item.solution}
+                    </p>
+                  </div>
+                  
+                  <div>
+                    <h4 className="font-semibold text-foreground mb-2">
+                      Практические советы:
+                    </h4>
+                    <ul className="space-y-1">
+                      {item.tips.map((tip, tipIndex) => (
+                        <li key={tipIndex} className="text-sm text-muted-foreground flex items-start gap-2">
+                          <span className="text-primary font-bold">•</span>
+                          <span>{tip}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                </AccordionContent>
+              </AccordionItem>
+            ))}
+          </Accordion>
         </div>
 
         {/* Additional Resources */}
