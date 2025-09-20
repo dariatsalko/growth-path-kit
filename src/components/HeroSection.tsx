@@ -14,7 +14,7 @@ const HeroSection = () => {
     }
   };
   return (
-    <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/20">
+    <section className="relative overflow-hidden bg-gradient-to-br from-primary/5 to-secondary/20" aria-labelledby="hero-heading">
       <div className="absolute inset-0 bg-gradient-to-r from-background/80 to-transparent z-10"></div>
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
@@ -23,7 +23,7 @@ const HeroSection = () => {
       
       <div className="relative z-20 container px-4 py-16 lg:py-24">
         <div className="max-w-2xl">
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold tracking-tight text-foreground mb-6">
+          <h1 id="hero-heading" className="text-4xl md:text-5xl lg:text-6xl font-playfair font-bold tracking-tight text-foreground mb-6">
             Добро пожаловать в Центр консультативной психологии <span className="text-primary">ИНТЕНЦИЯ</span>
           </h1>
           
@@ -51,16 +51,18 @@ const HeroSection = () => {
           <div className="flex flex-col sm:flex-row gap-4">
             <Button 
               size="lg"
-              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
+              className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all min-h-[56px] focus:ring-2 focus:ring-accent focus:ring-offset-2"
               onClick={openBooking}
+              aria-label="Записаться на консультацию - откроется форма записи"
             >
               Записаться на консультацию
             </Button>
             <Button 
               size="lg"
               variant="outline"
-              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg rounded-lg transition-all"
+              className="border-primary text-primary hover:bg-primary hover:text-primary-foreground font-semibold px-8 py-6 text-lg rounded-lg transition-all min-h-[56px] focus:ring-2 focus:ring-primary focus:ring-offset-2"
               onClick={scrollToApproach}
+              aria-label="Узнать о нашем подходе - прокрутка к разделу О нас"
             >
               Узнать о подходе
             </Button>
