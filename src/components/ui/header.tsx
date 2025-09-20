@@ -26,8 +26,8 @@ const Header = () => {
       <div className="w-full flex h-16 items-center justify-between px-4 lg:px-6">
         {/* Logo */}
         <a href="/" className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity flex-shrink-0">
-          <div className="flex h-10 w-10 items-center justify-center">
-            <img src={intentionLogo} alt="Интенция" className="h-10 w-10" />
+          <div className="flex h-12 w-12 items-center justify-center">
+            <img src={intentionLogo} alt="Интенция" className="h-12 w-12" />
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-bold text-foreground">ИНТЕНЦИЯ</span>
