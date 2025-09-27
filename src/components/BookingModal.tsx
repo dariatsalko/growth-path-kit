@@ -18,14 +18,16 @@ interface BookingModalProps {
 
 const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalProps) => {
   const { toast } = useToast();
-  const [formData, setFormData] = useState({
+
+  const getInitialFormData = (psychologistValue: string) => ({
     name: "",
     phone: "",
     email: "",
     format: "",
-    psychologist: selectedPsychologist || "",
+    psychologist: psychologistValue,
     timePreference: "",
     request: "",
+    additionalInfo: "",
     agreements: {
       privacy: false,
       terms: false,
@@ -33,12 +35,19 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
     }
   });
 
+  const [formData, setFormData] = useState(() => getInitialFormData(selectedPsychologist || ""));
+
   useEffect(() => {
     setFormData((prev) => ({
       ...prev,
       psychologist: selectedPsychologist ?? "",
     }));
   }, [selectedPsychologist]);
+
+  const handleClose = () => {
+    setFormData(getInitialFormData(selectedPsychologist || ""));
+    onClose();
+  };
 
   useEffect(() => {
     const handleBookingWithPsychologist = (event: CustomEvent) => {
@@ -81,7 +90,7 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
       description: "Мы свяжемся с вами в течение 2 часов для подтверждения записи",
     });
 
-    onClose();
+    handleClose();
     console.log("Form submitted:", formData);
   };
 
@@ -109,7 +118,7 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
   ];
 
   return (
-    <Dialog open={isOpen} onOpenChange={(open) => { if (!open) onClose(); }}>
+    <Dialog open={isOpen} onOpenChange={(open) => { if (!open) handleClose(); }}>
       <DialogContent className="max-w-2xl max-h-[90vh] overflow-y-auto">
         <DialogHeader>
           <DialogTitle className="flex items-center gap-2">
@@ -237,6 +246,8 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
               id="message"
               placeholder="Расскажите кратко о своём запросе (необязательно)"
               className="min-h-[100px]"
+              value={formData.additionalInfo}
+              onChange={(e) => setFormData({ ...formData, additionalInfo: e.target.value })}
             />
           </div>
 
