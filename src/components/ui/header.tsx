@@ -2,10 +2,12 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { useLocation } from "react-router-dom";
 import intentionLogo from "@/assets/intention.svg";
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
 
   const navItems = [
     { label: "Консультации", href: "/" },
@@ -41,7 +43,12 @@ const Header = () => {
             <a
               key={item.label}
               href={item.href}
-              className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors whitespace-nowrap"
+              className={cn(
+                "text-sm font-medium transition-colors whitespace-nowrap",
+                location.pathname === item.href 
+                  ? "text-foreground font-semibold border-b-2 border-primary pb-1" 
+                  : "text-muted-foreground hover:text-foreground"
+              )}
             >
               {item.label}
             </a>
@@ -81,7 +88,12 @@ const Header = () => {
             <a
               key={item.label}
               href={item.href}
-              className="block py-2 text-base font-medium text-muted-foreground hover:text-foreground transition-colors"
+              className={cn(
+                "block py-2 text-base font-medium transition-colors",
+                location.pathname === item.href 
+                  ? "text-foreground font-semibold" 
+                  : "text-muted-foreground hover:text-foreground"
+              )}
               onClick={() => setIsMenuOpen(false)}
             >
               {item.label}
