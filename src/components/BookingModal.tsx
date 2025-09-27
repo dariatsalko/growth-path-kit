@@ -38,9 +38,10 @@ const BookingModal = ({ isOpen, onClose, selectedPsychologist }: BookingModalPro
   const [formData, setFormData] = useState(() => getInitialFormData(selectedPsychologist || ""));
 
   useEffect(() => {
-    if (selectedPsychologist) {
-      setFormData((prev) => ({ ...prev, psychologist: selectedPsychologist }));
-    }
+    setFormData((prev) => ({
+      ...prev,
+      psychologist: selectedPsychologist ?? "",
+    }));
   }, [selectedPsychologist]);
 
   const handleClose = () => {
