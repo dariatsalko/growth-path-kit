@@ -6,11 +6,14 @@ const GlobalBookingModal = () => {
   const [selectedPsychologist, setSelectedPsychologist] = useState<string>("");
 
   useEffect(() => {
-    const handleOpen = () => setOpen(true);
+    const handleOpen = () => {
+      setSelectedPsychologist("");
+      setOpen(true);
+    };
     const handleOpenWith = (e: Event) => {
       const custom = e as CustomEvent;
       const name = custom.detail?.name as string | undefined;
-      if (name) setSelectedPsychologist(name);
+      setSelectedPsychologist(name ?? "");
       setOpen(true);
     };
 
@@ -25,7 +28,10 @@ const GlobalBookingModal = () => {
   return (
     <BookingModal 
       isOpen={open}
-      onClose={() => setOpen(false)}
+      onClose={() => {
+        setOpen(false);
+        setSelectedPsychologist("");
+      }}
       selectedPsychologist={selectedPsychologist}
     />
   );
