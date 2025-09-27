@@ -7,6 +7,7 @@ import Footer from "@/components/Footer";
 import { Brain, Users, Calendar, Star, BookOpen, Heart } from "lucide-react";
 import ParentingProblemsSection from "@/components/ParentingProblemsSection";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+import heroImage from "@/assets/EI.jpg";
 const School = () => {
   return <div className="min-h-screen bg-background">
       <Helmet>
@@ -20,8 +21,8 @@ const School = () => {
       
       {/* Hero Section */}
       <section className="py-16 lg:py-24 relative bg-cover bg-center bg-no-repeat" style={{
-      backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)), url('/src/assets/EI.jpg')`
-    }}>
+        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)), url(${heroImage})`
+      }}>
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-6">
