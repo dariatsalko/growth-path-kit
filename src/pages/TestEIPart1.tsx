@@ -1,19 +1,29 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
-import { Label } from "@/components/ui/label";
-import { Progress } from "@/components/ui/progress";
-import Header from "@/components/ui/header";
+
 import { ArrowRight } from "lucide-react";
+
+import { Button } from "@/components/ui/button/button";
+import {
+  Card,
+  CardContent,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card/card";
+import Header from "@/components/ui/header/header";
+import { Label } from "@/components/ui/label/label";
+import { Progress } from "@/components/ui/progress/progress";
+import {
+  RadioGroup,
+  RadioGroupItem,
+} from "@/components/ui/radio-group/radio-group";
 
 const TestEIPart1 = () => {
   const [answers, setAnswers] = useState<Record<string, string>>({});
-  
+
   const questions = [
     "Ребенок вежлив в общении с вами и другими взрослыми?",
-    "Терпим к вашим замечаниям и замечаниям других взрослых?", 
+    "Терпим к вашим замечаниям и замечаниям других взрослых?",
     "Принимает участие в домашних делах (в делах детского сада)?",
     "Помогает своим друзьям?",
     "Поддерживает друзей, у которых случаются неприятности?",
@@ -21,13 +31,13 @@ const TestEIPart1 = () => {
     "Обращает внимание на эмоциональное состояние окружающих?",
     "Выполняет поручения взрослых?",
     "Точно передает информацию, полученную от других людей?",
-    "Выражает собственное мнение о поступках других людей?"
+    "Выражает собственное мнение о поступках других людей?",
   ];
 
   const handleAnswerChange = (questionIndex: number, value: string) => {
-    setAnswers(prev => ({
+    setAnswers((prev) => ({
       ...prev,
-      [questionIndex]: value
+      [questionIndex]: value,
     }));
   };
 
@@ -35,19 +45,20 @@ const TestEIPart1 = () => {
   const progress = (Object.keys(answers).length / questions.length) * 50; // 50% for part 1
 
   const handleNext = () => {
-    localStorage.setItem('ei_test_part1', JSON.stringify(answers));
-    window.location.href = '/test-ei-part2';
+    localStorage.setItem("ei_test_part1", JSON.stringify(answers));
+    window.location.href = "/test-ei-part2";
   };
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
         <title>Тест ЭИ - Часть 1 | Центр ИНТЕНЦИЯ</title>
-        <meta name="description" content="Диагностика эмоционального интеллекта ребёнка - часть 1 из 2" />
+        <meta
+          name="description"
+          content="Диагностика эмоционального интеллекта ребёнка - часть 1 из 2"
+        />
       </Helmet>
-      
-      <Header />
-      
+
       <div className="container px-4 py-16">
         <div className="max-w-3xl mx-auto">
           <div className="text-center mb-8">
@@ -59,7 +70,8 @@ const TestEIPart1 = () => {
             </p>
             <Progress value={progress} className="mb-4" />
             <p className="text-sm text-muted-foreground">
-              Прогресс: {Object.keys(answers).length} из {questions.length} вопросов
+              Прогресс: {Object.keys(answers).length} из {questions.length}{" "}
+              вопросов
             </p>
           </div>
 
@@ -81,28 +93,23 @@ const TestEIPart1 = () => {
                       <tr key={index} className="border-b">
                         <td className="p-3">{question}</td>
                         <td colSpan={2} className="p-3">
-                          <RadioGroup 
-                            value={answers[index] || ""} 
-                            onValueChange={(value) => handleAnswerChange(index, value)}
+                          <RadioGroup
+                            value={answers[index] || ""}
+                            onValueChange={(value) =>
+                              handleAnswerChange(index, value)
+                            }
                             className="flex justify-center gap-8"
                           >
                             <div className="flex items-center space-x-2">
-                              <RadioGroupItem 
-                                value="yes" 
+                              <RadioGroupItem
+                                value="yes"
                                 id={`q${index}-yes`}
                               />
-                              <Label htmlFor={`q${index}-yes`}>
-                                Да
-                              </Label>
+                              <Label htmlFor={`q${index}-yes`}>Да</Label>
                             </div>
                             <div className="flex items-center space-x-2">
-                              <RadioGroupItem 
-                                value="no" 
-                                id={`q${index}-no`}
-                              />
-                              <Label htmlFor={`q${index}-no`}>
-                                Нет
-                              </Label>
+                              <RadioGroupItem value="no" id={`q${index}-no`} />
+                              <Label htmlFor={`q${index}-no`}>Нет</Label>
                             </div>
                           </RadioGroup>
                         </td>
@@ -115,8 +122,8 @@ const TestEIPart1 = () => {
           </Card>
 
           <div className="mt-8 text-center">
-            <Button 
-              size="lg" 
+            <Button
+              size="lg"
               onClick={handleNext}
               disabled={!isComplete}
               className="bg-accent hover:bg-accent/90 text-accent-foreground"

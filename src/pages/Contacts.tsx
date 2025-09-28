@@ -1,15 +1,37 @@
-import { Helmet } from "react-helmet-async";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { Label } from "@/components/ui/label";
-import { Textarea } from "@/components/ui/textarea";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
-import { Checkbox } from "@/components/ui/checkbox";
-import Header from "@/components/ui/header";
-import Footer from "@/components/Footer";
-import { MapPin, Phone, Mail, Clock, MessageCircle, CreditCard, FileText } from "lucide-react";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
+
+import {
+  Clock,
+  CreditCard,
+  FileText,
+  Mail,
+  MapPin,
+  MessageCircle,
+  Phone,
+} from "lucide-react";
+
+import Footer from "@/components/Footer/Footer";
+import { Button } from "@/components/ui/button/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card/card";
+import { Checkbox } from "@/components/ui/checkbox/checkbox";
+import Header from "@/components/ui/header/header";
+import { Input } from "@/components/ui/input/input";
+import { Label } from "@/components/ui/label/label";
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select/select";
+import { Textarea } from "@/components/ui/textarea/textarea";
 import { useToast } from "@/hooks/use-toast";
 
 const Contacts = () => {
@@ -19,13 +41,13 @@ const Contacts = () => {
     email: "",
     subject: "",
     message: "",
-    consent: false
+    consent: false,
   });
 
   const [paymentData, setPaymentData] = useState({
     service: "",
     package: "",
-    amount: ""
+    amount: "",
   });
 
   const handleContactSubmit = (e: React.FormEvent) => {
@@ -34,21 +56,21 @@ const Contacts = () => {
       toast({
         title: "Ошибка",
         description: "Заполните все обязательные поля",
-        variant: "destructive"
+        variant: "destructive",
       });
       return;
     }
     if (!contactForm.consent) {
       toast({
-        title: "Ошибка", 
+        title: "Ошибка",
         description: "Необходимо согласие на обработку данных",
-        variant: "destructive"
+        variant: "destructive",
       });
       return;
     }
     toast({
       title: "Сообщение отправлено!",
-      description: "Мы ответим вам в течение 24 часов"
+      description: "Мы ответим вам в течение 24 часов",
     });
   };
 
@@ -57,27 +79,48 @@ const Contacts = () => {
       toast({
         title: "Выберите услугу",
         description: "Необходимо выбрать услугу для оплаты",
-        variant: "destructive"
+        variant: "destructive",
       });
       return;
     }
     toast({
       title: "Переход к оплате",
-      description: "Сейчас откроется страница оплаты"
+      description: "Сейчас откроется страница оплаты",
     });
   };
+
+  // Check if contact form is valid for submission
+  const isContactFormValid =
+    contactForm.name.trim() !== "" &&
+    contactForm.email.trim() !== "" &&
+    contactForm.message.trim() !== "" &&
+    contactForm.consent;
+
+  // Check if payment form is valid for submission
+  const isPaymentFormValid =
+    paymentData.service.trim() !== "" && paymentData.package.trim() !== "";
 
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Контакты и запись на прием | Центр консультативной психологии ИНТЕНЦИЯ</title>
-        <meta name="description" content="Контакты центра психологии ИНТЕНЦИЯ в Минске. Телефон +375 29 237-57-30, email info@intention.by. Онлайн запись и оплата услуг." />
-        <meta property="og:title" content="Контакты центра психологии ИНТЕНЦИЯ" />
-        <meta property="og:description" content="Свяжитесь с нами для записи на консультацию. Работаем онлайн и очно в Минске." />
+        <title>
+          Контакты и запись на прием | Центр консультативной психологии ИНТЕНЦИЯ
+        </title>
+        <meta
+          name="description"
+          content="Контакты центра психологии ИНТЕНЦИЯ в Минске. Телефон +375 29 237-57-30, email info@intention.by. Онлайн запись и оплата услуг."
+        />
+        <meta
+          property="og:title"
+          content="Контакты центра психологии ИНТЕНЦИЯ"
+        />
+        <meta
+          property="og:description"
+          content="Свяжитесь с нами для записи на консультацию. Работаем онлайн и очно в Минске."
+        />
         <meta property="og:url" content="https://intention.by/contacts" />
       </Helmet>
-      <Header />
-      
+
       {/* Hero Section */}
       <section className="py-16 lg:py-24 bg-gradient-to-br from-primary/5 to-accent/5">
         <div className="container px-4">
@@ -103,7 +146,9 @@ const Contacts = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-medium mb-2">+375 (29) 237-57-30</p>
-                <p className="text-sm text-muted-foreground">Ежедневно с 9:00 до 21:00</p>
+                <p className="text-sm text-muted-foreground">
+                  Ежедневно с 9:00 до 21:00
+                </p>
               </CardContent>
             </Card>
 
@@ -114,7 +159,9 @@ const Contacts = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-lg font-medium mb-2">info@intention.by</p>
-                <p className="text-sm text-muted-foreground">Ответим в течение 24 часов</p>
+                <p className="text-sm text-muted-foreground">
+                  Ответим в течение 24 часов
+                </p>
               </CardContent>
             </Card>
 
@@ -125,8 +172,12 @@ const Contacts = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  <p className="text-lg font-medium">Telegram / Instagram / Viber / VK</p>
-                  <p className="text-sm text-muted-foreground">+375 (29) 237-57-30</p>
+                  <p className="text-lg font-medium">
+                    Telegram / Instagram / Viber / VK
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    +375 (29) 237-57-30
+                  </p>
                 </div>
               </CardContent>
             </Card>
@@ -141,7 +192,7 @@ const Contacts = () => {
                   <CardTitle>Адрес центра</CardTitle>
                 </div>
               </CardHeader>
-              <CardContent className="space-y-4">
+              <CardContent className="space-y-6">
                 <div className="space-y-2">
                   <p className="text-lg font-semibold">Юридический адрес:</p>
                   <p>220069, г. Минск, пр-т Дзержинского 11-843-3</p>
@@ -151,11 +202,22 @@ const Contacts = () => {
                   <p>220117, г. Минск, ул. Рафиева, д. 54, кв. 4</p>
                 </div>
                 <div className="space-y-2">
-                  <p className="text-sm text-muted-foreground">Учредитель: частное предприятие «ЭЛЬМОТО»</p>
-                  <p className="text-sm text-muted-foreground">УНП: 193334920</p>
+                  <p className="text-sm text-muted-foreground">
+                    Учредитель: частное предприятие «ЭЛЬМОТО»
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    УНП: 193334920
+                  </p>
                 </div>
-                <div className="bg-secondary/30 rounded-lg h-32 flex items-center justify-center">
-                  <p className="text-muted-foreground">Здесь будет карта</p>
+                <div className="bg-secondary/30 rounded-lg h-64 flex items-center justify-center">
+                  <iframe
+                    src="https://yandex.ru/map-widget/v1/?ll=27.52261914254535%2C53.88777524867306&z=16&pt=27.52261914254535%2C53.88777524867306%2Cpm2rdm&spn=0.01%2C0.01"
+                    width="100%"
+                    height="256"
+                    frameBorder="0"
+                    className="rounded-lg"
+                    title="Центр консультативной психологии ИНТЕНЦИЯ на карте"
+                  ></iframe>
                 </div>
               </CardContent>
             </Card>
@@ -184,12 +246,18 @@ const Contacts = () => {
                 </div>
                 <div className="pt-4 border-t">
                   <p className="text-sm text-muted-foreground">
-                    Онлайн-консультации доступны в любое время по предварительной записи. Работаем с клиентами по всей Беларуси.
+                    Онлайн-консультации доступны в любое время по
+                    предварительной записи. Работаем с клиентами по всей
+                    Беларуси.
                   </p>
                   <div className="mt-4 space-y-2">
                     <p className="text-sm font-medium">Банковские реквизиты:</p>
-                    <p className="text-xs text-muted-foreground">BY03ALFA30122559870010270000</p>
-                    <p className="text-xs text-muted-foreground">БИК: ALFABY2X</p>
+                    <p className="text-xs text-muted-foreground">
+                      BY03ALFA30122559870010270000
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      БИК: ALFABY2X
+                    </p>
                   </div>
                 </div>
               </CardContent>
@@ -199,7 +267,7 @@ const Contacts = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-16 lg:py-24 bg-secondary/30">
+      {/* <section className="py-16 lg:py-24 bg-secondary/30">
         <div className="container px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-8">
@@ -214,7 +282,9 @@ const Contacts = () => {
             <Card>
               <CardHeader>
                 <CardTitle>Форма обратной связи</CardTitle>
-                <CardDescription>Все поля обязательны для заполнения</CardDescription>
+                <CardDescription>
+                  Все поля обязательны для заполнения
+                </CardDescription>
               </CardHeader>
               <CardContent>
                 <form onSubmit={handleContactSubmit} className="space-y-6">
@@ -225,7 +295,12 @@ const Contacts = () => {
                         id="contact-name"
                         placeholder="Ваше имя"
                         value={contactForm.name}
-                        onChange={(e) => setContactForm({...contactForm, name: e.target.value})}
+                        onChange={(e) =>
+                          setContactForm({
+                            ...contactForm,
+                            name: e.target.value,
+                          })
+                        }
                         required
                       />
                     </div>
@@ -236,7 +311,12 @@ const Contacts = () => {
                         type="email"
                         placeholder="your@email.com"
                         value={contactForm.email}
-                        onChange={(e) => setContactForm({...contactForm, email: e.target.value})}
+                        onChange={(e) =>
+                          setContactForm({
+                            ...contactForm,
+                            email: e.target.value,
+                          })
+                        }
                         required
                       />
                     </div>
@@ -244,17 +324,28 @@ const Contacts = () => {
 
                   <div className="space-y-2">
                     <Label htmlFor="contact-subject">Тема</Label>
-                    <Select value={contactForm.subject} onValueChange={(value) => setContactForm({...contactForm, subject: value})}>
+                    <Select
+                      value={contactForm.subject}
+                      onValueChange={(value) =>
+                        setContactForm({ ...contactForm, subject: value })
+                      }
+                    >
                       <SelectTrigger>
                         <SelectValue placeholder="Выберите тему сообщения" />
                       </SelectTrigger>
                       <SelectContent>
                         <SelectItem value="question">Общий вопрос</SelectItem>
-                        <SelectItem value="consultation">Вопрос о консультации</SelectItem>
+                        <SelectItem value="consultation">
+                          Вопрос о консультации
+                        </SelectItem>
                         <SelectItem value="school">Школа ЭИ</SelectItem>
-                        <SelectItem value="mindfulness">Практики осознанности</SelectItem>
+                        <SelectItem value="mindfulness">
+                          Практики осознанности
+                        </SelectItem>
                         <SelectItem value="feedback">Отзыв</SelectItem>
-                        <SelectItem value="cooperation">Сотрудничество</SelectItem>
+                        <SelectItem value="cooperation">
+                          Сотрудничество
+                        </SelectItem>
                       </SelectContent>
                     </Select>
                   </div>
@@ -266,24 +357,45 @@ const Contacts = () => {
                       placeholder="Напишите ваше сообщение..."
                       className="min-h-[120px]"
                       value={contactForm.message}
-                      onChange={(e) => setContactForm({...contactForm, message: e.target.value})}
+                      onChange={(e) =>
+                        setContactForm({
+                          ...contactForm,
+                          message: e.target.value,
+                        })
+                      }
                       required
                     />
                   </div>
 
                   <div className="flex items-start space-x-2">
-                    <Checkbox 
+                    <Checkbox
                       id="contact-consent"
                       checked={contactForm.consent}
-                      onCheckedChange={(checked) => setContactForm({...contactForm, consent: checked as boolean})}
+                      onCheckedChange={(checked) =>
+                        setContactForm({
+                          ...contactForm,
+                          consent: checked as boolean,
+                        })
+                      }
                       required
                     />
-                    <Label htmlFor="contact-consent" className="text-sm leading-relaxed cursor-pointer">
-                      Согласен с обработкой персональных данных и <a href="/privacy" className="text-primary underline">политикой конфиденциальности</a> *
+                    <Label
+                      htmlFor="contact-consent"
+                      className="text-sm leading-relaxed cursor-pointer"
+                    >
+                      Согласен с обработкой персональных данных и{" "}
+                      <a href="/privacy" className="text-primary underline">
+                        политикой конфиденциальности
+                      </a>{" "}
+                      *
                     </Label>
                   </div>
 
-                  <Button type="submit" className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-6">
+                  <Button
+                    type="submit"
+                    className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-6 disabled:opacity-50 disabled:cursor-not-allowed"
+                    disabled={!isContactFormValid}
+                  >
                     Отправить сообщение
                   </Button>
                 </form>
@@ -291,10 +403,10 @@ const Contacts = () => {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Payment Section */}
-      <section className="py-16 lg:py-24">
+      {/* <section className="py-16 lg:py-24">
         <div className="container px-4">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-8">
@@ -316,31 +428,57 @@ const Contacts = () => {
               <CardContent className="space-y-6">
                 <div className="space-y-2">
                   <Label>Услуга</Label>
-                  <Select value={paymentData.service} onValueChange={(value) => setPaymentData({...paymentData, service: value})}>
+                  <Select
+                    value={paymentData.service}
+                    onValueChange={(value) =>
+                      setPaymentData({ ...paymentData, service: value })
+                    }
+                  >
                     <SelectTrigger>
                       <SelectValue placeholder="Выберите услугу" />
                     </SelectTrigger>
                     <SelectContent>
-                      <SelectItem value="individual">Индивидуальная консультация</SelectItem>
-                      <SelectItem value="family">Семейная консультация</SelectItem>
-                      <SelectItem value="teen">Подростковая консультация</SelectItem>
-                      <SelectItem value="school-6-8">Школа ЭИ (6-8 лет)</SelectItem>
-                      <SelectItem value="school-9-12">Школа ЭИ (9-12 лет)</SelectItem>
-                      <SelectItem value="school-13-17">Школа ЭИ (13-17 лет)</SelectItem>
+                      <SelectItem value="individual">
+                        Индивидуальная консультация
+                      </SelectItem>
+                      <SelectItem value="family">
+                        Семейная консультация
+                      </SelectItem>
+                      <SelectItem value="teen">
+                        Подростковая консультация
+                      </SelectItem>
+                      <SelectItem value="school-6-8">
+                        Школа ЭИ (6-8 лет)
+                      </SelectItem>
+                      <SelectItem value="school-9-12">
+                        Школа ЭИ (9-12 лет)
+                      </SelectItem>
+                      <SelectItem value="school-13-17">
+                        Школа ЭИ (13-17 лет)
+                      </SelectItem>
                     </SelectContent>
                   </Select>
                 </div>
 
                 <div className="space-y-2">
                   <Label>Пакет</Label>
-                  <Select value={paymentData.package} onValueChange={(value) => setPaymentData({...paymentData, package: value})}>
+                  <Select
+                    value={paymentData.package}
+                    onValueChange={(value) =>
+                      setPaymentData({ ...paymentData, package: value })
+                    }
+                  >
                     <SelectTrigger>
                       <SelectValue placeholder="Выберите пакет" />
                     </SelectTrigger>
                     <SelectContent>
                       <SelectItem value="single">Разовая сессия</SelectItem>
-                      <SelectItem value="package-4">Пакет 4 сессии (-10%)</SelectItem>
-                      <SelectItem value="package-8">Пакет 8 сессий (-15%)</SelectItem>
+                      <SelectItem value="package-4">
+                        Пакет 4 сессии (-10%)
+                      </SelectItem>
+                      <SelectItem value="package-8">
+                        Пакет 8 сессий (-15%)
+                      </SelectItem>
                       <SelectItem value="trial">Пробное занятие</SelectItem>
                     </SelectContent>
                   </Select>
@@ -350,15 +488,18 @@ const Contacts = () => {
                   <div className="flex justify-between items-center">
                     <span className="font-medium">К оплате:</span>
                     <span className="text-2xl font-bold text-primary">
-                      {paymentData.service && paymentData.package ? "150 BYN" : "— BYN"}
+                      {paymentData.service && paymentData.package
+                        ? "150 BYN"
+                        : "— BYN"}
                     </span>
                   </div>
                 </div>
 
-                <Button 
+                <Button
                   onClick={handlePayment}
-                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-6"
+                  className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-6 disabled:opacity-50 disabled:cursor-not-allowed"
                   size="lg"
+                  disabled={!isPaymentFormValid}
                 >
                   <CreditCard className="w-5 h-5 mr-2" />
                   Перейти к оплате
@@ -376,7 +517,7 @@ const Contacts = () => {
             </Card>
           </div>
         </div>
-      </section>
+      </section> */}
 
       {/* Documents */}
       <section className="py-16 lg:py-24 bg-secondary/30">
@@ -394,7 +535,9 @@ const Contacts = () => {
                   <CardContent className="pt-6">
                     <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
                     <h3 className="font-medium mb-2">Договор оферты</h3>
-                    <p className="text-sm text-muted-foreground">Условия оказания услуг</p>
+                    <p className="text-sm text-muted-foreground">
+                      Условия оказания услуг
+                    </p>
                   </CardContent>
                 </Card>
               </a>
@@ -403,8 +546,12 @@ const Contacts = () => {
                 <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer h-full">
                   <CardContent className="pt-6">
                     <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
-                    <h3 className="font-medium mb-2">Политика конфиденциальности</h3>
-                    <p className="text-sm text-muted-foreground">Обработка персональных данных</p>
+                    <h3 className="font-medium mb-2">
+                      Политика конфиденциальности
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Обработка персональных данных
+                    </p>
                   </CardContent>
                 </Card>
               </a>
@@ -413,12 +560,15 @@ const Contacts = () => {
                 <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer h-full">
                   <CardContent className="pt-6">
                     <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
-                    <h3 className="font-medium mb-2">Согласие на обработку данных</h3>
-                    <p className="text-sm text-muted-foreground">Обработка персональных данных</p>
+                    <h3 className="font-medium mb-2">
+                      Согласие на обработку данных
+                    </h3>
+                    <p className="text-sm text-muted-foreground">
+                      Обработка персональных данных
+                    </p>
                   </CardContent>
                 </Card>
               </a>
-
             </div>
           </div>
         </div>

@@ -1,28 +1,55 @@
 import { Helmet } from "react-helmet-async";
-import { Button } from "@/components/ui/button";
-import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import Header from "@/components/ui/header";
-import Footer from "@/components/Footer";
-import { Brain, Users, Calendar, Star, BookOpen, Heart } from "lucide-react";
-import ParentingProblemsSection from "@/components/ParentingProblemsSection";
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
+
+import { BookOpen, Brain, Calendar, Heart, Star, Users } from "lucide-react";
+
 import heroImage from "@/assets/EI.jpg";
+import Footer from "@/components/Footer/Footer";
+import ParentingProblemsSection from "@/components/ParentingProblemsSection/ParentingProblemsSection";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion/accordion";
+import { Badge } from "@/components/ui/badge/badge";
+import { Button } from "@/components/ui/button/button";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card/card";
+
 const School = () => {
-  return <div className="min-h-screen bg-background">
+  return (
+    <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Школа эмоционального интеллекта для детей | Центр ИНТЕНЦИЯ</title>
-        <meta name="description" content="Развитие эмоционального интеллекта у детей 6-17 лет в Минске. Научно обоснованные методики, игровая терапия, групповые и индивидуальные занятия." />
-        <meta property="og:title" content="Школа эмоционального интеллекта для детей | ИНТЕНЦИЯ" />
-        <meta property="og:description" content="Помогаем детям понимать эмоции, развивать эмпатию и строить здоровые отношения через игровые практики." />
+        <title>
+          Школа эмоционального интеллекта для детей | Центр ИНТЕНЦИЯ
+        </title>
+        <meta
+          name="description"
+          content="Развитие эмоционального интеллекта у детей 6-17 лет в Минске. Научно обоснованные методики, игровая терапия, групповые и индивидуальные занятия."
+        />
+        <meta
+          property="og:title"
+          content="Школа эмоционального интеллекта для детей | ИНТЕНЦИЯ"
+        />
+        <meta
+          property="og:description"
+          content="Помогаем детям понимать эмоции, развивать эмпатию и строить здоровые отношения через игровые практики."
+        />
         <meta property="og:url" content="https://intention.by/school" />
       </Helmet>
-      <Header />
-      
+
       {/* Hero Section */}
-      <section className="py-16 lg:py-24 relative bg-cover bg-center bg-no-repeat" style={{
-        backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)), url(${heroImage})`
-      }}>
+      <section
+        className="py-16 lg:py-24 relative bg-cover bg-center bg-no-repeat"
+        style={{
+          backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)), url(${heroImage})`,
+        }}
+      >
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-6">
@@ -32,14 +59,23 @@ const School = () => {
               Развитие ЭИ у детей и подростков
             </h1>
             <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-              Помогаем детям понимать эмоции, развивать эмпатию и строить здоровые отношения через игровые практики и научно обоснованные методики
+              Помогаем детям понимать эмоции, развивать эмпатию и строить
+              здоровые отношения через игровые практики и научно обоснованные
+              методики
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}>
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                onClick={() =>
+                  window.dispatchEvent(
+                    new CustomEvent("openSchoolBookingModal")
+                  )
+                }
+              >
                 <Calendar className="w-5 h-5 mr-2" />
                 Записать ребёнка
               </Button>
-              
             </div>
           </div>
         </div>
@@ -53,7 +89,8 @@ const School = () => {
               Что такое эмоциональный интеллект?
             </h2>
             <p className="text-lg text-muted-foreground">
-              ЭИ — это способность понимать свои эмоции и эмоции других людей, управлять ими и использовать для принятия решений
+              ЭИ — это способность понимать свои эмоции и эмоции других людей,
+              управлять ими и использовать для принятия решений
             </p>
           </div>
 
@@ -89,7 +126,8 @@ const School = () => {
               </CardHeader>
               <CardContent>
                 <p className="text-muted-foreground">
-                  Умение строить отношения, разрешать конфликты и работать в команде
+                  Умение строить отношения, разрешать конфликты и работать в
+                  команде
                 </p>
               </CardContent>
             </Card>
@@ -110,7 +148,9 @@ const School = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="text-center">6-8 лет</CardTitle>
-                <CardDescription className="text-center">Младшие школьники</CardDescription>
+                <CardDescription className="text-center">
+                  Младшие школьники
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-2 text-sm">
@@ -120,10 +160,19 @@ const School = () => {
                   <li>• Простые дыхательные упражнения</li>
                 </ul>
                 <div className="pt-4">
-                  <p className="text-sm text-muted-foreground mb-2">20 занятий по 40 минут (1-2 раза в неделю)</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    20 занятий по 40 минут (1-2 раза в неделю)
+                  </p>
                   <p className="font-semibold">От 40 BYN/занятие</p>
                 </div>
-                <Button className="w-full" onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}>
+                <Button
+                  className="w-full"
+                  onClick={() =>
+                    window.dispatchEvent(
+                      new CustomEvent("openSchoolBookingModal")
+                    )
+                  }
+                >
                   Записаться
                 </Button>
               </CardContent>
@@ -132,7 +181,9 @@ const School = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="text-center">9-12 лет</CardTitle>
-                <CardDescription className="text-center">Средние школьники</CardDescription>
+                <CardDescription className="text-center">
+                  Средние школьники
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-2 text-sm">
@@ -142,10 +193,19 @@ const School = () => {
                   <li>• Решение конфликтов</li>
                 </ul>
                 <div className="pt-4">
-                  <p className="text-sm text-muted-foreground mb-2">20 занятий по 40 минут (2-3 раза в неделю)</p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    20 занятий по 40 минут (2-3 раза в неделю)
+                  </p>
                   <p className="font-semibold">От 40 BYN/занятие</p>
                 </div>
-                <Button className="w-full" onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}>
+                <Button
+                  className="w-full"
+                  onClick={() =>
+                    window.dispatchEvent(
+                      new CustomEvent("openSchoolBookingModal")
+                    )
+                  }
+                >
                   Записаться
                 </Button>
               </CardContent>
@@ -154,7 +214,9 @@ const School = () => {
             <Card>
               <CardHeader>
                 <CardTitle className="text-center">13-16 лет</CardTitle>
-                <CardDescription className="text-center">Подростки</CardDescription>
+                <CardDescription className="text-center">
+                  Подростки
+                </CardDescription>
               </CardHeader>
               <CardContent className="space-y-4">
                 <ul className="space-y-2 text-sm">
@@ -164,12 +226,19 @@ const School = () => {
                   <li>• Цифровая грамотность эмоций</li>
                 </ul>
                 <div className="pt-4">
-                  <p className="text-sm text-muted-foreground mb-2">10 занятий по 40 минут
-
-                </p>
+                  <p className="text-sm text-muted-foreground mb-2">
+                    10 занятий по 40 минут
+                  </p>
                   <p className="font-semibold">От 55 BYN/занятие</p>
                 </div>
-                <Button className="w-full" onClick={() => window.dispatchEvent(new CustomEvent("openSchoolBookingModal"))}>
+                <Button
+                  className="w-full"
+                  onClick={() =>
+                    window.dispatchEvent(
+                      new CustomEvent("openSchoolBookingModal")
+                    )
+                  }
+                >
                   Записаться
                 </Button>
               </CardContent>
@@ -186,7 +255,8 @@ const School = () => {
               Наши методики
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              Используем научно обоснованные подходы, адаптированные для детей и подростков
+              Используем научно обоснованные подходы, адаптированные для детей и
+              подростков
             </p>
           </div>
 
@@ -246,45 +316,86 @@ const School = () => {
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="w-full">
                 <AccordionItem value="item-1">
-                  <AccordionTrigger>В каком возрасте лучше начинать развитие эмоционального интеллекта?</AccordionTrigger>
+                  <AccordionTrigger>
+                    В каком возрасте лучше начинать развитие эмоционального
+                    интеллекта?
+                  </AccordionTrigger>
                   <AccordionContent>
-                    Развитие эмоционального интеллекта можно начинать с самого раннего возраста. Однако наши программы рассчитаны на детей от 6 лет, когда ребёнок уже может осознанно работать с эмоциями и участвовать в групповой работе.
+                    Развитие эмоционального интеллекта можно начинать с самого
+                    раннего возраста. Однако наши программы рассчитаны на детей
+                    от 6 лет, когда ребёнок уже может осознанно работать с
+                    эмоциями и участвовать в групповой работе.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-2">
-                  <AccordionTrigger>Как понять, что ребёнку нужны занятия по развитию ЭИ?</AccordionTrigger>
+                  <AccordionTrigger>
+                    Как понять, что ребёнку нужны занятия по развитию ЭИ?
+                  </AccordionTrigger>
                   <AccordionContent>
-                    Обратите внимание на следующие признаки: частые истерики, трудности в общении со сверстниками, неумение выражать свои чувства словами, агрессивное поведение, замкнутость, проблемы с адаптацией в новой среде.
+                    Обратите внимание на следующие признаки: частые истерики,
+                    трудности в общении со сверстниками, неумение выражать свои
+                    чувства словами, агрессивное поведение, замкнутость,
+                    проблемы с адаптацией в новой среде.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-3">
-                  <AccordionTrigger>Как быстро будут видны результаты?</AccordionTrigger>
+                  <AccordionTrigger>
+                    Как быстро будут видны результаты?
+                  </AccordionTrigger>
                   <AccordionContent>
-                    Первые изменения родители замечают уже через 4-6 занятий. Ребёнок начинает лучше понимать и называть свои эмоции. Устойчивые навыки формируются через 2-3 месяца регулярных занятий.
+                    Первые изменения родители замечают уже через 4-6 занятий.
+                    Ребёнок начинает лучше понимать и называть свои эмоции.
+                    Устойчивые навыки формируются через 2-3 месяца регулярных
+                    занятий.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-4">
-                  <AccordionTrigger>Можно ли развивать ЭИ ребёнка дома самостоятельно?</AccordionTrigger>
+                  <AccordionTrigger>
+                    Можно ли развивать ЭИ ребёнка дома самостоятельно?
+                  </AccordionTrigger>
                   <AccordionContent>
-                    Да, домашняя практика очень важна! Мы предоставляем родителям материалы и упражнения для работы дома. Однако системный подход и работа в группе со специалистом дают более быстрые и устойчивые результаты.
+                    Да, домашняя практика очень важна! Мы предоставляем
+                    родителям материалы и упражнения для работы дома. Однако
+                    системный подход и работа в группе со специалистом дают
+                    более быстрые и устойчивые результаты.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-5">
-                  <AccordionTrigger>Что делать, если ребёнок не хочет идти на занятия?</AccordionTrigger>
+                  <AccordionTrigger>
+                    Что делать, если ребёнок не хочет идти на занятия?
+                  </AccordionTrigger>
                   <AccordionContent>
-                    Это нормальная реакция. Мы используем игровой подход, поэтому дети обычно быстро втягиваются в процесс. Важно не принуждать, а мотивировать ребёнка. Первое занятие можно провести в присутствии родителя.
+                    Это нормальная реакция. Мы используем игровой подход,
+                    поэтому дети обычно быстро втягиваются в процесс. Важно не
+                    принуждать, а мотивировать ребёнка. Первое занятие можно
+                    провести в присутствии родителя.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-6">
-                  <AccordionTrigger>Работаете ли вы с детьми с особенностями развития?</AccordionTrigger>
+                  <AccordionTrigger>
+                    Работаете ли вы с детьми с особенностями развития?
+                  </AccordionTrigger>
                   <AccordionContent>
-                    Да, мы адаптируем программы для детей с СДВГ, аутизмом, задержкой развития. Перед началом занятий проводим индивидуальную консультацию для определения оптимального подхода.
+                    Да, мы адаптируем программы для детей с СДВГ, аутизмом,
+                    задержкой развития. Перед началом занятий проводим
+                    индивидуальную консультацию для определения оптимального
+                    подхода.
                   </AccordionContent>
                 </AccordionItem>
                 <AccordionItem value="item-7">
-                  <AccordionTrigger>Как обеспечить домашнюю практику и поддержку родителей?</AccordionTrigger>
+                  <AccordionTrigger>
+                    Как обеспечить домашнюю практику и поддержку родителей?
+                  </AccordionTrigger>
                   <AccordionContent>
-                    Домашняя практика очень важна, так как ребёнок присутствует на занятии всего лишь несколько часов в неделю, однако большую часть времени он проводит дома с родителями. В целях поддержания позитивной динамики обучения мы предлагаем периодические консультации с родителями ребёнка, на которых вы получите информацию о его прогрессе, достижениях и успехах, а также сможете задать психологу интересующие вас вопросы и получить поддержку в вопросах самостоятельного обучения.
+                    Домашняя практика очень важна, так как ребёнок присутствует
+                    на занятии всего лишь несколько часов в неделю, однако
+                    большую часть времени он проводит дома с родителями. В целях
+                    поддержания позитивной динамики обучения мы предлагаем
+                    периодические консультации с родителями ребёнка, на которых
+                    вы получите информацию о его прогрессе, достижениях и
+                    успехах, а также сможете задать психологу интересующие вас
+                    вопросы и получить поддержку в вопросах самостоятельного
+                    обучения.
                   </AccordionContent>
                 </AccordionItem>
               </Accordion>
@@ -297,9 +408,14 @@ const School = () => {
                 Бесплатная диагностика ЭИ ребёнка
               </h3>
               <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-                Пройдите короткий тест и получите персональные рекомендации по развитию эмоционального интеллекта вашего ребёнка
+                Пройдите короткий тест и получите персональные рекомендации по
+                развитию эмоционального интеллекта вашего ребёнка
               </p>
-              <Button size="lg" className="bg-accent hover:bg-accent/90 text-accent-foreground" onClick={() => window.open("/test-ei-part1", "_blank")}>
+              <Button
+                size="lg"
+                className="bg-accent hover:bg-accent/90 text-accent-foreground"
+                onClick={() => window.open("/test-ei-part1", "_blank")}
+              >
                 Пройти тест
               </Button>
             </div>
@@ -320,10 +436,13 @@ const School = () => {
             <Card>
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                  ))}
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">
-                  "После занятий дочь стала лучше понимать свои эмоции и говорить о них. Истерики почти прекратились."
+                  "После занятий дочь стала лучше понимать свои эмоции и
+                  говорить о них. Истерики почти прекратились."
                 </p>
                 <p className="font-medium">Мария, мама Ани (7 лет)</p>
               </CardContent>
@@ -332,10 +451,13 @@ const School = () => {
             <Card>
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                  ))}
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">
-                  "Сын-подросток научился управлять гневом. В школе конфликтов стало меньше, оценки улучшились."
+                  "Сын-подросток научился управлять гневом. В школе конфликтов
+                  стало меньше, оценки улучшились."
                 </p>
                 <p className="font-medium">Алексей, папа Максима (14 лет)</p>
               </CardContent>
@@ -344,10 +466,13 @@ const School = () => {
             <Card>
               <CardContent className="pt-6">
                 <div className="flex items-center mb-4">
-                  {[...Array(5)].map((_, i) => <Star key={i} className="w-4 h-4 fill-accent text-accent" />)}
+                  {[...Array(5)].map((_, i) => (
+                    <Star key={i} className="w-4 h-4 fill-accent text-accent" />
+                  ))}
                 </div>
                 <p className="text-sm text-muted-foreground mb-4">
-                  "Замечательная программа! Ребёнок стал более уверенным в себе и открытым к общению."
+                  "Замечательная программа! Ребёнок стал более уверенным в себе
+                  и открытым к общению."
                 </p>
                 <p className="font-medium">Елена, мама Софии (10 лет)</p>
               </CardContent>
@@ -357,6 +482,7 @@ const School = () => {
       </section>
 
       <Footer />
-    </div>;
+    </div>
+  );
 };
 export default School;

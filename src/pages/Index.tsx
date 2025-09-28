@@ -1,26 +1,36 @@
 import { Helmet } from "react-helmet-async";
-import Header from "@/components/ui/header";
-import HeroSection from "@/components/HeroSection";
-import AboutSection from "@/components/AboutSection";
-import HowItWorksSection from "@/components/HowItWorksSection";
-import ServicesSection from "@/components/ServicesSection";
-import PsychologistsSection from "@/components/PsychologistsSection";
-import MessageSection from "@/components/MessageSection";
-import CtaSection from "@/components/CtaSection";
-import Footer from "@/components/Footer";
-import ScrollToTop from "@/components/ScrollToTop";
-import AnimatedSection from "@/components/AnimatedSection";
+
+import AboutSection from "@/components/AboutSection/AboutSection";
+import AnimatedSection from "@/components/AnimatedSection/AnimatedSection";
+import CtaSection from "@/components/CtaSection/CtaSection";
+import Footer from "@/components/Footer/Footer";
+import HeroSection from "@/components/HeroSection/HeroSection";
+import HowItWorksSection from "@/components/HowItWorksSection/HowItWorksSection";
+import MessageSection from "@/components/MessageSection/MessageSection";
+import PsychologistsSection from "@/components/PsychologistsSection/PsychologistsSection";
+import ScrollToTop from "@/components/ScrollToTop/ScrollToTop";
+import ServicesSection from "@/components/ServicesSection/ServicesSection";
 
 const Index = () => {
-
-
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Центр консультативной психологии ИНТЕНЦИЯ - Профессиональная помощь в Беларуси</title>
-        <meta name="description" content="Центр консультативной психологии ИНТЕНЦИЯ в Минске. Индивидуальная, семейная и подростковая психотерапия. Онлайн и очно. Школа эмоционального интеллекта для детей. Лицензированные специалисты." />
-        <meta property="og:title" content="Центр ИНТЕНЦИЯ - Психологическая поддержка в Беларуси" />
-        <meta property="og:description" content="Профессиональная психологическая помощь для взрослых, семей и подростков. Запишитесь на консультацию онлайн или очно." />
+        <title>
+          Центр консультативной психологии ИНТЕНЦИЯ - Профессиональная помощь в
+          Беларуси
+        </title>
+        <meta
+          name="description"
+          content="Центр консультативной психологии ИНТЕНЦИЯ в Минске. Индивидуальная, семейная и подростковая психотерапия. Онлайн и очно. Школа эмоционального интеллекта для детей. Лицензированные специалисты."
+        />
+        <meta
+          property="og:title"
+          content="Центр ИНТЕНЦИЯ - Психологическая поддержка в Беларуси"
+        />
+        <meta
+          property="og:description"
+          content="Профессиональная психологическая помощь для взрослых, семей и подростков. Запишитесь на консультацию онлайн или очно."
+        />
         <meta property="og:url" content="https://intention.by/" />
         <script type="application/ld+json">
           {`{
@@ -48,7 +58,7 @@ const Index = () => {
           }`}
         </script>
       </Helmet>
-      <Header />
+
       <main>
         <HeroSection />
         <AnimatedSection animation="fade-up" id="about">
@@ -61,9 +71,15 @@ const Index = () => {
           <ServicesSection />
         </AnimatedSection>
         <AnimatedSection animation="fade-up" delay={150} id="psychologists">
-          <PsychologistsSection onSelectPsychologist={(psychologist) => {
-            window.dispatchEvent(new CustomEvent('openBookingWithPsychologist', { detail: { name: psychologist } }));
-          }} />
+          <PsychologistsSection
+            onSelectPsychologist={(psychologist) => {
+              window.dispatchEvent(
+                new CustomEvent("openBookingWithPsychologist", {
+                  detail: { name: psychologist },
+                })
+              );
+            }}
+          />
         </AnimatedSection>
         <AnimatedSection animation="fade-up" delay={100} id="message">
           <MessageSection />
