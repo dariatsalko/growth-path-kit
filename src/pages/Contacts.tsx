@@ -196,13 +196,7 @@ const Contacts = () => {
                 <div className="space-y-2">
                   <p className="text-lg font-semibold">Юридический адрес:</p>
                   <p>220069, г. Минск, пр-т Дзержинского 11-843-3</p>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-lg font-semibold">Почтовый адрес:</p>
                   <p>220117, г. Минск, ул. Рафиева, д. 54, кв. 4</p>
-                </div>
-                <div className="space-y-2">
-                  <p className="text-lg font-semibold">Адрес на карте:</p>
                   <p>220030, г. Минск, ул. Короля, 20</p>
                 </div>
                 <div className="space-y-2">
