@@ -258,7 +258,7 @@ const Cancellation = () => {
               <ul className="list-disc pl-6 space-y-2">
                 <li>Телефон: +7 (999) 123-45-67</li>
                 <li>Email: hello@tochkarosta-psy.ru</li>
-                <li>Адрес: г. Москва, ул. Примерная, д. 123</li>
+                <li>Адрес: г. Минск, ул. Короля, 20</li>
                 <li>Время работы: Пн-Пт 9:00-21:00, Сб-Вс 10:00-18:00</li>
               </ul>
             </section>

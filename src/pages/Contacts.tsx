@@ -215,7 +215,7 @@ const Contacts = () => {
                 </div>
                 <div className="bg-secondary/30 rounded-lg h-64 flex items-center justify-center">
                   <iframe
-                    src="https://yandex.ru/map-widget/v1/?ll=27.5556%2C53.9021&z=16&pt=27.5556%2C53.9021%2Cpm2rdm&spn=0.01%2C0.01"
+                    src="https://yandex.ru/map-widget/v1/?ll=27.539858%2C53.903663&z=16&pt=27.539858%2C53.903663%2Cpm2rdm&spn=0.01%2C0.01"
                     width="100%"
                     height="256"
                     frameBorder="0"
