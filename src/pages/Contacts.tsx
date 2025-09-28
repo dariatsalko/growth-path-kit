@@ -202,6 +202,10 @@ const Contacts = () => {
                   <p>220117, г. Минск, ул. Рафиева, д. 54, кв. 4</p>
                 </div>
                 <div className="space-y-2">
+                  <p className="text-lg font-semibold">Адрес на карте:</p>
+                  <p>220030, г. Минск, ул. Короля, 20</p>
+                </div>
+                <div className="space-y-2">
                   <p className="text-sm text-muted-foreground">
                     Учредитель: частное предприятие «ЭЛЬМОТО»
                   </p>
@@ -211,12 +215,12 @@ const Contacts = () => {
                 </div>
                 <div className="bg-secondary/30 rounded-lg h-64 flex items-center justify-center">
                   <iframe
-                    src="https://yandex.ru/map-widget/v1/?ll=27.52261914254535%2C53.88777524867306&z=16&pt=27.52261914254535%2C53.88777524867306%2Cpm2rdm&spn=0.01%2C0.01"
+                    src="https://yandex.ru/map-widget/v1/?ll=27.5556%2C53.9021&z=16&pt=27.5556%2C53.9021%2Cpm2rdm&spn=0.01%2C0.01"
                     width="100%"
                     height="256"
                     frameBorder="0"
                     className="rounded-lg"
-                    title="Центр консультативной психологии ИНТЕНЦИЯ на карте"
+                    title="Центр консультативной психологии ИНТЕНЦИЯ на карте (ул. Короля, 20)"
                   ></iframe>
                 </div>
               </CardContent>
