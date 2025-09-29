@@ -105,10 +105,12 @@ const PsychologistDetailsModal: React.FC<PsychologistDetailsModalProps> = ({
               className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold h-12 text-lg"
               onClick={() => {
                 onClose();
-                window.dispatchEvent(new CustomEvent('openContactModal'));
+                window.dispatchEvent(new CustomEvent('openBookingWithPsychologist', { 
+                  detail: { name: psychologist.name } 
+                }));
               }}
             >
-              Связаться для записи
+              Записаться на консультацию
             </Button>
           </div>
         </div>

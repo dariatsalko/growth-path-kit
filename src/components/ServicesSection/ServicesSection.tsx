@@ -4,7 +4,6 @@ import { Button } from "@/components/ui/button/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card/card";
 
 const ServicesSection = () => {
-  // Contact modal handler
   const openContact = () => {
     window.dispatchEvent(new CustomEvent('openContactModal'));
   };

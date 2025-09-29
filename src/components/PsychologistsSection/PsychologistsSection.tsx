@@ -23,15 +23,27 @@ const PsychologistsSection = ({
   const { toast } = useToast();
   const [selectedPsychologist, setSelectedPsychologist] = useState<any>(null);
   const [isDetailsModalOpen, setIsDetailsModalOpen] = useState(false);
-  const openContact = () => {
-    window.dispatchEvent(new CustomEvent("openContactModal"));
+  const openBooking = (psychologistName?: string) => {
+    if (psychologistName) {
+      window.dispatchEvent(
+        new CustomEvent("openBookingWithPsychologist", {
+          detail: { name: psychologistName },
+        })
+      );
+    } else {
+      window.dispatchEvent(
+        new CustomEvent("openBookingWithPsychologist", {
+          detail: { name: "auto" },
+        })
+      );
+    }
   };
   const handleSelectPsychologist = (psychologist: any) => {
     onSelectPsychologist?.(psychologist.name);
-    openContact();
+    openBooking(psychologist.name);
     toast({
-      title: "Для записи свяжитесь с нами!",
-      description: `Выбранный психолог: ${psychologist.name}. Укажите это при записи.`,
+      title: "Психолог выбран!",
+      description: `Вы выбрали ${psychologist.name}. Заполните форму записи.`,
     });
   };
   const handleViewDetails = (psychologist: any) => {
@@ -146,9 +158,9 @@ const PsychologistsSection = ({
           <Button
             size="lg"
             className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8"
-            onClick={() => openContact()}
+            onClick={() => openBooking()}
           >
-            Связаться для записи
+            Подобрать психолога автоматически
           </Button>
         </div>
 
