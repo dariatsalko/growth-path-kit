@@ -74,9 +74,7 @@ const Index = () => {
           <PsychologistsSection
             onSelectPsychologist={(psychologist) => {
               window.dispatchEvent(
-                new CustomEvent("openBookingWithPsychologist", {
-                  detail: { name: psychologist },
-                })
+                new CustomEvent("openContactModal")
               );
             }}
           />
