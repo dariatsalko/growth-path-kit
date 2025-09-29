@@ -18,9 +18,9 @@ const Header = () => {
     { label: "Контакты и оплата", href: "/contacts" },
   ];
 
-  const openBookingModal = () => {
-    // Dispatch custom event to open booking modal
-    window.dispatchEvent(new CustomEvent("openBookingModal"));
+  const openContactModal = () => {
+    // Dispatch custom event to open contact modal
+    window.dispatchEvent(new CustomEvent("openContactModal"));
   };
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -67,10 +67,10 @@ const Header = () => {
           <Button
             variant="default"
             className="touch-target bg-accent hover:bg-accent/90 text-accent-foreground font-medium focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
-            onClick={openBookingModal}
-            aria-label="Записаться на консультацию"
+            onClick={openContactModal}
+            aria-label="Связаться с нами"
           >
-            Записаться
+            Связаться
           </Button>
         </div>
 
@@ -118,11 +118,11 @@ const Header = () => {
               className="touch-target w-full bg-accent hover:bg-accent/90 text-accent-foreground font-medium focus:outline-none focus:ring-2 focus:ring-accent focus:ring-offset-2"
               onClick={() => {
                 setIsMenuOpen(false);
-                openBookingModal();
+                openContactModal();
               }}
-              aria-label="Записаться на консультацию"
+              aria-label="Связаться с нами"
             >
-              Записаться
+              Связаться
             </Button>
           </div>
         </nav>

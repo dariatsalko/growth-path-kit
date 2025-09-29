@@ -30,8 +30,8 @@ import {
 import Header from "@/components/ui/header/header";
 
 const Mindfulness = () => {
-  const openBooking = () => {
-    window.dispatchEvent(new CustomEvent("openBookingModal"));
+  const openContact = () => {
+    window.dispatchEvent(new CustomEvent("openContactModal"));
   };
 
   const practices = [
@@ -268,8 +268,8 @@ const Mindfulness = () => {
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" onClick={openBooking}>
-                Записаться на консультацию
+              <Button size="lg" onClick={openContact}>
+                Связаться для записи
               </Button>
             </div>
           </div>
@@ -487,15 +487,15 @@ const Mindfulness = () => {
                             <div className="flex gap-3 pt-2">
                               <Button
                                 size="sm"
-                                onClick={() =>
-                                  window.dispatchEvent(
-                                    new CustomEvent("openBookingModal")
-                                  )
-                                }
+                onClick={() =>
+                  window.dispatchEvent(
+                    new CustomEvent("openContactModal")
+                  )
+                }
                                 className="bg-primary hover:bg-primary/90"
                               >
                                 <Calendar className="w-4 h-4 mr-2" />
-                                Записаться на консультацию
+                Связаться для записи
                               </Button>
                             </div>
                           </div>
@@ -704,10 +704,10 @@ const Mindfulness = () => {
               </p>
               <Button
                 size="lg"
-                onClick={openBooking}
+                onClick={openContact}
                 className="text-lg px-8 py-3"
               >
-                Записаться на консультацию
+                Связаться для записи
               </Button>
             </div>
           </div>

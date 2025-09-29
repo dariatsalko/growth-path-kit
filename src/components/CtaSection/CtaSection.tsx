@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button/button";
 
 const CtaSection = () => {
-  const openBooking = () => {
-    window.dispatchEvent(new CustomEvent('openBookingModal'));
+  const openContact = () => {
+    window.dispatchEvent(new CustomEvent('openContactModal'));
   };
 
   return (
@@ -13,15 +13,15 @@ const CtaSection = () => {
             Готовы сделать первый шаг?
           </h2>
           <p className="text-lg md:text-xl leading-relaxed mb-8 opacity-90">
-            Поговорите с нами в безопасной, уважительной атмосфере.
+            Запись временно ведется по телефону или через мессенджеры.
           </p>
           <Button 
             size="lg"
             variant="secondary"
             className="bg-background text-primary hover:bg-background/90 font-semibold px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
-            onClick={openBooking}
+            onClick={openContact}
           >
-            Записаться на консультацию
+            Связаться с нами
           </Button>
         </div>
       </div>

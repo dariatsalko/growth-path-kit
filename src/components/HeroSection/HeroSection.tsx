@@ -4,8 +4,8 @@ import heroImage from "@/assets/hero-image.jpg";
 import { Button } from "@/components/ui/button/button";
 
 const HeroSection = () => {
-  const openBooking = () => {
-    window.dispatchEvent(new CustomEvent('openBookingModal'));
+  const openContact = () => {
+    window.dispatchEvent(new CustomEvent('openContactModal'));
   };
 
   const scrollToApproach = () => {
@@ -53,10 +53,10 @@ const HeroSection = () => {
             <Button 
               size="lg"
               className="touch-target bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg rounded-lg shadow-lg hover:shadow-xl transition-all"
-              onClick={openBooking}
-              aria-label="Записаться на консультацию к психологу"
+              onClick={openContact}
+              aria-label="Связаться с нами для записи"
             >
-              Записаться на консультацию
+              Связаться для записи
             </Button>
             <Button 
               size="lg"

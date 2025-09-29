@@ -4,8 +4,8 @@ import { Button } from "@/components/ui/button/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card/card";
 
 const ServicesSection = () => {
-  const openBooking = () => {
-    window.dispatchEvent(new CustomEvent('openBookingModal'));
+  const openContact = () => {
+    window.dispatchEvent(new CustomEvent('openContactModal'));
   };
 
   const services = [
@@ -149,9 +149,9 @@ const ServicesSection = () => {
           <Button 
             className="bg-accent hover:bg-accent/90 text-accent-foreground font-semibold px-8 py-6 text-lg"
             size="lg"
-            onClick={openBooking}
+            onClick={openContact}
           >
-            Хочу обсудить свой запрос
+            Связаться для записи
           </Button>
         </div>
       </div>

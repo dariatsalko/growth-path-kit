@@ -69,12 +69,12 @@ const School = () => {
                 className="bg-accent hover:bg-accent/90 text-accent-foreground"
                 onClick={() =>
                   window.dispatchEvent(
-                    new CustomEvent("openSchoolBookingModal")
+                    new CustomEvent("openContactModal")
                   )
                 }
               >
                 <Calendar className="w-5 h-5 mr-2" />
-                Записать ребёнка
+                Связаться для записи
               </Button>
             </div>
           </div>
@@ -169,11 +169,11 @@ const School = () => {
                   className="w-full"
                   onClick={() =>
                     window.dispatchEvent(
-                      new CustomEvent("openSchoolBookingModal")
+                      new CustomEvent("openContactModal")
                     )
                   }
                 >
-                  Записаться
+                  Связаться
                 </Button>
               </CardContent>
             </Card>
@@ -202,11 +202,11 @@ const School = () => {
                   className="w-full"
                   onClick={() =>
                     window.dispatchEvent(
-                      new CustomEvent("openSchoolBookingModal")
+                      new CustomEvent("openContactModal")
                     )
                   }
                 >
-                  Записаться
+                  Связаться
                 </Button>
               </CardContent>
             </Card>
@@ -235,11 +235,11 @@ const School = () => {
                   className="w-full"
                   onClick={() =>
                     window.dispatchEvent(
-                      new CustomEvent("openSchoolBookingModal")
+                      new CustomEvent("openContactModal")
                     )
                   }
                 >
-                  Записаться
+                  Связаться
                 </Button>
               </CardContent>
             </Card>
