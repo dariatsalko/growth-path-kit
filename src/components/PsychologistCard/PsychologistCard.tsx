@@ -102,17 +102,7 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
         </div>
 
         {/* Actions */}
-        <div className="flex gap-2">
-          <Button
-            className="flex-1 h-9 bg-accent hover:bg-accent/90 text-accent-foreground font-semibold rounded-lg shadow-sm hover:shadow transition-all"
-            onClick={(e) => {
-              e.stopPropagation();
-              onSelect();
-            }}
-            disabled={!available}
-          >
-            {available ? "Выбрать специалиста" : "Нет свободных слотов"}
-          </Button>
+        <div className="flex justify-center">
           <Button
             variant="outline"
             className="h-9 px-4 border border-primary/20 text-primary hover:bg-primary hover:text-primary-foreground font-medium rounded-lg transition-all"
