@@ -73,8 +73,8 @@ const Footer = () => {
               </div>
               <div className="flex items-center gap-3 text-primary-foreground/80">
                 <Mail className="w-4 h-4 flex-shrink-0" />
-                <a href="mailto:info@intention.by" className="hover:text-primary-foreground transition-colors">
-                  info@intention.by
+                <a href="mailto:admin@intention.by" className="hover:text-primary-foreground transition-colors">
+                  admin@intention.by
                 </a>
               </div>
               <div className="flex items-start gap-3 text-primary-foreground/80">

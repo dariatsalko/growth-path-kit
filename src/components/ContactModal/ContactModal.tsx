@@ -65,9 +65,9 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
             <Button
               variant="outline"
               className="w-full justify-start"
-              onClick={() => handleContactClick("email", "info@intention.by")}
+              onClick={() => handleContactClick("email", "admin@intention.by")}
             >
-              info@intention.by
+              admin@intention.by
             </Button>
           </div>
 
