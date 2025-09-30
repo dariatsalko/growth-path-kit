@@ -12,6 +12,7 @@ import {
   Shield,
   Target,
   Users,
+  Youtube,
   Zap,
 } from "lucide-react";
 
@@ -496,6 +497,21 @@ const Mindfulness = () => {
                               >
                                 <Calendar className="w-4 h-4 mr-2" />
                 Связаться для записи
+                              </Button>
+                              <Button
+                                size="sm"
+                                variant="outline"
+                                asChild
+                              >
+                                <a 
+                                  href="https://youtu.be/nlXYyDkAOlg"
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="flex items-center"
+                                >
+                                  <Youtube className="w-4 h-4 mr-2" />
+                                  Смотреть на YouTube
+                                </a>
                               </Button>
                             </div>
                           </div>
