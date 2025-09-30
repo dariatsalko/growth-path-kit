@@ -84,18 +84,24 @@ const PsychologistDetailsModal: React.FC<PsychologistDetailsModalProps> = ({
                 Стоимость консультации:
               </h4>
               <div className="space-y-2">
-                <div className="flex items-center justify-between p-2 bg-background/50 rounded">
-                  <span className="text-muted-foreground">{psychologist.pricing.individual.split(' – ')[0]}</span>
-                  <span className="font-semibold text-accent">{psychologist.pricing.individual.split(' – ')[1]}</span>
-                </div>
-                <div className="flex items-center justify-between p-2 bg-background/50 rounded">
-                  <span className="text-muted-foreground">{psychologist.pricing.family.split(' – ')[0]}</span>
-                  <span className="font-semibold text-accent">{psychologist.pricing.family.split(' – ')[1]}</span>
-                </div>
-                <div className="flex items-center justify-between p-2 bg-background/50 rounded">
-                  <span className="text-muted-foreground">{psychologist.pricing.group.split(' – ')[0]}</span>
-                  <span className="font-semibold text-accent">{psychologist.pricing.group.split(' – ')[1]}</span>
-                </div>
+                {psychologist.pricing.individual && (
+                  <div className="flex items-center justify-between p-2 bg-background/50 rounded">
+                    <span className="text-muted-foreground">{psychologist.pricing.individual.split(' – ')[0]}</span>
+                    <span className="font-semibold text-accent">{psychologist.pricing.individual.split(' – ')[1]}</span>
+                  </div>
+                )}
+                {psychologist.pricing.family && (
+                  <div className="flex items-center justify-between p-2 bg-background/50 rounded">
+                    <span className="text-muted-foreground">{psychologist.pricing.family.split(' – ')[0]}</span>
+                    <span className="font-semibold text-accent">{psychologist.pricing.family.split(' – ')[1]}</span>
+                  </div>
+                )}
+                {psychologist.pricing.group && (
+                  <div className="flex items-center justify-between p-2 bg-background/50 rounded">
+                    <span className="text-muted-foreground">{psychologist.pricing.group.split(' – ')[0]}</span>
+                    <span className="font-semibold text-accent">{psychologist.pricing.group.split(' – ')[1]}</span>
+                  </div>
+                )}
               </div>
             </div>
           )}
