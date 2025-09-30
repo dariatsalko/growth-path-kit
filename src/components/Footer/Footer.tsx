@@ -1,4 +1,4 @@
-import { Facebook,Instagram, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Facebook,Instagram, Mail, MapPin, MessageCircle, Phone, Send } from "lucide-react";
 
 import intentionLogo from "@/assets/intention.svg";
 const Footer = () => {
@@ -17,14 +17,41 @@ const Footer = () => {
               Центр консультативной психологии ИНТЕНЦИЯ. Помогаем найти баланс и двигаться вперёд
             </p>
             <div className="flex space-x-3">
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                <MessageCircle className="w-5 h-5" />
-              </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
+              <a 
+                href="https://www.instagram.com/intention.by?igsh=cG43MWN2dGJlcWFs" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                aria-label="Instagram"
+              >
                 <Instagram className="w-5 h-5" />
               </a>
-              <a href="#" className="text-primary-foreground/60 hover:text-primary-foreground transition-colors">
-                <Facebook className="w-5 h-5" />
+              <a 
+                href="https://wa.me/375292375730" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                aria-label="WhatsApp"
+              >
+                <MessageCircle className="w-5 h-5" />
+              </a>
+              <a 
+                href="https://t.me/Psy_artiva" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                aria-label="Telegram"
+              >
+                <Send className="w-5 h-5" />
+              </a>
+              <a 
+                href="viber://add?number=375292375730" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
+                aria-label="Viber"
+              >
+                <Phone className="w-5 h-5" />
               </a>
             </div>
           </div>
