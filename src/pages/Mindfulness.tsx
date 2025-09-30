@@ -634,9 +634,16 @@ const Mindfulness = () => {
                   <CardDescription>{practice.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="space-y-4">
-                  <Button size="sm" className="w-full">
-                    <Play className="w-4 h-4 mr-2" />
-                    Слушать
+                  <Button size="sm" className="w-full" asChild>
+                    <a 
+                      href="https://youtu.be/ViyzxTC18QY"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center"
+                    >
+                      <Play className="w-4 h-4 mr-2" />
+                      Слушать
+                    </a>
                   </Button>
                 </CardContent>
               </Card>
