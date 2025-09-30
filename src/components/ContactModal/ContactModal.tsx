@@ -101,10 +101,8 @@ const ContactModal = ({ isOpen, onClose }: ContactModalProps) => {
               <Clock className="h-5 w-5 text-primary" />
               <span className="font-medium">Режим работы</span>
             </div>
-            <div className="text-sm text-muted-foreground space-y-1">
-              <p>ПН-ПТ: 9:00-21:00</p>
-              <p>СБ: 10:00-18:00</p>
-              <p>ВС: 10:00-16:00</p>
+            <div className="text-sm text-muted-foreground">
+              <p>9:00-20:00 по предварительной записи</p>
             </div>
           </div>
         </div>

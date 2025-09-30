@@ -85,8 +85,7 @@ const Footer = () => {
                 </div>
               </div>
               <div className="text-primary-foreground/60 text-xs mt-2">
-                Пн-Пт: 9:00-21:00<br />
-                Сб-Вс: 10:00-18:00
+                9:00-20:00 по предварительной записи
               </div>
             </div>
           </div>
