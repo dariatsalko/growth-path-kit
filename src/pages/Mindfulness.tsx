@@ -40,21 +40,21 @@ const Mindfulness = () => {
       title: "Дыхание 4-7-8",
       duration: "4 минуты",
       description: "Техника для быстрого расслабления и снижения тревожности",
-      audioUrl: "#",
+      audioUrl: "https://youtu.be/ViyzxTC18QY",
       icon: <Leaf className="w-6 h-6" />,
     },
     {
       title: "Сканирование тела",
       duration: "12 минут",
       description: "Постепенное расслабление всех частей тела",
-      audioUrl: "#",
+      audioUrl: "https://youtu.be/gd7OleVCAmY",
       icon: <Brain className="w-6 h-6" />,
     },
     {
       title: "Наблюдение за мыслями",
       duration: "8 минут",
       description: "Практика осознанного наблюдения без оценки",
-      audioUrl: "#",
+      audioUrl: "https://youtu.be/ViyzxTC18QY",
       icon: <Clock className="w-6 h-6" />,
     },
   ];
@@ -636,7 +636,7 @@ const Mindfulness = () => {
                 <CardContent className="space-y-4">
                   <Button size="sm" className="w-full" asChild>
                     <a 
-                      href="https://youtu.be/ViyzxTC18QY"
+                      href={practice.audioUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="flex items-center"
