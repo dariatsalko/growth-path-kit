@@ -1,0 +1,49 @@
+---
+deployment:
+  tasks:
+    # Установка зависимостей
+    - export DEPLOYPATH=/home/intentionb/public_html/
+    - export NODE_VERSION=18
+    - export PATH=/opt/cpanel/node/bin:$PATH
+
+    # Установка Node.js (если нужно)
+    - /bin/cp -R . $DEPLOYPATH
+
+    # Переходим в директорию проекта
+    - cd $DEPLOYPATH
+
+    # Проверяем версию Node.js
+    - node --version
+    - npm --version
+
+    # Устанавливаем зависимости
+    - npm install
+
+    # Собираем проект для продакшена
+    - npm run build
+
+    # Копируем собранные файлы в корень public_html
+    - /bin/cp -R dist/* ./
+
+    # Удаляем ненужные файлы и папки после деплоя
+    - rm -rf node_modules
+    - rm -rf src
+    - rm -rf dist
+    - rm -f package.json
+    - rm -f package-lock.json
+    - rm -f vite.config.ts
+    - rm -f tsconfig.json
+    - rm -f tsconfig.app.json
+    - rm -f tsconfig.node.json
+    - rm -f tailwind.config.ts
+    - rm -f postcss.config.js
+    - rm -f eslint.config.mjs
+    - rm -f components.json
+    - rm -f bun.lockb
+    - rm -f .cpanel.yml
+
+    # Создаем .htaccess для SPA маршрутизации
+    - echo "Options -MultiViews" > .htaccess
+    - echo "RewriteEngine On" >> .htaccess
+    - echo "RewriteCond %{REQUEST_FILENAME} !-f" >> .htaccess
+    - echo "RewriteRule ^ index.html [QSA,L]" >> .htaccess
