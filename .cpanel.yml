@@ -1,29 +1,43 @@
 ---
 deployment:
   tasks:
-    # Установка зависимостей
+    # Установка Node.js окружения
     - export DEPLOYPATH=/home/intentionb/public_html/
     - export NODE_VERSION=18
-    - export PATH=/opt/cpanel/node/bin:$PATH
+    - export PATH=/opt/cpanel/ea-nodejs18/bin:/opt/cpanel/node/bin:$PATH
 
-    # Установка Node.js (если нужно)
+    # Копируем файлы в директорию развертывания
     - /bin/cp -R . $DEPLOYPATH
 
     # Переходим в директорию проекта
     - cd $DEPLOYPATH
 
-    # Проверяем версию Node.js
+    # Проверяем доступность Node.js и npm
+    - which node
+    - which npm
     - node --version
     - npm --version
 
-    # Устанавливаем зависимости
-    - npm install
+    # Очищаем npm cache для избежания проблем
+    - npm cache clean --force
+
+    # Устанавливаем зависимости с увеличенным timeout
+    - npm install --timeout=600000 --no-audit --no-fund
 
     # Собираем проект для продакшена
     - npm run build
 
+    # Проверяем что папка dist создалась
+    - ls -la dist/
+
     # Копируем собранные файлы в корень public_html
     - /bin/cp -R dist/* ./
+
+    # Создаем .htaccess для SPA маршрутизации ПЕРЕД удалением файлов
+    - echo "Options -MultiViews" > .htaccess
+    - echo "RewriteEngine On" >> .htaccess
+    - echo "RewriteCond %{REQUEST_FILENAME} !-f" >> .htaccess
+    - echo "RewriteRule ^ index.html [QSA,L]" >> .htaccess
 
     # Удаляем ненужные файлы и папки после деплоя
     - rm -rf node_modules
@@ -41,9 +55,3 @@ deployment:
     - rm -f components.json
     - rm -f bun.lockb
     - rm -f .cpanel.yml
-
-    # Создаем .htaccess для SPA маршрутизации
-    - echo "Options -MultiViews" > .htaccess
-    - echo "RewriteEngine On" >> .htaccess
-    - echo "RewriteCond %{REQUEST_FILENAME} !-f" >> .htaccess
-    - echo "RewriteRule ^ index.html [QSA,L]" >> .htaccess
