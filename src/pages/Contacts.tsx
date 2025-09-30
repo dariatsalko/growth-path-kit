@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Clock, CreditCard, FileText, Instagram, Mail, MapPin, MessageCircle, Phone, Share2 } from "lucide-react";
+import { Clock, CreditCard, FileText, Instagram, Mail, MapPin, MessageCircle, Phone, Send, Share2 } from "lucide-react";
 import Footer from "@/components/Footer/Footer";
 import { Button } from "@/components/ui/button/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card/card";
@@ -131,10 +131,39 @@ const Contacts = () => {
                 <CardTitle>Мессенджеры</CardTitle>
               </CardHeader>
               <CardContent>
-                <div className="space-y-2">
-                  <p className="text-lg font-medium">
-                    Telegram / Viber
-                  </p>
+                <div className="space-y-3">
+                  <div className="flex justify-center gap-3">
+                    <a 
+                      href="https://t.me/+375292375730"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                      aria-label="Telegram"
+                    >
+                      <Send className="w-5 h-5" />
+                      <span className="text-sm font-medium">Telegram</span>
+                    </a>
+                    <a 
+                      href="https://wa.me/375292375730"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                      aria-label="WhatsApp"
+                    >
+                      <MessageCircle className="w-5 h-5" />
+                      <span className="text-sm font-medium">WhatsApp</span>
+                    </a>
+                    <a 
+                      href="viber://chat?number=+375292375730"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
+                      aria-label="Viber"
+                    >
+                      <Phone className="w-5 h-5" />
+                      <span className="text-sm font-medium">Viber</span>
+                    </a>
+                  </div>
                   <p className="text-sm text-muted-foreground">
                     +375 (29) 237-57-30
                   </p>
