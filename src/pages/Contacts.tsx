@@ -1,62 +1,39 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-
-import {
-  Clock,
-  CreditCard,
-  FileText,
-  Mail,
-  MapPin,
-  MessageCircle,
-  Phone,
-} from "lucide-react";
-
+import { Clock, CreditCard, FileText, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
 import Footer from "@/components/Footer/Footer";
 import { Button } from "@/components/ui/button/button";
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from "@/components/ui/card/card";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card/card";
 import { Checkbox } from "@/components/ui/checkbox/checkbox";
 import Header from "@/components/ui/header/header";
 import { Input } from "@/components/ui/input/input";
 import { Label } from "@/components/ui/label/label";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select/select";
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select/select";
 import { Textarea } from "@/components/ui/textarea/textarea";
 import { useToast } from "@/hooks/use-toast";
-
 const Contacts = () => {
-  const { toast } = useToast();
+  const {
+    toast
+  } = useToast();
   const [contactForm, setContactForm] = useState({
     name: "",
     email: "",
     subject: "",
     message: "",
-    consent: false,
+    consent: false
   });
-
   const [paymentData, setPaymentData] = useState({
     service: "",
     package: "",
-    amount: "",
+    amount: ""
   });
-
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!contactForm.name || !contactForm.email || !contactForm.message) {
       toast({
         title: "Ошибка",
         description: "Заполните все обязательные поля",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
@@ -64,60 +41,43 @@ const Contacts = () => {
       toast({
         title: "Ошибка",
         description: "Необходимо согласие на обработку данных",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
     toast({
       title: "Сообщение отправлено!",
-      description: "Мы ответим вам в течение 24 часов",
+      description: "Мы ответим вам в течение 24 часов"
     });
   };
-
   const handlePayment = () => {
     if (!paymentData.service) {
       toast({
         title: "Выберите услугу",
         description: "Необходимо выбрать услугу для оплаты",
-        variant: "destructive",
+        variant: "destructive"
       });
       return;
     }
     toast({
       title: "Переход к оплате",
-      description: "Сейчас откроется страница оплаты",
+      description: "Сейчас откроется страница оплаты"
     });
   };
 
   // Check if contact form is valid for submission
-  const isContactFormValid =
-    contactForm.name.trim() !== "" &&
-    contactForm.email.trim() !== "" &&
-    contactForm.message.trim() !== "" &&
-    contactForm.consent;
+  const isContactFormValid = contactForm.name.trim() !== "" && contactForm.email.trim() !== "" && contactForm.message.trim() !== "" && contactForm.consent;
 
   // Check if payment form is valid for submission
-  const isPaymentFormValid =
-    paymentData.service.trim() !== "" && paymentData.package.trim() !== "";
-
-  return (
-    <div className="min-h-screen bg-background">
+  const isPaymentFormValid = paymentData.service.trim() !== "" && paymentData.package.trim() !== "";
+  return <div className="min-h-screen bg-background">
       <Helmet>
         <title>
           Контакты и запись на прием | Центр консультативной психологии ИНТЕНЦИЯ
         </title>
-        <meta
-          name="description"
-          content="Контакты центра психологии ИНТЕНЦИЯ в Минске. Телефон +375 29 237-57-30, email info@intention.by. Онлайн запись и оплата услуг."
-        />
-        <meta
-          property="og:title"
-          content="Контакты центра психологии ИНТЕНЦИЯ"
-        />
-        <meta
-          property="og:description"
-          content="Свяжитесь с нами для записи на консультацию. Работаем онлайн и очно в Минске."
-        />
+        <meta name="description" content="Контакты центра психологии ИНТЕНЦИЯ в Минске. Телефон +375 29 237-57-30, email info@intention.by. Онлайн запись и оплата услуг." />
+        <meta property="og:title" content="Контакты центра психологии ИНТЕНЦИЯ" />
+        <meta property="og:description" content="Свяжитесь с нами для записи на консультацию. Работаем онлайн и очно в Минске." />
         <meta property="og:url" content="https://intention.by/contacts" />
       </Helmet>
 
@@ -158,7 +118,7 @@ const Contacts = () => {
                 <CardTitle>Email</CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-lg font-medium mb-2">info@intention.by</p>
+                <p className="text-lg font-medium mb-2">admin@intention.by</p>
                 <p className="text-sm text-muted-foreground">
                   Ответим в течение 24 часов
                 </p>
@@ -206,14 +166,7 @@ const Contacts = () => {
                   </p>
                 </div>
                 <div className="bg-secondary/30 rounded-lg h-64 flex items-center justify-center">
-                  <iframe
-                    src="https://yandex.ru/map-widget/v1/?ll=27.539858%2C53.903663&z=16&pt=27.539858%2C53.903663%2Cpm2rdm&spn=0.01%2C0.01"
-                    width="100%"
-                    height="256"
-                    frameBorder="0"
-                    className="rounded-lg"
-                    title="Центр консультативной психологии ИНТЕНЦИЯ на карте (ул. Короля, 20)"
-                  ></iframe>
+                  <iframe src="https://yandex.ru/map-widget/v1/?ll=27.539858%2C53.903663&z=16&pt=27.539858%2C53.903663%2Cpm2rdm&spn=0.01%2C0.01" width="100%" height="256" frameBorder="0" className="rounded-lg" title="Центр консультативной психологии ИНТЕНЦИЯ на карте (ул. Короля, 20)"></iframe>
                 </div>
               </CardContent>
             </Card>
@@ -274,8 +227,7 @@ const Contacts = () => {
                 Задайте вопрос или оставьте отзыв — мы обязательно ответим
               </p>
             </div>
-
-            <Card>
+             <Card>
               <CardHeader>
                 <CardTitle>Форма обратной связи</CardTitle>
                 <CardDescription>
@@ -317,8 +269,7 @@ const Contacts = () => {
                       />
                     </div>
                   </div>
-
-                  <div className="space-y-2">
+                   <div className="space-y-2">
                     <Label htmlFor="contact-subject">Тема</Label>
                     <Select
                       value={contactForm.subject}
@@ -345,8 +296,7 @@ const Contacts = () => {
                       </SelectContent>
                     </Select>
                   </div>
-
-                  <div className="space-y-2">
+                   <div className="space-y-2">
                     <Label htmlFor="contact-message">Сообщение *</Label>
                     <Textarea
                       id="contact-message"
@@ -362,8 +312,7 @@ const Contacts = () => {
                       required
                     />
                   </div>
-
-                  <div className="flex items-start space-x-2">
+                   <div className="flex items-start space-x-2">
                     <Checkbox
                       id="contact-consent"
                       checked={contactForm.consent}
@@ -386,8 +335,7 @@ const Contacts = () => {
                       *
                     </Label>
                   </div>
-
-                  <Button
+                   <Button
                     type="submit"
                     className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-6 disabled:opacity-50 disabled:cursor-not-allowed"
                     disabled={!isContactFormValid}
@@ -399,7 +347,7 @@ const Contacts = () => {
             </Card>
           </div>
         </div>
-      </section> */}
+       </section> */}
 
       {/* Payment Section */}
       {/* <section className="py-16 lg:py-24">
@@ -413,8 +361,7 @@ const Contacts = () => {
                 Оплатите услуги безопасно через наш сайт
               </p>
             </div>
-
-            <Card>
+             <Card>
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <CreditCard className="w-6 h-6 text-primary" />
@@ -455,8 +402,7 @@ const Contacts = () => {
                     </SelectContent>
                   </Select>
                 </div>
-
-                <div className="space-y-2">
+                 <div className="space-y-2">
                   <Label>Пакет</Label>
                   <Select
                     value={paymentData.package}
@@ -479,8 +425,7 @@ const Contacts = () => {
                     </SelectContent>
                   </Select>
                 </div>
-
-                <div className="bg-secondary/30 rounded-lg p-4">
+                 <div className="bg-secondary/30 rounded-lg p-4">
                   <div className="flex justify-between items-center">
                     <span className="font-medium">К оплате:</span>
                     <span className="text-2xl font-bold text-primary">
@@ -490,8 +435,7 @@ const Contacts = () => {
                     </span>
                   </div>
                 </div>
-
-                <Button
+                 <Button
                   onClick={handlePayment}
                   className="w-full bg-accent hover:bg-accent/90 text-accent-foreground font-semibold py-6 disabled:opacity-50 disabled:cursor-not-allowed"
                   size="lg"
@@ -500,8 +444,7 @@ const Contacts = () => {
                   <CreditCard className="w-5 h-5 mr-2" />
                   Перейти к оплате
                 </Button>
-
-                <div className="text-center space-y-2">
+                 <div className="text-center space-y-2">
                   <p className="text-sm text-muted-foreground">
                     Принимаем карты Visa, Mastercard, Белкарт, Интернет-банкинг
                   </p>
@@ -513,7 +456,7 @@ const Contacts = () => {
             </Card>
           </div>
         </div>
-      </section> */}
+       </section> */}
 
       {/* Documents */}
       <section className="py-16 lg:py-24 bg-secondary/30">
@@ -571,8 +514,6 @@ const Contacts = () => {
       </section>
 
       <Footer />
-    </div>
-  );
+    </div>;
 };
-
 export default Contacts;
