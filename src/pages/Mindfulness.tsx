@@ -54,7 +54,7 @@ const Mindfulness = () => {
       title: "Наблюдение за мыслями",
       duration: "8 минут",
       description: "Практика осознанного наблюдения без оценки",
-      audioUrl: "https://youtu.be/ViyzxTC18QY",
+      audioUrl: "https://youtu.be/X91qvj-oZc0",
       icon: <Clock className="w-6 h-6" />,
     },
   ];
