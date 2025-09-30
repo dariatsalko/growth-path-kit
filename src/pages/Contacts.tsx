@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Clock, CreditCard, FileText, Mail, MapPin, MessageCircle, Phone, Share2 } from "lucide-react";
+import { Clock, CreditCard, FileText, Instagram, Mail, MapPin, MessageCircle, Phone, Share2 } from "lucide-react";
 import Footer from "@/components/Footer/Footer";
 import { Button } from "@/components/ui/button/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card/card";
@@ -149,9 +149,17 @@ const Contacts = () => {
               </CardHeader>
               <CardContent>
                 <div className="space-y-2">
-                  <p className="text-lg font-medium">
-                    Instagram / VK
-                  </p>
+                  <div className="flex justify-center gap-4">
+                    <a 
+                      href="https://www.instagram.com/intention.by?igsh=cG43MWN2dGJlcWFs"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:opacity-70 transition-opacity"
+                      aria-label="Instagram"
+                    >
+                      <Instagram className="w-8 h-8 text-primary" />
+                    </a>
+                  </div>
                   <p className="text-sm text-muted-foreground">
                     Следите за нашими новостями
                   </p>
