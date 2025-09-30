@@ -38,7 +38,7 @@ const Mindfulness = () => {
   const practices = [
     {
       title: "Дыхание 4-7-8",
-      duration: "5 минут",
+      duration: "4 минуты",
       description: "Техника для быстрого расслабления и снижения тревожности",
       audioUrl: "#",
       icon: <Leaf className="w-6 h-6" />,
