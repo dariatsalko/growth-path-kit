@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Helmet } from "react-helmet-async";
-import { Clock, CreditCard, FileText, Mail, MapPin, MessageCircle, Phone } from "lucide-react";
+import { Clock, CreditCard, FileText, Mail, MapPin, MessageCircle, Phone, Share2 } from "lucide-react";
 import Footer from "@/components/Footer/Footer";
 import { Button } from "@/components/ui/button/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card/card";
@@ -137,6 +137,23 @@ const Contacts = () => {
                   </p>
                   <p className="text-sm text-muted-foreground">
                     +375 (29) 237-57-30
+                  </p>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="text-center">
+              <CardHeader>
+                <Share2 className="w-12 h-12 text-primary mx-auto mb-4" />
+                <CardTitle>Наши соц. сети</CardTitle>
+              </CardHeader>
+              <CardContent>
+                <div className="space-y-2">
+                  <p className="text-lg font-medium">
+                    Instagram / VK
+                  </p>
+                  <p className="text-sm text-muted-foreground">
+                    Следите за нашими новостями
                   </p>
                 </div>
               </CardContent>
