@@ -33,25 +33,11 @@ deployment:
     # Копируем собранные файлы в корень public_html
     - /bin/cp -R dist/* ./
 
-    # Создаем .htaccess для SPA маршрутизации ПЕРЕД удалением файлов
+    # Создаем .htaccess для SPA маршрутизации
     - echo "Options -MultiViews" > .htaccess
     - echo "RewriteEngine On" >> .htaccess
     - echo "RewriteCond %{REQUEST_FILENAME} !-f" >> .htaccess
     - echo "RewriteRule ^ index.html [QSA,L]" >> .htaccess
 
-    # Удаляем ненужные файлы и папки после деплоя
-    - rm -rf node_modules
-    - rm -rf src
-    - rm -rf dist
-    - rm -f package.json
-    - rm -f package-lock.json
-    - rm -f vite.config.ts
-    - rm -f tsconfig.json
-    - rm -f tsconfig.app.json
-    - rm -f tsconfig.node.json
-    - rm -f tailwind.config.ts
-    - rm -f postcss.config.js
-    - rm -f eslint.config.mjs
-    - rm -f components.json
-    - rm -f bun.lockb
-    - rm -f .cpanel.yml
+    # Опционально: удаляем только node_modules для экономии места
+    # - rm -rf node_modules
