@@ -133,7 +133,7 @@ const Contacts = () => {
               <CardContent>
                 <div className="space-y-2">
                   <p className="text-lg font-medium">
-                    Telegram / Instagram / Viber / VK
+                    Telegram / Viber
                   </p>
                   <p className="text-sm text-muted-foreground">
                     +375 (29) 237-57-30
