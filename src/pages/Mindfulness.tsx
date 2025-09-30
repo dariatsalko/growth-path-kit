@@ -45,7 +45,7 @@ const Mindfulness = () => {
     },
     {
       title: "Сканирование тела",
-      duration: "10 минут",
+      duration: "12 минут",
       description: "Постепенное расслабление всех частей тела",
       audioUrl: "#",
       icon: <Brain className="w-6 h-6" />,
