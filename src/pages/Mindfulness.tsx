@@ -63,6 +63,7 @@ const Mindfulness = () => {
     {
       name: "Осознанное дыхание",
       hasVideo: true,
+      videoUrl: "https://youtu.be/ViyzxTC18QY",
       howTo:
         "На 3-5 минут полностью сосредоточьтесь на естественном ритме своего дыхания. Когда внимание уплывает, мягко, без критики, верните его к вдохам и выдохам.",
       purpose:
@@ -87,6 +88,7 @@ const Mindfulness = () => {
     {
       name: "Сканирование тела (Body Scan)",
       hasVideo: true,
+      videoUrl: "https://youtu.be/gd7OleVCAmY",
       howTo:
         "Мысленное путешествие вниманием по всему телу от макушки до кончиков пальцев ног. Цель — замечать ощущения (тепло, тяжесть, покалывание, напряжение) без попытки их изменить.",
       purpose:
@@ -155,6 +157,7 @@ const Mindfulness = () => {
     {
       name: "Техника «СТОП»",
       hasVideo: true,
+      videoUrl: "https://youtu.be/X91qvj-oZc0",
       howTo:
         "Краткий алгоритм для паузы в момент нарастания стресса. Не требует уединения и может быть применен где угодно.",
       purpose:
@@ -510,7 +513,7 @@ const Mindfulness = () => {
                                   asChild
                                 >
                                   <a 
-                                    href="https://youtu.be/nlXYyDkAOlg"
+                                    href={practice.videoUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center"
