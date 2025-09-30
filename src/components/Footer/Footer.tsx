@@ -35,9 +35,9 @@ const Footer = () => {
               >
                 <MessageCircle className="w-5 h-5" />
               </a>
-              <a 
-                href="https://t.me/Psy_artiva" 
-                target="_blank"
+            <a
+              href="https://t.me/Intentionby"
+              target="_blank"
                 rel="noopener noreferrer"
                 className="text-primary-foreground/60 hover:text-primary-foreground transition-colors"
                 aria-label="Telegram"

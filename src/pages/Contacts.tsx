@@ -134,7 +134,7 @@ const Contacts = () => {
                 <div className="space-y-3">
                   <div className="flex justify-center gap-3">
                     <a 
-                      href="https://t.me/Psy_artiva"
+                      href="https://t.me/Intentionby"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2 px-4 py-2 rounded-lg bg-primary text-primary-foreground hover:bg-primary/90 transition-colors"
