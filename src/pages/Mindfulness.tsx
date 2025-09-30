@@ -62,6 +62,7 @@ const Mindfulness = () => {
   const detailedPractices = [
     {
       name: "Осознанное дыхание",
+      hasVideo: true,
       howTo:
         "На 3-5 минут полностью сосредоточьтесь на естественном ритме своего дыхания. Когда внимание уплывает, мягко, без критики, верните его к вдохам и выдохам.",
       purpose:
@@ -85,6 +86,7 @@ const Mindfulness = () => {
     },
     {
       name: "Сканирование тела (Body Scan)",
+      hasVideo: true,
       howTo:
         "Мысленное путешествие вниманием по всему телу от макушки до кончиков пальцев ног. Цель — замечать ощущения (тепло, тяжесть, покалывание, напряжение) без попытки их изменить.",
       purpose:
@@ -107,6 +109,7 @@ const Mindfulness = () => {
     },
     {
       name: "Осознанное питание",
+      hasVideo: false,
       howTo:
         "Прием пищи без внешних раздражителей (телефон, TV), с полным вниманием к процессу: к текстуре, вкусу, запаху и ощущениям от еды.",
       purpose:
@@ -129,6 +132,7 @@ const Mindfulness = () => {
     },
     {
       name: "Осознанная ходьба",
+      hasVideo: false,
       howTo:
         "Ходьба, при которой все внимание направлено на физические ощущения от движения: на то, как стопы касаются земли, работают мышцы ног и тела.",
       purpose:
@@ -150,6 +154,7 @@ const Mindfulness = () => {
     },
     {
       name: "Техника «СТОП»",
+      hasVideo: true,
       howTo:
         "Краткий алгоритм для паузы в момент нарастания стресса. Не требует уединения и может быть применен где угодно.",
       purpose:
@@ -498,21 +503,23 @@ const Mindfulness = () => {
                                 <Calendar className="w-4 h-4 mr-2" />
                 Связаться для записи
                               </Button>
-                              <Button
-                                size="sm"
-                                variant="outline"
-                                asChild
-                              >
-                                <a 
-                                  href="https://youtu.be/nlXYyDkAOlg"
-                                  target="_blank"
-                                  rel="noopener noreferrer"
-                                  className="flex items-center"
+                              {practice.hasVideo && (
+                                <Button
+                                  size="sm"
+                                  variant="outline"
+                                  asChild
                                 >
-                                  <Youtube className="w-4 h-4 mr-2" />
-                                  Смотреть на YouTube
-                                </a>
-                              </Button>
+                                  <a 
+                                    href="https://youtu.be/nlXYyDkAOlg"
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="flex items-center"
+                                  >
+                                    <Youtube className="w-4 h-4 mr-2" />
+                                    Смотреть на YouTube
+                                  </a>
+                                </Button>
+                              )}
                             </div>
                           </div>
                         </details>
