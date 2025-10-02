@@ -116,7 +116,7 @@ const PsychologistDetailsModal: React.FC<PsychologistDetailsModalProps> = ({
                 }));
               }}
             >
-              Записаться на консультацию
+              Связаться для записи
             </Button>
           </div>
         </div>
