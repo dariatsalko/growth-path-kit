@@ -85,7 +85,7 @@ const School = () => {
       <section className="py-16 lg:py-24">
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-playfair font-bold text-foreground mb-6">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
               Школа эмоционального интеллекта для детей в Минске
             </h1>
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
