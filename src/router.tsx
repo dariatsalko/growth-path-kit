@@ -1,5 +1,5 @@
-import { createBrowserRouter, Outlet, useLocation } from "react-router-dom";
 import { useEffect } from "react";
+import { createBrowserRouter, Outlet, useLocation } from "react-router-dom";
 
 import Cancellation from "./pages/Cancellation";
 import Consent from "./pages/Consent";
