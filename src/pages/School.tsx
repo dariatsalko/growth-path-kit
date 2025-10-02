@@ -81,6 +81,20 @@ const School = () => {
         </div>
       </section>
 
+      {/* SEO Section */}
+      <section className="py-12 bg-background">
+        <div className="container px-4">
+          <div className="max-w-4xl mx-auto">
+            <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Школа эмоционального интеллекта для детей в Минске
+            </h1>
+            <p className="text-lg text-muted-foreground leading-relaxed">
+              Центр «Интенция» проводит групповые и индивидуальные занятия по развитию эмоционального интеллекта у детей 6-17 лет. Помогаем понимать эмоции, развивать эмпатию, справляться со стрессом и улучшать коммуникацию. Используем игровую терапию, КПТ и техники mindfulness. Программы адаптированы под каждый возраст. Занятия ведут лицензированные психологи с опытом работы с детьми.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* What is EI Section */}
       <section className="py-16 lg:py-24">
         <div className="container px-4">
