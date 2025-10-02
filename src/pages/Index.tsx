@@ -63,14 +63,14 @@ const Index = () => {
         <HeroSection />
         
         {/* SEO Section */}
-        <section className="py-12 bg-background">
+        <section className="py-16 lg:py-20 bg-secondary/30">
           <div className="container px-4">
-            <div className="max-w-4xl mx-auto">
-              <h1 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground mb-6">
                 Психологические консультации в Минске и онлайн
               </h1>
-              <p className="text-lg text-muted-foreground leading-relaxed">
-                Наша команда психологов «Интенция» помогает взрослым и подросткам справляться с тревогой и паническими атаками, выгоранием, депрессией, сложностями в отношениях и самокритикой. Работаем научно-доказательными методами: когнитивно-поведенческая терапия (КПТ), техники осознанности (mindfulness), краткосрочные фокус-подходы. Принимаем в Минске и ведём онлайн-сессии по всему миру. Первая встреча — чтобы понять запрос и договориться о плане помощи.
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
+                Наша команда психологов «Интенция» помогает взрослым и подросткам справляться с тревогой и паническими атаками, выгоранием, депрессией, сложностями в отношениях и самокритикой. Работаем научно-доказательными методами: когнитивно-поведенческая терапия (КПТ), техники осознанности (mindfulness), краткосрочные фокус-подходы. Принимаем в Минске и ведём онлайн-сессии по всему миру.
               </p>
             </div>
           </div>
