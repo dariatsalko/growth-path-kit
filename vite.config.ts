@@ -10,21 +10,20 @@ export default defineConfig(({ mode }) => ({
   server: {
     host: "::",
     port: 8080,
+    historyApiFallback: true,
   },
-  plugins: [
-    react(),
-    mode === 'development' &&
-    componentTagger(),
-  ].filter(Boolean),
+  plugins: [react(), mode === "development" && componentTagger()].filter(
+    Boolean
+  ),
   build: {
     rollupOptions: {
       output: {
         manualChunks: {
-          vendor: ['react', 'react-dom'],
-          router: ['react-router-dom']
-        }
-      }
-    }
+          vendor: ["react", "react-dom"],
+          router: ["react-router-dom"],
+        },
+      },
+    },
   },
   resolve: {
     alias: {
