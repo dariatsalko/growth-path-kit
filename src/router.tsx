@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { createBrowserRouter, Outlet, useLocation } from "react-router-dom";
+import { createHashRouter, Outlet, useLocation } from "react-router-dom";
 
 import Cancellation from "./pages/Cancellation";
 import Consent from "./pages/Consent";
@@ -35,7 +35,7 @@ const RootLayout = () => {
   );
 };
 
-export const router = createBrowserRouter([
+export const router = createHashRouter([
   {
     path: "/",
     element: <RootLayout />,

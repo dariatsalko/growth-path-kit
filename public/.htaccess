@@ -1,6 +1,14 @@
-Options +FollowSymLinks
-RewriteEngine On
-RewriteBase /
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /index.html [QSA,L]
+# Test if mod_rewrite is working
+
+<IfModule mod_rewrite.c>
+    Options +FollowSymLinks
+    RewriteEngine On
+    RewriteBase /
+    RewriteCond %{REQUEST_FILENAME} !-f
+    RewriteCond %{REQUEST_FILENAME} !-d
+    RewriteRule ^(.*)$ /index.html [QSA,L]
+</IfModule>
+
+# Fallback error pages if mod_rewrite is not available
+
+ErrorDocument 404 /index.html
