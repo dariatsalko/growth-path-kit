@@ -258,10 +258,10 @@ const Mindfulness = () => {
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center">
             <Badge variant="secondary" className="mb-6">
-              Осознанность (майндфулнесс)
+              Практики осознанности (майндфулнесс)
             </Badge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Перестаньте жить на автопилоте!
+              Практики осознанности (майндфулнесс) в Минске и онлайн
             </h1>
             <div className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto space-y-4">
               <p>
@@ -290,7 +290,7 @@ const Mindfulness = () => {
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Что такое осознанность (майндфулнесс)?
+              Что такое практики осознанности (mindfulness)?
             </h2>
             <p className="text-lg text-muted-foreground mb-8">
               Осознанность — это навык целенаправленного, безоценочного внимания
@@ -378,7 +378,7 @@ const Mindfulness = () => {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Практики и техники: с чего начать?
+              Техники майндфулнесс: инструкции и аудиогиды
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Практики осознанности — это не сложные медитации по часу. Это
@@ -541,7 +541,7 @@ const Mindfulness = () => {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Почему это важно? Ваши выгоды
+              Преимущества практик осознанности для психического здоровья
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Регулярная практика — это не просто «расслабиться». Это
@@ -577,7 +577,7 @@ const Mindfulness = () => {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Чем рискует тот, кто живет на автопилоте?
+              Риски жизни без практик mindfulness
             </h2>
             <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
               Отсутствие осознанности — это не нейтрально. Это медленное
@@ -613,10 +613,10 @@ const Mindfulness = () => {
         <div className="container px-4">
           <div className="text-center mb-16">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
-              Бесплатные практики
+              Бесплатные аудиопрактики осознанности онлайн
             </h2>
             <p className="text-lg text-muted-foreground">
-              Попробуйте базовые техники осознанности прямо сейчас
+              Попробуйте базовые техники mindfulness прямо сейчас с аудиогидами
             </p>
           </div>
 

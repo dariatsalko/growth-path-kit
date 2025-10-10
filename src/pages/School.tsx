@@ -323,9 +323,17 @@ const School = () => {
       {/* FAQ Section */}
       <section className="py-16 lg:py-24">
         <div className="container px-4">
-          <div className="mt-16">
-            <h3 className="text-2xl font-bold text-foreground mb-8 text-center">
-              Часто задаваемые вопросы
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-6">
+              Часто задаваемые вопросы о развитии ЭИ
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+              Ответы на популярные вопросы родителей о школе эмоционального интеллекта в Минске
+            </p>
+          </div>
+          <div className="mt-8">
+            <h3 className="sr-only">
+              Вопросы и ответы о программе развития эмоционального интеллекта
             </h3>
             <div className="max-w-3xl mx-auto">
               <Accordion type="single" collapsible className="w-full">
