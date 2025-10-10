@@ -93,7 +93,7 @@ const BookingModal = ({
     };
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
 
     if (!formData.name || !formData.phone || !formData.format) {
@@ -115,14 +115,46 @@ const BookingModal = ({
       return;
     }
 
-    toast({
-      title: "Заявка отправлена!",
-      description:
-        "Мы свяжемся с вами в течение 2 часов для подтверждения записи",
-    });
+    try {
+      // Show loading toast
+      toast({
+        title: "Отправка заявки...",
+        description: "Пожалуйста, подождите",
+      });
 
-    handleClose();
-    console.log("Form submitted:", formData);
+      // Send data to PHP backend
+      const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8080";
+      const response = await fetch(`${apiUrl}/send-booking.php`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const result = await response.json();
+
+      if (result.success) {
+        toast({
+          title: "Заявка отправлена!",
+          description:
+            "Мы свяжемся с вами в течение 2 часов для подтверждения записи",
+        });
+        handleClose();
+      } else {
+        throw new Error(result.error || "Неизвестная ошибка");
+      }
+    } catch (error) {
+      console.error("Error sending booking:", error);
+      toast({
+        title: "Ошибка отправки",
+        description:
+          error instanceof Error
+            ? error.message
+            : "Не удалось отправить заявку. Попробуйте позже.",
+        variant: "destructive",
+      });
+    }
   };
 
   const timeSlots = [

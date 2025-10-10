@@ -7,7 +7,7 @@ import { router } from "./router";
 
 import GlobalContactModal from "@/components/GlobalContactModal/GlobalContactModal";
 // Temporarily disabled booking modals
-// import GlobalBookingModal from "@/components/GlobalBookingModal/GlobalBookingModal";
+import GlobalBookingModal from "@/components/GlobalBookingModal/GlobalBookingModal";
 // import GlobalSchoolBookingModal from "@/components/GlobalSchoolBookingModal/GlobalSchoolBookingModal";
 import { Toaster as Sonner } from "@/components/ui/sonner/sonner";
 import { Toaster } from "@/components/ui/toaster/toaster";
@@ -24,7 +24,7 @@ const App = () => (
         <RouterProvider router={router} />
         <GlobalContactModal />
         {/* Temporarily disabled booking modals */}
-        {/* <GlobalBookingModal /> */}
+        <GlobalBookingModal />
         {/* <GlobalSchoolBookingModal /> */}
       </TooltipProvider>
     </HelmetProvider>

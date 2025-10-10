@@ -20,7 +20,8 @@ const Header = () => {
 
   const openContactModal = () => {
     // Dispatch custom event to open contact modal
-    window.dispatchEvent(new CustomEvent("openContactModal"));
+    console.log("Opening contact modal");
+    window.dispatchEvent(new CustomEvent("openBookingModal"));
   };
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
