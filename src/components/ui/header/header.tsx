@@ -12,16 +12,32 @@ const Header = () => {
   const location = useLocation();
 
   const navItems = [
-    { label: "Консультации", href: "/", title: "Психолог Минск - консультации и психотерапия" },
-    { label: "Школа эмоционального интеллекта", href: "/school", title: "Развитие эмоционального интеллекта детей в Минске" },
-    { label: "Осознанность", href: "/mindfulness", title: "Практики осознанности и майндфулнесс в Минске" },
-    { label: "Контакты и оплата", href: "/contacts", title: "Контакты психологического центра Интенция" },
+    {
+      label: "Консультации",
+      href: "/",
+      title: "Психолог Минск - консультации и психотерапия",
+    },
+    {
+      label: "Школа эмоционального интеллекта",
+      href: "/school",
+      title: "Развитие эмоционального интеллекта детей в Минске",
+    },
+    {
+      label: "Осознанность",
+      href: "/mindfulness",
+      title: "Практики осознанности и майндфулнесс в Минске",
+    },
+    {
+      label: "Контакты и оплата",
+      href: "/contacts",
+      title: "Контакты психологического центра Интенция",
+    },
   ];
 
   const openContactModal = () => {
     // Dispatch custom event to open contact modal
     console.log("Opening contact modal");
-    window.dispatchEvent(new CustomEvent("openBookingModal"));
+    window.dispatchEvent(new CustomEvent("openContactModal"));
   };
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -36,7 +52,11 @@ const Header = () => {
           title="Центр консультативной психологии Интенция - главная страница"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-full">
-            <img src={intentionLogo} alt="Логотип психологического центра Интенция Минск" className="h-8 w-11" />
+            <img
+              src={intentionLogo}
+              alt="Логотип психологического центра Интенция Минск"
+              className="h-8 w-11"
+            />
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-bold text-foreground">ИНТЕНЦИЯ</span>
