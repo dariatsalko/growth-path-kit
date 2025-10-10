@@ -34,10 +34,13 @@ const Index = () => {
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
-            "@type": "LocalBusiness",
+            "@type": ["MedicalBusiness", "LocalBusiness", "ProfessionalService"],
             "name": "Центр консультативной психологии ИНТЕНЦИЯ",
-            "description": "Профессиональная психологическая помощь в Минске",
+            "alternateName": "Психолог Минск - центр Интенция",
+            "description": "Профессиональная психологическая помощь в Минске. Индивидуальная и семейная терапия, школа эмоционального интеллекта, практики осознанности",
             "url": "https://intention.by",
+            "logo": "https://intention.by/favicon.svg",
+            "image": "https://intention.by/og-image.jpg",
             "telephone": "+375292375730",
             "email": "info@intention.by",
             "address": {
@@ -45,15 +48,112 @@ const Index = () => {
               "streetAddress": "пр-т Дзержинского 11-843-3",
               "addressLocality": "Минск",
               "postalCode": "220069",
+              "addressRegion": "Минская область",
               "addressCountry": "BY"
             },
-            "openingHours": "Mo-Fr 09:00-21:00, Sa 10:00-18:00, Su 10:00-16:00",
+            "geo": {
+              "@type": "GeoCoordinates",
+              "latitude": "53.9168",
+              "longitude": "27.5918"
+            },
+            "openingHoursSpecification": [
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                "opens": "09:00",
+                "closes": "21:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Saturday",
+                "opens": "10:00",
+                "closes": "18:00"
+              },
+              {
+                "@type": "OpeningHoursSpecification",
+                "dayOfWeek": "Sunday",
+                "opens": "10:00",
+                "closes": "16:00"
+              }
+            ],
             "priceRange": "80-150 BYN",
+            "paymentAccepted": "Cash, Card, Bank Transfer",
+            "currenciesAccepted": "BYN",
+            "areaServed": {
+              "@type": "City",
+              "name": "Минск"
+            },
+            "hasOfferCatalog": {
+              "@type": "OfferCatalog",
+              "name": "Психологические услуги",
+              "itemListElement": [
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Индивидуальная психотерапия",
+                    "description": "Консультация психолога для взрослых"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Семейная терапия",
+                    "description": "Психологическая помощь парам и семьям"
+                  }
+                },
+                {
+                  "@type": "Offer",
+                  "itemOffered": {
+                    "@type": "Service",
+                    "name": "Школа эмоционального интеллекта",
+                    "description": "Развитие ЭИ у детей и подростков"
+                  }
+                }
+              ]
+            },
             "founder": {
               "@type": "Organization",
               "name": "частное предприятие «ЭЛЬМОТО»",
               "taxID": "193334920"
-            }
+            },
+            "sameAs": [
+              "https://www.instagram.com/intention.by",
+              "https://t.me/Intentionby"
+            ]
+          }`}
+        </script>
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+              {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Главная",
+                "item": "https://intention.by/"
+              },
+              {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Школа эмоционального интеллекта",
+                "item": "https://intention.by/school"
+              },
+              {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Практики осознанности",
+                "item": "https://intention.by/mindfulness"
+              },
+              {
+                "@type": "ListItem",
+                "position": 4,
+                "name": "Контакты",
+                "item": "https://intention.by/contacts"
+              }
+            ]
           }`}
         </script>
       </Helmet>

@@ -75,12 +75,60 @@ const Contacts = () => {
   return <div className="min-h-screen bg-background">
       <Helmet>
         <title>
-          Контакты и запись на прием | Центр консультативной психологии ИНТЕНЦИЯ
+          Контакты психолога Минск | Запись в Центр Интенция
         </title>
-        <meta name="description" content="Контакты центра психологии ИНТЕНЦИЯ в Минске. Телефон +375 29 237-57-30, email info@intention.by. Онлайн запись и оплата услуг." />
+        <meta name="description" content="Телефон +375 29 237-57-30, email info@intention.by. Онлайн-запись к психологу. Работаем очно в Минске и онлайн." />
         <meta property="og:title" content="Контакты центра психологии ИНТЕНЦИЯ" />
         <meta property="og:description" content="Свяжитесь с нами для записи на консультацию. Работаем онлайн и очно в Минске." />
         <meta property="og:url" content="https://intention.by/contacts" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://intention.by/contacts" />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "ContactPage",
+            "name": "Контакты центра психологии ИНТЕНЦИЯ",
+            "description": "Свяжитесь с психологами центра ИНТЕНЦИЯ для записи на консультацию",
+            "url": "https://intention.by/contacts",
+            "mainEntity": {
+              "@type": "MedicalBusiness",
+              "name": "Центр консультативной психологии ИНТЕНЦИЯ",
+              "telephone": "+375292375730",
+              "email": "info@intention.by",
+              "address": {
+                "@type": "PostalAddress",
+                "streetAddress": "пр-т Дзержинского 11-843-3",
+                "addressLocality": "Минск",
+                "postalCode": "220069",
+                "addressCountry": "BY"
+              },
+              "openingHoursSpecification": [
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+                  "opens": "09:00",
+                  "closes": "21:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Saturday",
+                  "opens": "10:00",
+                  "closes": "18:00"
+                },
+                {
+                  "@type": "OpeningHoursSpecification",
+                  "dayOfWeek": "Sunday",
+                  "opens": "10:00",
+                  "closes": "16:00"
+                }
+              ],
+              "sameAs": [
+                "https://www.instagram.com/intention.by",
+                "https://t.me/Intentionby"
+              ]
+            }
+          }`}
+        </script>
       </Helmet>
 
       {/* Hero Section */}

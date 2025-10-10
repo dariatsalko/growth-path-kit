@@ -15,6 +15,7 @@ import {
   Youtube,
   Zap,
 } from "lucide-react";
+import { Helmet } from "react-helmet-async";
 
 import landingImage from "@/assets/landing.png";
 import mindfullImage from "@/assets/Mindfull.jpg";
@@ -248,6 +249,54 @@ const Mindfulness = () => {
   ];
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Практики осознанности майндфулнесс Минск | Центр ИНТЕНЦИЯ</title>
+        <meta
+          name="description"
+          content="Практики осознанности для снижения тревоги и стресса. Аудиомедитации, техники дыхания. Онлайн и в Минске."
+        />
+        <meta property="og:title" content="Практики осознанности майндфулнесс | ИНТЕНЦИЯ" />
+        <meta
+          property="og:description"
+          content="Научитесь управлять стрессом и тревогой с помощью практик майндфулнесс"
+        />
+        <meta property="og:url" content="https://intention.by/mindfulness" />
+        <meta property="og:type" content="website" />
+        <link rel="canonical" href="https://intention.by/mindfulness" />
+        <script type="application/ld+json">
+          {`{
+            "@context": "https://schema.org",
+            "@type": "Course",
+            "name": "Практики осознанности (майндфулнесс)",
+            "description": "Обучение техникам майндфулнесс для снижения стресса, тревоги и улучшения качества жизни",
+            "provider": {
+              "@type": "Organization",
+              "name": "Центр консультативной психологии ИНТЕНЦИЯ",
+              "url": "https://intention.by"
+            },
+            "url": "https://intention.by/mindfulness",
+            "courseMode": ["Online", "Onsite"],
+            "inLanguage": "ru",
+            "teaches": "Техники осознанности, медитация, управление стрессом",
+            "educationalLevel": "Beginner",
+            "hasCourseInstance": {
+              "@type": "CourseInstance",
+              "courseMode": "Blended",
+              "location": {
+                "@type": "Place",
+                "name": "Центр ИНТЕНЦИЯ",
+                "address": {
+                  "@type": "PostalAddress",
+                  "streetAddress": "пр-т Дзержинского 11-843-3",
+                  "addressLocality": "Минск",
+                  "addressCountry": "BY"
+                }
+              }
+            }
+          }`}
+        </script>
+      </Helmet>
+
       {/* Hero Section */}
       <section
         className="py-16 lg:py-24 bg-cover bg-center bg-no-repeat relative"
