@@ -912,6 +912,43 @@ const Mindfulness = () => {
         </div>
       </section>
 
+      {/* Internal Links Section */}
+      <section className="py-12 bg-secondary/20">
+        <div className="container px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Другие услуги психологического центра
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Практики осознанности особенно эффективны в сочетании с профессиональной психологической помощью
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <a 
+                href="/" 
+                title="Индивидуальная психотерапия и консультации психолога"
+                className="px-6 py-3 bg-background text-foreground rounded-lg hover:bg-primary/10 transition-colors font-medium shadow-sm border border-border"
+              >
+                Консультации психолога в Минске
+              </a>
+              <a 
+                href="/school" 
+                title="Школа эмоционального интеллекта для детей"
+                className="px-6 py-3 bg-background text-foreground rounded-lg hover:bg-primary/10 transition-colors font-medium shadow-sm border border-border"
+              >
+                Школа ЭИ для детей и подростков
+              </a>
+              <a 
+                href="/contacts" 
+                title="Контакты центра психологии Интенция"
+                className="px-6 py-3 bg-background text-foreground rounded-lg hover:bg-primary/10 transition-colors font-medium shadow-sm border border-border"
+              >
+                Записаться на консультацию
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       <Footer />
     </div>
   );

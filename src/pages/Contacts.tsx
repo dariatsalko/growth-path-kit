@@ -516,7 +516,11 @@ const Contacts = () => {
             </div>
 
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 justify-items-center">
-              <a href="/terms" className="block w-full max-w-xs">
+              <a 
+                href="/terms" 
+                className="block w-full max-w-xs"
+                title="Договор оферты на психологические услуги"
+              >
                 <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer h-full">
                   <CardContent className="pt-6">
                     <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
@@ -528,7 +532,11 @@ const Contacts = () => {
                 </Card>
               </a>
 
-              <a href="/privacy" className="block w-full max-w-xs">
+              <a 
+                href="/privacy" 
+                className="block w-full max-w-xs"
+                title="Политика конфиденциальности центра Интенция"
+              >
                 <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer h-full">
                   <CardContent className="pt-6">
                     <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
@@ -542,7 +550,11 @@ const Contacts = () => {
                 </Card>
               </a>
 
-              <a href="/consent" className="block w-full max-w-xs">
+              <a 
+                href="/consent" 
+                className="block w-full max-w-xs"
+                title="Согласие на обработку персональных данных"
+              >
                 <Card className="text-center hover:shadow-lg transition-shadow cursor-pointer h-full">
                   <CardContent className="pt-6">
                     <FileText className="w-8 h-8 text-primary mx-auto mb-3" />
@@ -554,6 +566,43 @@ const Contacts = () => {
                     </p>
                   </CardContent>
                 </Card>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Internal Links Section */}
+      <section className="py-12 bg-secondary/20">
+        <div className="container px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Наши услуги
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Психологический центр Интенция предлагает широкий спектр услуг для детей, подростков и взрослых
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <a 
+                href="/" 
+                title="Индивидуальная и семейная психотерапия в Минске"
+                className="px-6 py-3 bg-background text-foreground rounded-lg hover:bg-primary/10 transition-colors font-medium shadow-sm border border-border"
+              >
+                Психологические консультации
+              </a>
+              <a 
+                href="/school" 
+                title="Школа эмоционального интеллекта для детей и подростков"
+                className="px-6 py-3 bg-background text-foreground rounded-lg hover:bg-primary/10 transition-colors font-medium shadow-sm border border-border"
+              >
+                Школа эмоционального интеллекта
+              </a>
+              <a 
+                href="/mindfulness" 
+                title="Практики осознанности майндфулнесс онлайн и в Минске"
+                className="px-6 py-3 bg-background text-foreground rounded-lg hover:bg-primary/10 transition-colors font-medium shadow-sm border border-border"
+              >
+                Практики осознанности
               </a>
             </div>
           </div>

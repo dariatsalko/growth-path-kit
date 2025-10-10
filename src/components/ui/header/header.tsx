@@ -12,10 +12,10 @@ const Header = () => {
   const location = useLocation();
 
   const navItems = [
-    { label: "Консультации", href: "/" },
-    { label: "Школа эмоционального интеллекта", href: "/school" },
-    { label: "Осознанность", href: "/mindfulness" },
-    { label: "Контакты и оплата", href: "/contacts" },
+    { label: "Консультации", href: "/", title: "Психолог Минск - консультации и психотерапия" },
+    { label: "Школа эмоционального интеллекта", href: "/school", title: "Развитие эмоционального интеллекта детей в Минске" },
+    { label: "Осознанность", href: "/mindfulness", title: "Практики осознанности и майндфулнесс в Минске" },
+    { label: "Контакты и оплата", href: "/contacts", title: "Контакты психологического центра Интенция" },
   ];
 
   const openContactModal = () => {
@@ -33,6 +33,7 @@ const Header = () => {
         <Link
           to="/"
           className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity flex-shrink-0"
+          title="Центр консультативной психологии Интенция - главная страница"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-full">
             <img src={intentionLogo} alt="Логотип психологического центра Интенция Минск" className="h-8 w-11" />
@@ -51,6 +52,7 @@ const Header = () => {
             <Link
               key={item.label}
               to={item.href}
+              title={item.title}
               className={cn(
                 "text-sm font-medium transition-colors whitespace-nowrap",
                 location.pathname === item.href
@@ -102,6 +104,7 @@ const Header = () => {
             <Link
               key={item.label}
               to={item.href}
+              title={item.title}
               className={cn(
                 "block py-2 text-base font-medium transition-colors",
                 location.pathname === item.href

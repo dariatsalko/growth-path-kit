@@ -153,6 +153,29 @@ const ServicesSection = () => {
           >
             Связаться для записи
           </Button>
+          
+          {/* Internal Links Block */}
+          <div className="mt-12 pt-8 border-t border-border/40">
+            <p className="text-muted-foreground mb-4">
+              Помимо индивидуальных консультаций, мы предлагаем специализированные программы:
+            </p>
+            <div className="flex flex-wrap gap-3 justify-center">
+              <a 
+                href="/school" 
+                title="Школа эмоционального интеллекта для детей"
+                className="px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors font-medium text-sm"
+              >
+                Школа ЭИ для детей и подростков
+              </a>
+              <a 
+                href="/mindfulness" 
+                title="Практики осознанности майндфулнесс"
+                className="px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors font-medium text-sm"
+              >
+                Практики осознанности и майндфулнесс
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

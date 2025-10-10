@@ -505,6 +505,43 @@ const School = () => {
         </div>
       </section>
 
+      {/* Internal Links Section */}
+      <section className="py-12 bg-secondary/20">
+        <div className="container px-4">
+          <div className="max-w-3xl mx-auto text-center">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Дополнительные услуги центра Интенция
+            </h3>
+            <p className="text-muted-foreground mb-6">
+              Помимо школы эмоционального интеллекта мы предлагаем другие услуги для детей и взрослых
+            </p>
+            <div className="flex flex-wrap gap-4 justify-center">
+              <a 
+                href="/" 
+                title="Психолог Минск - индивидуальные консультации"
+                className="px-6 py-3 bg-background text-foreground rounded-lg hover:bg-primary/10 transition-colors font-medium shadow-sm border border-border"
+              >
+                Консультации психолога для взрослых
+              </a>
+              <a 
+                href="/mindfulness" 
+                title="Практики осознанности и майндфулнесс в Минске"
+                className="px-6 py-3 bg-background text-foreground rounded-lg hover:bg-primary/10 transition-colors font-medium shadow-sm border border-border"
+              >
+                Практики осознанности (майндфулнесс)
+              </a>
+              <a 
+                href="/contacts" 
+                title="Контакты психологического центра"
+                className="px-6 py-3 bg-background text-foreground rounded-lg hover:bg-primary/10 transition-colors font-medium shadow-sm border border-border"
+              >
+                Контакты и запись на прием
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Hidden SEO Content */}
       <div style={{ position: "absolute", left: "-9999px", top: "-9999px" }}>
         <p>Школа эмоционального интеллекта центра «Интенция» в Минске — это программы для детей и подростков, которые помогают развивать осознанность, эмпатию, саморегуляцию и уверенное общение. Мы проводим очные занятия в Минске, а также онлайн-занятия для участников из Беларуси и других стран.</p>

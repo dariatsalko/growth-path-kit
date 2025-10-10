@@ -80,6 +80,7 @@ const Footer = () => {
                 <Link
                   to="/"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  title="Индивидуальная психотерапия для взрослых в Минске"
                 >
                   Индивидуальная терапия
                 </Link>
@@ -88,6 +89,7 @@ const Footer = () => {
                 <Link
                   to="/"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  title="Семейная психотерапия и консультации психолога для пар"
                 >
                   Семейная терапия
                 </Link>
@@ -96,6 +98,7 @@ const Footer = () => {
                 <Link
                   to="/school"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  title="Школа развития эмоционального интеллекта для детей и подростков"
                 >
                   Школа эмоционального интеллекта
                 </Link>
@@ -104,6 +107,7 @@ const Footer = () => {
                 <Link
                   to="/mindfulness"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  title="Практики осознанности майндфулнесс для снижения стресса"
                 >
                   Практики осознанности
                 </Link>
@@ -112,6 +116,7 @@ const Footer = () => {
                 <Link
                   to="/"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  title="Психолог для подростков - помощь в решении эмоциональных проблем"
                 >
                   Подростковая психология
                 </Link>
@@ -168,6 +173,7 @@ const Footer = () => {
                 <Link
                   to="/privacy"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  title="Политика конфиденциальности центра Интенция"
                 >
                   Политика конфиденциальности
                 </Link>
@@ -176,6 +182,7 @@ const Footer = () => {
                 <Link
                   to="/terms"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  title="Договор оферты на психологические услуги"
                 >
                   Договор оферты
                 </Link>
@@ -184,6 +191,7 @@ const Footer = () => {
                 <Link
                   to="/consent"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  title="Согласие на обработку персональных данных"
                 >
                   Согласие на обработку персональных данных
                 </Link>
