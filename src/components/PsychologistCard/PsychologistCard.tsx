@@ -57,7 +57,7 @@ const PsychologistCard: React.FC<PsychologistCardProps> = ({
           <div className="relative flex-shrink-0">
             <img
               src={photo}
-              alt={`Психолог ${name}`}
+              alt={`Фото психолога ${name} - ${specialization} в центре Интенция Минск`}
               className="w-16 h-16 rounded-lg object-cover shadow-sm ring-1 ring-primary/20 border border-border/20"
             />
           </div>

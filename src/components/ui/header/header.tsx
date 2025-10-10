@@ -35,7 +35,7 @@ const Header = () => {
           className="flex items-center space-x-2 cursor-pointer hover:opacity-80 transition-opacity flex-shrink-0"
         >
           <div className="flex h-10 w-10 items-center justify-center rounded-full">
-            <img src={intentionLogo} alt="Интенция" className="h-8 w-11" />
+            <img src={intentionLogo} alt="Логотип психологического центра Интенция Минск" className="h-8 w-11" />
           </div>
           <div className="flex flex-col">
             <span className="text-lg font-bold text-foreground">ИНТЕНЦИЯ</span>

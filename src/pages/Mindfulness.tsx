@@ -254,6 +254,8 @@ const Mindfulness = () => {
         style={{
           backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0.5)), url(${mindfullImage})`,
         }}
+        role="img"
+        aria-label="Медитация и практики осознанности для снижения стресса и тревоги в центре Интенция"
       >
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center">

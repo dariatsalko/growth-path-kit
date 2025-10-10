@@ -35,7 +35,7 @@ const PsychologistDetailsModal: React.FC<PsychologistDetailsModalProps> = ({
           <div className="flex items-start gap-6 mb-6">
             <img 
               src={psychologist.photo} 
-              alt={`Психолог ${psychologist.name}`}
+              alt={`Фото психолога ${psychologist.name} - ${psychologist.specialization} в центре психологии Интенция Минск`}
               className="w-24 h-24 rounded-xl object-cover flex-shrink-0 shadow-lg"
             />
             <div className="flex-1">

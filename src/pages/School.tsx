@@ -49,6 +49,8 @@ const School = () => {
         style={{
           backgroundImage: `linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.3)), url(${heroImage})`,
         }}
+        role="img"
+        aria-label="Занятие по развитию эмоционального интеллекта детей в школе ЭИ центра Интенция"
       >
         <div className="container px-4">
           <div className="max-w-4xl mx-auto text-center">

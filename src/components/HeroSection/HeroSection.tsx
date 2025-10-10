@@ -20,6 +20,8 @@ const HeroSection = () => {
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
         style={{ backgroundImage: `url(${heroImage})` }}
+        role="img"
+        aria-label="Консультация психолога в уютной обстановке центра Интенция Минск"
       ></div>
       
       <div className="relative z-20 container px-4 py-16 lg:py-24">

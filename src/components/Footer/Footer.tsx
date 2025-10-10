@@ -22,7 +22,7 @@ const Footer = () => {
                 className="flex h-8 w-8 items-center justify-center rounded-full"
                 style={{ backgroundColor: "#F6F7F5" }}
               >
-                <img src={intentionLogo} alt="Интенция" className="h-6 w-7" />
+                <img src={intentionLogo} alt="Логотип центра психологии Интенция Минск" className="h-6 w-7" />
               </div>
               <span className="text-lg font-semibold">ИНТЕНЦИЯ</span>
             </div>
