@@ -124,7 +124,7 @@ const BookingModal = ({
 
       // Send data to PHP backend
       const apiUrl = import.meta.env.VITE_API_URL || "http://localhost:8080";
-      const response = await fetch(`${apiUrl}/send-booking.php`, {
+      const response = await fetch(`${apiUrl}/api/send-booking.php`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
