@@ -62,7 +62,40 @@ This project is built with:
 
 ## How can I deploy this project?
 
+### Deploy to Lovable (Easy)
+
 Simply open [Lovable](https://lovable.dev/projects/dc87d00c-efeb-418f-8226-a4ec765ea9c6) and click on Share -> Publish.
+
+### Deploy to cPanel Hosting (Custom Domain)
+
+This project is configured for cPanel hosting with proper `.htaccess` configuration for SPA routing.
+
+1. **Build the project:**
+
+   ```sh
+   npm run build
+   ```
+
+2. **Upload to cPanel:**
+
+   - Upload all contents of the `dist/` folder to your domain's public_html directory
+   - Make sure the `.htaccess` file is uploaded (it handles SPA routing)
+   - Ensure all route folders (cancellation/, consent/, contacts/, etc.) are created with their index.html files
+
+3. **Verify deployment:**
+
+   - Test each route manually:
+     - https://your-domain.com/
+     - https://your-domain.com/cancellation
+     - https://your-domain.com/consent
+     - https://your-domain.com/contacts
+     - https://your-domain.com/mindfulness
+     - https://your-domain.com/school
+
+4. **SEO considerations:**
+   - Submit updated sitemap.xml to Google Search Console
+   - Request re-indexing for problematic URLs
+   - The `.htaccess` file includes proper headers and caching rules
 
 ## Can I connect a custom domain to my Lovable project?
 

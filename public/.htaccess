@@ -1,8 +1,47 @@
+# Enable rewrite engine
 <IfModule mod_rewrite.c>
-  RewriteEngine On
-  RewriteBase /
-  RewriteRule ^index\.html$ - [L]
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule . /index.html [L]
+  RewriteEngine On RewriteBase / # Handle specific routes for better SEO and
+  indexing RewriteRule ^cancellation/?$ /index.html [L,QSA] RewriteRule
+  ^consent/?$ /index.html [L,QSA] RewriteRule ^contacts/?$ /index.html [L,QSA]
+  RewriteRule ^mindfulness/?$ /index.html [L,QSA] RewriteRule ^school/?$
+  /index.html [L,QSA] RewriteRule ^privacy/?$ /index.html [L,QSA] RewriteRule
+  ^terms/?$ /index.html [L,QSA] RewriteRule ^test-ei-part1/?$ /index.html
+  [L,QSA] RewriteRule ^test-ei-part2/?$ /index.html [L,QSA] # Don't rewrite
+  files or directories that exist RewriteCond %{REQUEST_FILENAME} !-f
+  RewriteCond %{REQUEST_FILENAME} !-d RewriteCond %{REQUEST_URI} !^/api/ #
+  Fallback to index.html for SPA routing RewriteRule . /index.html [L]
+</IfModule>
+
+# Security headers (if mod_headers is available)
+<IfModule mod_headers.c>
+  Header always set X-Frame-Options "DENY" Header always set X-XSS-Protection
+  "1; mode=block" Header always set X-Content-Type-Options "nosniff" Header
+  always set Referrer-Policy "strict-origin-when-cross-origin"
+</IfModule>
+
+# Set proper MIME types
+<IfModule mod_mime.c>
+  AddType application/xml .xml AddType text/plain .txt AddType
+  application/javascript .js AddType text/css .css
+</IfModule>
+
+# Cache static assets (if mod_expires is available)
+<IfModule mod_expires.c>
+  ExpiresActive on ExpiresByType text/css "access plus 1 year" ExpiresByType
+  application/javascript "access plus 1 year" ExpiresByType image/png "access
+  plus 1 year" ExpiresByType image/jpg "access plus 1 year" ExpiresByType
+  image/jpeg "access plus 1 year" ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year" ExpiresByType image/webp
+  "access plus 1 year" ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+</IfModule>
+
+# Gzip compression (if mod_deflate is available)
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/plain AddOutputFilterByType DEFLATE
+  text/html AddOutputFilterByType DEFLATE text/xml AddOutputFilterByType DEFLATE
+  text/css AddOutputFilterByType DEFLATE application/xml AddOutputFilterByType
+  DEFLATE application/xhtml+xml AddOutputFilterByType DEFLATE
+  application/rss+xml AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/x-javascript
 </IfModule>

@@ -1,7 +1,6 @@
 import { Helmet } from "react-helmet-async";
 
 import Footer from "@/components/Footer/Footer";
-import Header from "@/components/ui/header/header";
 
 const Consent = () => {
   return (
@@ -11,6 +10,7 @@ const Consent = () => {
           Согласие на обработку персональных данных - Центр консультативной
           психологии «Интенция»
         </title>
+        <link rel="canonical" href="https://intention.by/consent" />
         <meta
           name="description"
           content="Согласие на обработку персональных данных в центре консультативной психологии «Интенция». Условия обработки и права субъекта данных."

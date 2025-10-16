@@ -1,9 +1,31 @@
+import { Helmet } from "react-helmet-async";
+
 import Footer from "@/components/Footer/Footer";
-import Header from "@/components/ui/header/header";
 
 const Cancellation = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>
+          Правила отмены и возврата | Центр консультативной психологии
+          «Интенция»
+        </title>
+        <meta
+          name="description"
+          content="Правила отмены консультаций и возврата денежных средств в центре консультативной психологии «Интенция». Условия отмены за 24 часа, 12 часов и менее."
+        />
+        <link rel="canonical" href="https://intention.by/cancellation" />
+        <meta
+          property="og:title"
+          content="Правила отмены и возврата - Центр Интенция"
+        />
+        <meta
+          property="og:description"
+          content="Ознакомьтесь с правилами отмены консультаций и возврата средств в психологическом центре Интенция"
+        />
+        <meta property="og:url" content="https://intention.by/cancellation" />
+        <meta property="og:type" content="website" />
+      </Helmet>
       <main className="container mx-auto px-4 py-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="text-4xl font-bold text-foreground mb-8">

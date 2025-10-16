@@ -14,6 +14,8 @@ const routes = [
   "contacts",
   "privacy",
   "terms",
+  "consent",
+  "cancellation",
   "test-ei-part1",
   "test-ei-part2",
 ];

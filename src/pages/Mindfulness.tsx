@@ -1,10 +1,11 @@
+import { Helmet } from "react-helmet-async";
+
 import {
   AlertTriangle,
   Brain,
   Calendar,
   CheckCircle,
   Clock,
-  Download,
   Focus,
   Heart,
   Leaf,
@@ -15,9 +16,7 @@ import {
   Youtube,
   Zap,
 } from "lucide-react";
-import { Helmet } from "react-helmet-async";
 
-import landingImage from "@/assets/landing.png";
 import mindfullImage from "@/assets/Mindfull.jpg";
 import Footer from "@/components/Footer/Footer";
 import { Badge } from "@/components/ui/badge/badge";
@@ -29,7 +28,6 @@ import {
   CardHeader,
   CardTitle,
 } from "@/components/ui/card/card";
-import Header from "@/components/ui/header/header";
 
 const Mindfulness = () => {
   const openContact = () => {
@@ -255,14 +253,17 @@ const Mindfulness = () => {
           name="description"
           content="Практики осознанности для снижения тревоги и стресса. Аудиомедитации, техники дыхания. Онлайн и в Минске."
         />
-        <meta property="og:title" content="Практики осознанности майндфулнесс | ИНТЕНЦИЯ" />
+        <meta
+          property="og:title"
+          content="Практики осознанности майндфулнесс | ИНТЕНЦИЯ"
+        />
         <meta
           property="og:description"
           content="Научитесь управлять стрессом и тревогой с помощью практик майндфулнесс"
         />
+        <link rel="canonical" href="https://intention.by/mindfulness" />
         <meta property="og:url" content="https://intention.by/mindfulness" />
         <meta property="og:type" content="website" />
-        <link rel="canonical" href="https://intention.by/mindfulness" />
         <script type="application/ld+json">
           {`{
             "@context": "https://schema.org",
@@ -547,23 +548,19 @@ const Mindfulness = () => {
                             <div className="flex gap-3 pt-2">
                               <Button
                                 size="sm"
-                onClick={() =>
-                  window.dispatchEvent(
-                    new CustomEvent("openContactModal")
-                  )
-                }
+                                onClick={() =>
+                                  window.dispatchEvent(
+                                    new CustomEvent("openContactModal")
+                                  )
+                                }
                                 className="bg-primary hover:bg-primary/90"
                               >
                                 <Calendar className="w-4 h-4 mr-2" />
-                Связаться для записи
+                                Связаться для записи
                               </Button>
                               {practice.hasVideo && (
-                                <Button
-                                  size="sm"
-                                  variant="outline"
-                                  asChild
-                                >
-                                  <a 
+                                <Button size="sm" variant="outline" asChild>
+                                  <a
                                     href={practice.videoUrl}
                                     target="_blank"
                                     rel="noopener noreferrer"
@@ -689,7 +686,7 @@ const Mindfulness = () => {
                 </CardHeader>
                 <CardContent className="space-y-4">
                   <Button size="sm" className="w-full" asChild>
-                    <a 
+                    <a
                       href={practice.audioUrl}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -969,25 +966,26 @@ const Mindfulness = () => {
               Другие услуги психологического центра
             </h3>
             <p className="text-muted-foreground mb-6">
-              Практики осознанности особенно эффективны в сочетании с профессиональной психологической помощью
+              Практики осознанности особенно эффективны в сочетании с
+              профессиональной психологической помощью
             </p>
             <div className="flex flex-wrap gap-4 justify-center">
-              <a 
-                href="/" 
+              <a
+                href="/"
                 title="Индивидуальная психотерапия и консультации психолога"
                 className="px-6 py-3 bg-background text-foreground rounded-lg hover:bg-primary/10 transition-colors font-medium shadow-sm border border-border"
               >
                 Консультации психолога в Минске
               </a>
-              <a 
-                href="/school" 
+              <a
+                href="/school"
                 title="Школа эмоционального интеллекта для детей"
                 className="px-6 py-3 bg-background text-foreground rounded-lg hover:bg-primary/10 transition-colors font-medium shadow-sm border border-border"
               >
                 Школа ЭИ для детей и подростков
               </a>
-              <a 
-                href="/contacts" 
+              <a
+                href="/contacts"
                 title="Контакты центра психологии Интенция"
                 className="px-6 py-3 bg-background text-foreground rounded-lg hover:bg-primary/10 transition-colors font-medium shadow-sm border border-border"
               >
