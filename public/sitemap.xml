@@ -19,6 +19,12 @@
     <priority>0.9</priority>
   </url>
   <url>
+    <loc>https://intention.by/cabinet-rent</loc>
+    <lastmod>2025-10-16</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>https://intention.by/contacts</loc>
     <lastmod>2025-10-16</lastmod>
     <changefreq>monthly</changefreq>

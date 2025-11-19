@@ -11,6 +11,7 @@ const distDir = path.join(__dirname, "../dist");
 const routes = [
   "school",
   "mindfulness",
+  "cabinet-rent",
   "contacts",
   "privacy",
   "terms",
