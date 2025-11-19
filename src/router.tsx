@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { createBrowserRouter, Outlet, useLocation } from "react-router-dom";
 
+import CabinetRent from "./pages/CabinetRent";
 import Cancellation from "./pages/Cancellation";
 import Consent from "./pages/Consent";
 import Contacts from "./pages/Contacts";
@@ -79,6 +80,10 @@ export const router = createBrowserRouter([
       {
         path: "/test-ei-part2",
         element: <TestEIPart2 />,
+      },
+      {
+        path: "/cabinet-rent",
+        element: <CabinetRent />,
       },
       // ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE
       {
