@@ -161,6 +161,13 @@ const ServicesSection = () => {
             </p>
             <div className="flex flex-wrap gap-3 justify-center">
               <a 
+                href="/depression" 
+                title="Лечение депрессии в Минске"
+                className="px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors font-medium text-sm"
+              >
+                Лечение депрессии
+              </a>
+              <a 
                 href="/school" 
                 title="Школа эмоционального интеллекта для детей"
                 className="px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors font-medium text-sm"
