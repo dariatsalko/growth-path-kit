@@ -19,6 +19,7 @@ const routes = [
   "cancellation",
   "test-ei-part1",
   "test-ei-part2",
+  "depression",
 ];
 
 // Read the main index.html
