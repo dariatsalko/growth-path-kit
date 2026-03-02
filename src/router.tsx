@@ -4,6 +4,7 @@ import { createBrowserRouter, Outlet, useLocation } from "react-router-dom";
 import CabinetRent from "./pages/CabinetRent";
 import Cancellation from "./pages/Cancellation";
 import Depression from "./pages/Depression";
+import FamilyPsychologist from "./pages/FamilyPsychologist";
 import Consent from "./pages/Consent";
 import Contacts from "./pages/Contacts";
 import Index from "./pages/Index";
@@ -89,6 +90,10 @@ export const router = createBrowserRouter([
       {
         path: "/depression",
         element: <Depression />,
+      },
+      {
+        path: "/family-psychologist",
+        element: <FamilyPsychologist />,
       },
       // ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE
       {
