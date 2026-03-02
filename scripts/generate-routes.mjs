@@ -20,6 +20,7 @@ const routes = [
   "test-ei-part1",
   "test-ei-part2",
   "depression",
+  "family-psychologist",
 ];
 
 // Read the main index.html

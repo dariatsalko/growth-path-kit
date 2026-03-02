@@ -123,6 +123,15 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/family-psychologist"
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  title="Семейный психолог в Минске — терапия для пар"
+                >
+                  Семейный психолог
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/cabinet-rent"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   title="Аренда кабинета психолога в центре Минска"

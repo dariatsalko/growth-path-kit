@@ -168,6 +168,13 @@ const ServicesSection = () => {
                 Лечение депрессии
               </a>
               <a 
+                href="/family-psychologist" 
+                title="Семейный психолог в Минске"
+                className="px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors font-medium text-sm"
+              >
+                Семейный психолог
+              </a>
+              <a 
                 href="/school" 
                 title="Школа эмоционального интеллекта для детей"
                 className="px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors font-medium text-sm"
