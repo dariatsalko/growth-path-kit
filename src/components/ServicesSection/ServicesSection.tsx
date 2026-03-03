@@ -182,6 +182,13 @@ const ServicesSection = () => {
                 Школа ЭИ для детей и подростков
               </a>
               <a 
+                href="/anxiety" 
+                title="Лечение тревоги и панических атак в Минске"
+                className="px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors font-medium text-sm"
+              >
+                Лечение тревоги
+              </a>
+              <a 
                 href="/mindfulness" 
                 title="Практики осознанности майндфулнесс"
                 className="px-4 py-2 bg-primary/10 text-primary rounded-lg hover:bg-primary/20 transition-colors font-medium text-sm"

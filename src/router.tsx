@@ -5,6 +5,7 @@ import CabinetRent from "./pages/CabinetRent";
 import Cancellation from "./pages/Cancellation";
 import Depression from "./pages/Depression";
 import FamilyPsychologist from "./pages/FamilyPsychologist";
+import Anxiety from "./pages/Anxiety";
 import Consent from "./pages/Consent";
 import Contacts from "./pages/Contacts";
 import Index from "./pages/Index";
@@ -94,6 +95,10 @@ export const router = createBrowserRouter([
       {
         path: "/family-psychologist",
         element: <FamilyPsychologist />,
+      },
+      {
+        path: "/anxiety",
+        element: <Anxiety />,
       },
       // ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE
       {

@@ -132,6 +132,15 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/anxiety"
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  title="Лечение тревоги и панических атак в Минске"
+                >
+                  Лечение тревоги
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/cabinet-rent"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   title="Аренда кабинета психолога в центре Минска"

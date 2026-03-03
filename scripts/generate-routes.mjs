@@ -21,6 +21,7 @@ const routes = [
   "test-ei-part2",
   "depression",
   "family-psychologist",
+  "anxiety",
 ];
 
 // Read the main index.html
