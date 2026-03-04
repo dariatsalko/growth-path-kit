@@ -6,6 +6,7 @@ import Cancellation from "./pages/Cancellation";
 import Depression from "./pages/Depression";
 import FamilyPsychologist from "./pages/FamilyPsychologist";
 import Anxiety from "./pages/Anxiety";
+import CareerGuidance from "./pages/CareerGuidance";
 import Consent from "./pages/Consent";
 import Contacts from "./pages/Contacts";
 import Index from "./pages/Index";
@@ -99,6 +100,10 @@ export const router = createBrowserRouter([
       {
         path: "/anxiety",
         element: <Anxiety />,
+      },
+      {
+        path: "/career-guidance",
+        element: <CareerGuidance />,
       },
       // ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE
       {

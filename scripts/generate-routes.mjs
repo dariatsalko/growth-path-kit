@@ -22,6 +22,7 @@ const routes = [
   "depression",
   "family-psychologist",
   "anxiety",
+  "career-guidance",
 ];
 
 // Read the main index.html
