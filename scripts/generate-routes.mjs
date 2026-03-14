@@ -23,6 +23,7 @@ const routes = [
   "family-psychologist",
   "anxiety",
   "career-guidance",
+  "psiholog-online",
 ];
 
 // Read the main index.html

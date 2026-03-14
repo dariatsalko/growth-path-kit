@@ -141,6 +141,15 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/psiholog-online"
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  title="Психолог онлайн — консультация из любой точки мира"
+                >
+                  Психолог онлайн
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/career-guidance"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   title="Профориентация и психодиагностика в Минске"
