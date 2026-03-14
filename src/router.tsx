@@ -7,6 +7,7 @@ import Depression from "./pages/Depression";
 import FamilyPsychologist from "./pages/FamilyPsychologist";
 import Anxiety from "./pages/Anxiety";
 import CareerGuidance from "./pages/CareerGuidance";
+import PsychologOnline from "./pages/PsychologOnline";
 import Consent from "./pages/Consent";
 import Contacts from "./pages/Contacts";
 import Index from "./pages/Index";
@@ -104,6 +105,10 @@ export const router = createBrowserRouter([
       {
         path: "/career-guidance",
         element: <CareerGuidance />,
+      },
+      {
+        path: "/psiholog-online",
+        element: <PsychologOnline />,
       },
       // ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE
       {
