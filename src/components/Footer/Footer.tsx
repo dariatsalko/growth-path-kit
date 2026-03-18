@@ -141,6 +141,15 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/anonimnyj-psiholog"
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  title="Анонимный психолог в Минске — конфиденциальная консультация"
+                >
+                  Анонимный психолог
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/psiholog-online"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   title="Психолог онлайн — консультация из любой точки мира"

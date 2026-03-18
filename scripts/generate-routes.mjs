@@ -24,6 +24,7 @@ const routes = [
   "anxiety",
   "career-guidance",
   "psiholog-online",
+  "anonimnyj-psiholog",
 ];
 
 // Read the main index.html
