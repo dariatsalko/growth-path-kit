@@ -25,6 +25,7 @@ const routes = [
   "career-guidance",
   "psiholog-online",
   "anonimnyj-psiholog",
+  "detskij-psiholog",
 ];
 
 // Read the main index.html
