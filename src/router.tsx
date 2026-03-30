@@ -121,6 +121,10 @@ export const router = createBrowserRouter([
         path: "/detskij-psiholog",
         element: <ChildPsychologist />,
       },
+      {
+        path: "/klinicheskij-psiholog",
+        element: <ClinicalPsychologist />,
+      },
       // ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE
       {
         path: "*",
