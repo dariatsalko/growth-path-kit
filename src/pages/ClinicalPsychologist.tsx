@@ -203,7 +203,7 @@ const ClinicalPsychologist = () => {
             <div className="absolute bottom-10 right-20 w-96 h-96 bg-accent rounded-full blur-3xl" />
           </div>
           <div className="container px-4 relative z-10">
-            <AnimatedSection animation="fadeIn">
+            <AnimatedSection animation="fade-in">
               <div className="max-w-4xl mx-auto text-center">
                 <div className="inline-flex items-center gap-2 bg-primary/10 text-primary px-4 py-2 rounded-full text-sm font-medium mb-6">
                   <Stethoscope className="w-4 h-4" />
@@ -248,7 +248,7 @@ const ClinicalPsychologist = () => {
         {/* Advantages */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container px-4">
-            <AnimatedSection animation="fadeIn">
+            <AnimatedSection animation="fade-in">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-playfair font-bold text-foreground mb-4">
                   Почему клинический психолог центра «Интенция»
@@ -262,7 +262,7 @@ const ClinicalPsychologist = () => {
               {advantages.map((adv, index) => {
                 const Icon = adv.icon;
                 return (
-                  <AnimatedSection key={index} animation="slideUp" delay={index * 100}>
+                  <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
                     <Card className="h-full border-border/40 hover:shadow-lg transition-shadow">
                       <CardHeader className="pb-3">
                         <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-primary/10 mb-3">
@@ -284,7 +284,7 @@ const ClinicalPsychologist = () => {
         {/* Problems */}
         <section className="py-16 lg:py-24 bg-muted/30">
           <div className="container px-4">
-            <AnimatedSection animation="fadeIn">
+            <AnimatedSection animation="fade-in">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-playfair font-bold text-foreground mb-4">
                   С какими расстройствами работает клинический психолог
@@ -298,7 +298,7 @@ const ClinicalPsychologist = () => {
               {problems.map((problem, index) => {
                 const Icon = problem.icon;
                 return (
-                  <AnimatedSection key={index} animation="slideUp" delay={index * 80}>
+                  <AnimatedSection key={index} animation="fade-up" delay={index * 80}>
                     <Card className="h-full border-border/40 hover:shadow-lg transition-shadow">
                       <CardHeader className="pb-3">
                         <div className="flex items-center gap-3">
@@ -329,7 +329,7 @@ const ClinicalPsychologist = () => {
         {/* How it works */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container px-4">
-            <AnimatedSection animation="fadeIn">
+            <AnimatedSection animation="fade-in">
               <div className="text-center mb-12">
                 <h2 className="text-3xl md:text-4xl font-playfair font-bold text-foreground mb-4">
                   Как проходит работа с клиническим психологом
@@ -338,7 +338,7 @@ const ClinicalPsychologist = () => {
             </AnimatedSection>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
               {howItWorks.map((step, index) => (
-                <AnimatedSection key={index} animation="slideUp" delay={index * 100}>
+                <AnimatedSection key={index} animation="fade-up" delay={index * 100}>
                   <div className="text-center">
                     <div className="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-4">
                       <span className="text-xl font-bold text-primary">{step.step}</span>
@@ -355,7 +355,7 @@ const ClinicalPsychologist = () => {
         {/* Pricing */}
         <section className="py-16 lg:py-24 bg-muted/30">
           <div className="container px-4">
-            <AnimatedSection animation="fadeIn">
+            <AnimatedSection animation="fade-in">
               <div className="max-w-3xl mx-auto">
                 <div className="text-center mb-8">
                   <h2 className="text-3xl md:text-4xl font-playfair font-bold text-foreground mb-4">
@@ -395,7 +395,7 @@ const ClinicalPsychologist = () => {
         {/* Specialists */}
         <section className="py-16 lg:py-24 bg-background">
           <div className="container px-4">
-            <AnimatedSection animation="fadeIn">
+            <AnimatedSection animation="fade-in">
               <div className="max-w-3xl mx-auto text-center">
                 <h2 className="text-3xl md:text-4xl font-playfair font-bold text-foreground mb-4">
                   Наши клинические психологи
@@ -430,7 +430,7 @@ const ClinicalPsychologist = () => {
         {/* FAQ */}
         <section className="py-16 lg:py-24 bg-muted/30">
           <div className="container px-4">
-            <AnimatedSection animation="fadeIn">
+            <AnimatedSection animation="fade-in">
               <div className="max-w-3xl mx-auto">
                 <h2 className="text-3xl md:text-4xl font-playfair font-bold text-foreground mb-8 text-center">
                   Частые вопросы о клиническом психологе
@@ -509,7 +509,7 @@ const ClinicalPsychologist = () => {
         {/* CTA */}
         <section className="py-16 lg:py-24 bg-gradient-to-r from-primary/10 via-accent/10 to-primary/10">
           <div className="container px-4">
-            <AnimatedSection animation="fadeIn">
+            <AnimatedSection animation="fade-in">
               <div className="max-w-2xl mx-auto text-center">
                 <h2 className="text-3xl md:text-4xl font-playfair font-bold text-foreground mb-4">
                   Запишитесь на консультацию клинического психолога
