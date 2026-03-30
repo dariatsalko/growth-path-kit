@@ -26,6 +26,7 @@ const routes = [
   "psiholog-online",
   "anonimnyj-psiholog",
   "detskij-psiholog",
+  "klinicheskij-psiholog",
 ];
 
 // Read the main index.html
