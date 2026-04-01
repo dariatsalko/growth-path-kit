@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { createBrowserRouter, Outlet, useLocation } from "react-router-dom";
 
 import CabinetRent from "./pages/CabinetRent";
+import KptPsychologist from "./pages/KptPsychologist";
 import Cancellation from "./pages/Cancellation";
 import Depression from "./pages/Depression";
 import FamilyPsychologist from "./pages/FamilyPsychologist";
