@@ -387,8 +387,6 @@ const KptPsychologist = () => {
 
         <Footer />
       </main>
-
-      <GlobalBookingModal isOpen={isBookingOpen} onClose={() => setIsBookingOpen(false)} />
     </>
   );
 };
