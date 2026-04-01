@@ -195,6 +195,15 @@ const Footer = () => {
               </li>
               <li>
                 <Link
+                  to="/kpt-psiholog"
+                  className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
+                  title="КПТ психолог в Минске — когнитивно-поведенческая терапия"
+                >
+                  КПТ-терапия
+                </Link>
+              </li>
+              <li>
+                <Link
                   to="/"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
                   title="Психолог для подростков - помощь в решении эмоциональных проблем"
