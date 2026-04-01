@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { createBrowserRouter, Outlet, useLocation } from "react-router-dom";
 
 import CabinetRent from "./pages/CabinetRent";
+import KptPsychologist from "./pages/KptPsychologist";
 import Cancellation from "./pages/Cancellation";
 import Depression from "./pages/Depression";
 import FamilyPsychologist from "./pages/FamilyPsychologist";
@@ -124,6 +125,10 @@ export const router = createBrowserRouter([
       {
         path: "/klinicheskij-psiholog",
         element: <ClinicalPsychologist />,
+      },
+      {
+        path: "/kpt-psiholog",
+        element: <KptPsychologist />,
       },
       // ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE
       {

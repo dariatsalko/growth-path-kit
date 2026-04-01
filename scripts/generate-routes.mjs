@@ -27,6 +27,7 @@ const routes = [
   "anonimnyj-psiholog",
   "detskij-psiholog",
   "klinicheskij-psiholog",
+  "kpt-psiholog",
 ];
 
 // Read the main index.html
