@@ -4,10 +4,8 @@ import { Brain, CheckCircle, MessageCircle, Shield, Target, Clock, ArrowRight, P
 import { Button } from "@/components/ui/button/button";
 import Footer from "@/components/Footer/Footer";
 import GlobalBookingModal from "@/components/GlobalBookingModal/GlobalBookingModal";
-import { useState } from "react";
-
 const KptPsychologist = () => {
-  const [isBookingOpen, setIsBookingOpen] = useState(false);
+  const openBooking = () => window.dispatchEvent(new Event("open-booking-modal"));
 
   const jsonLd = {
     "@context": "https://schema.org",
