@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { Brain, CheckCircle, MessageCircle, Shield, Target, Clock, ArrowRight, Phone, ChevronDown } from "lucide-react";
 import { Button } from "@/components/ui/button/button";
 import Footer from "@/components/Footer/Footer";
-import GlobalBookingModal from "@/components/GlobalBookingModal/GlobalBookingModal";
+
 const KptPsychologist = () => {
   const openBooking = () => window.dispatchEvent(new Event("open-booking-modal"));
 
@@ -125,7 +125,7 @@ const KptPsychologist = () => {
                 КПТ — «золотой стандарт» психотерапии. Помогаем изменить мышление и поведение, чтобы вы почувствовали себя лучше. Очно в Минске и онлайн из любой точки мира.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" variant="secondary" className="text-base" onClick={() => setIsBookingOpen(true)}>
+                <Button size="lg" variant="secondary" className="text-base" onClick={() => openBooking()}>
                   Записаться на КПТ
                   <ArrowRight className="ml-2 w-5 h-5" />
                 </Button>
@@ -240,7 +240,7 @@ const KptPsychologist = () => {
                 <p className="text-sm text-muted-foreground mb-6">
                   Первая консультация включает клиническую диагностику, построение когнитивной модели и составление индивидуального плана терапии.
                 </p>
-                <Button size="lg" onClick={() => setIsBookingOpen(true)}>
+                <Button size="lg" onClick={() => openBooking()}>
                   Записаться на консультацию
                   <ArrowRight className="ml-2 w-4 h-4" />
                 </Button>
@@ -296,7 +296,7 @@ const KptPsychologist = () => {
                   Вы можете проходить КПТ-терапию из любой точки мира через Zoom, Skype или Google Meet. Это особенно удобно, если вы живёте за пределами Минска или предпочитаете заниматься из дома.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                  <Button size="lg" onClick={() => setIsBookingOpen(true)}>
+                  <Button size="lg" onClick={() => openBooking()}>
                     Записаться онлайн
                     <ArrowRight className="ml-2 w-4 h-4" />
                   </Button>
@@ -371,7 +371,7 @@ const KptPsychologist = () => {
               Запишитесь на первую консультацию — мы оценим ваше состояние и составим индивидуальный план когнитивно-поведенческой терапии
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" variant="secondary" onClick={() => setIsBookingOpen(true)}>
+              <Button size="lg" variant="secondary" onClick={() => openBooking()}>
                 Записаться на КПТ
                 <ArrowRight className="ml-2 w-5 h-5" />
               </Button>
