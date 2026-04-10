@@ -204,11 +204,11 @@ const Footer = () => {
               </li>
               <li>
                 <Link
-                  to="/"
+                  to="/psiholog-dlya-podrostka"
                   className="text-primary-foreground/80 hover:text-primary-foreground transition-colors"
-                  title="Психолог для подростков - помощь в решении эмоциональных проблем"
+                  title="Психолог для подростков в Минске — помощь в решении эмоциональных проблем"
                 >
-                  Подростковая психология
+                  Подростковый психолог
                 </Link>
               </li>
             </ul>
