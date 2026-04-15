@@ -29,6 +29,7 @@ const routes = [
   "klinicheskij-psiholog",
   "kpt-psiholog",
   "psiholog-dlya-podrostka",
+  "psiholog-pri-stresse",
 ];
 
 // Read the main index.html
